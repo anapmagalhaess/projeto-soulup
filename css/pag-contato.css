@@ -1,5 +1,11 @@
 @import url("style.css");
 
+body {
+display: flex;
+flex-direction: column;
+background: var(--cor-plano-de-fundo);
+}
+
 /* layout lado a lado */
 .main__layout {
     display: flex;
