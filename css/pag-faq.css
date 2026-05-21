@@ -9,7 +9,7 @@ html {
 body {
     font-family: system-ui, -apple-system, sans-serif;
     background: linear-gradient(to right, var(--cor-azul-bebe), var(--cor-azul), var(--cor-ciano));
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
 }
@@ -115,10 +115,15 @@ body {
     cursor: pointer;
 }
 
+.btn-faq:hover {
+    transition: 0.3s ease;
+    color: #1aa7a1;
+    background-color: #fff;
+    border: 1px solid #1aa7a1;
+}
+
 .footer__p {
     color: var(--cor-branco);
-    position: fixed;
-    bottom: 0;
 }
 
 @media (max-width: 768px) {
