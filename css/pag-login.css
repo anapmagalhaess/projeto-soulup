@@ -23,12 +23,12 @@ html {
 .form-login__field {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 550px;
     max-width: 450px;
     height: auto;
     padding: 30px;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 0;
     background-color: var(--cor-azul-bebe);  
 
@@ -37,11 +37,11 @@ html {
     background-color: var(--cor-azul);
     color: var(--cor-branco);
     text-align: center;
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 8px 20px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 22px;
     border: 0;
     margin-top: 20px;
     cursor: pointer;
@@ -72,21 +72,22 @@ html {
 /*titulo*/
 .login__title {
     text-align: center;
-    font-size: 30px;
+    font-size: 45px;
     color: var(--cor-azul);
 
 }
 /*Labels*/
 .form-login__label {
     color: var(--cor-azul-escuro);
-    font-size: 20px;
+    font-size: 25px;
 }
 /*Inputs*/
 .form-login__input {
-    padding: 5px 20px;
+    padding: 25px 20px;
     border-radius: 15px;
     border: none;
-    height: 35px;
+    height: 45px;
+    font-size: 16px;
 }
 .form-login__input:focus { /* quando selecionado*/
     outline: 2px solid var(--cor-azul); 
@@ -126,6 +127,12 @@ html {
 .banner__logo-img {
     max-width: 100%;
     height: auto;
+}
+
+.footer__copyright{
+    text-align: center;
+    padding: 20px;
+    color: var(--cor-azul-escuro);
 }
 /*modal*/
 .modal {
