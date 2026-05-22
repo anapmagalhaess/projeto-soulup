@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluções</title>
-    <link rel="stylesheet" href="../css/pag-sobre.css">
+    <title>Soluções - Soul Up</title>
+    <link rel="stylesheet" href="../css/pag-solucao.css">
     <link rel="shortcut icon" href="../img/img-icon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="../js/auth-check.js" defer></script>
     <script src="../js/btn-mobile.js" defer></script>
+    <script src="../js/pagina-solucao.js" defer></script>
 </head>
 
 <body>
@@ -27,8 +29,203 @@
                 <a href="./pagina-quem-somos.html" class="nav__link">Quem somos?</a>
             </div>
             <a href="./pagina-login.html" class="nav-btn__login">Entrar</a>
+            <button id="btn-sair" style="display: none">Deseja sair ?</button>
         </nav>
     </header>
+
+    <main>
+        <section class="solucao-hero">
+            <h1 class="solucao-hero__title">
+                Tecnologia verde inteligente.
+                <span>Validação segura para um futuro melhor.</span>
+            </h1>
+            <p class="solucao-hero__p">
+                Nosso aplicativo une sustentabilidade e tecnologia de ponta. Descubra como a Inteligência Artificial e a Visão Computacional atuam nos bastidores da Soul Up para validar suas atitudes ecológicas, combater fraudes e recompensar com precisão cada esforço individual.
+            </p>
+        </section>
+
+        <section class="pillars__container">
+            <h2 class="pillars__title">Nossos Pilares Tecnológicos</h2>
+            <div class="pillars__grid">
+                
+                <article class="pillar__card">
+                    <div class="pillar__icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="pillar__name">Visão Computacional</h3>
+                    <p class="pillar__desc">
+                        Nossa IA analisa fotos e vídeos de descarte de resíduos ou trajetos, classificando objetos com precisão e atestando que a ação ecológica de fato ocorreu.
+                    </p>
+                </article>
+
+                <article class="pillar__card">
+                    <div class="pillar__icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="pillar__name">Filtros Antifraude</h3>
+                    <p class="pillar__desc">
+                        Analisamos metadados de imagens, coordenadas de GPS e logs temporais para impedir o reenvio de mídias antigas ou retiradas de fontes da internet.
+                    </p>
+                </article>
+
+                <article class="pillar__card">
+                    <div class="pillar__icon">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3 class="pillar__name">Gamificação Prática</h3>
+                    <p class="pillar__desc">
+                        Transformamos o impacto ambiental positivo em dados palpáveis na sua carteira, permitindo subir no ranking e desbloquear prêmios reais e financeiros.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="process__section">
+            <div class="process__container">
+                <h2 class="process__title">Como a nossa Inteligência Artificial atua?</h2>
+                <div class="process__flow">
+                    
+                    <div class="process__step">
+                        <span class="step__number">1</span>
+                        <h4 class="step__title">Upload da Ação</h4>
+                        <p class="step__desc">O usuário fotografa ou filma a ação (ex: garrafas PET no coletor) e envia diretamente pelo aplicativo.</p>
+                    </div>
+
+                    <div class="process__step">
+                        <span class="step__number">2</span>
+                        <h4 class="step__title">Auditoria Básica</h4>
+                        <p class="step__desc">Nossos algoritmos decodificam o arquivo, auditando metadados de localização e carimbo de tempo.</p>
+                    </div>
+
+                    <div class="process__step">
+                        <span class="step__number">3</span>
+                        <h4 class="step__title">Classificação IA</h4>
+                        <p class="step__desc">A rede neural analisa as formas, texturas e contornos para validar se os objetos condizem com o desafio.</p>
+                    </div>
+
+                    <div class="process__step">
+                        <span class="step__number">4</span>
+                        <h4 class="step__title">Emissão de Pontos</h4>
+                        <p class="step__desc">Com o impacto aprovado, os pontos são depositados na hora e você avança na liderança do ranking global!</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator__container">
+            <h2 class="calculator__title">
+                <i class="fa-solid fa-calculator"></i> Calculadora de Eco-Impacto
+            </h2>
+            <p class="calculator__description">
+                Gostaria de saber qual é o resultado gerado pelas suas pequenas atitudes? Use a nossa calculadora interativa para simular o acúmulo de <strong>Pontos Soul</strong> e a quantidade aproximada de **gás carbônico (CO₂)            <div class="calculator__grid">
+                <div class="calculator__inputs">
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label class="calc-label" for="input-distance">
+                                <i class="fa-solid fa-person-walking"></i> Mobilidade Sustentável
+                            </label>
+                            <span class="calc-badge" id="badge-distance">0 km</span>
+                        </div>
+                        <div class="calc-slider-container">
+                            <input class="calc-range" type="range" id="input-distance" min="0" max="50" value="0">
+                            <div class="calc-range-limits">
+                                <span>0 km</span>
+                                <span>50 km</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label class="calc-label" for="input-pet">
+                                <i class="fa-solid fa-recycle"></i> Reciclagem de PET
+                            </label>
+                            <span class="calc-badge" id="badge-pet">0 garrafas</span>
+                        </div>
+                        <div class="calc-slider-container">
+                            <input class="calc-range" type="range" id="input-pet" min="0" max="100" value="0">
+                            <div class="calc-range-limits">
+                                <span>0 garrafas</span>
+                                <span>100 garrafas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label class="calc-label" for="input-alum">
+                                <i class="fa-solid fa-bottle-water"></i> Reciclagem de Alumínio
+                            </label>
+                            <span class="calc-badge" id="badge-alum">0 latas</span>
+                        </div>
+                        <div class="calc-slider-container">
+                            <input class="calc-range" type="range" id="input-alum" min="0" max="100" value="0">
+                            <div class="calc-range-limits">
+                                <span>0 latas</span>
+                                <span>100 latas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label class="calc-label" for="input-energy">
+                                <i class="fa-solid fa-solar-panel"></i> Energia Solar Gerada/Economizada
+                            </label>
+                            <span class="calc-badge" id="badge-energy">0 kWh</span>
+                        </div>
+                        <div class="calc-slider-container">
+                            <input class="calc-range" type="range" id="input-energy" min="0" max="200" value="0">
+                            <div class="calc-range-limits">
+                                <span>0 kWh</span>
+                                <span>200 kWh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator__results">
+                    <div class="result-box">
+                        <span class="result-label">Pontuação Estimada</span>
+                        <div class="result-value" id="calc-points">
+                            <i class="fa-solid fa-coins"></i> 0
+                        </div>
+                    </div>
+                    
+                    <div class="result-box__divider"></div>
+
+                    <div class="result-box">
+                        <span class="result-label">Emissão de CO₂ Evitada</span>
+                        <div class="result-value co2" id="calc-co2">
+                            <i class="fa-solid fa-tree"></i> 0,00 kg
+                        </div>
+                    </div>
+
+                    <div class="result-box__divider"></div>
+
+                    <div class="result-box eco-level-box">
+                        <span class="result-label">Seu Nível de Eco-Impacto</span>
+                        <div class="eco-badge-wrapper">
+                            <div class="eco-badge level-semente" id="eco-badge-level">
+                                <i class="fa-solid fa-seedling"></i> <span>Semente Verde</span>
+                            </div>
+                        </div>
+                        <div class="eco-progress-container">
+                            <div class="eco-progress-bar">
+                                <div class="eco-progress-fill" id="eco-progress-fill" style="width: 0%;"></div>
+                            </div>
+                            <span class="eco-progress-text" id="eco-progress-text">Próximo nível: Eco Cidadão (+100 pts)</span>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <p class="footer__p">&copy; 2026 SOUL UP. Todos os direitos reservados.</p>
     </footer>
+</body>
+
+</html>
