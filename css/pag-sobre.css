@@ -200,8 +200,19 @@ background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
 }
 
 .hero__button {
-    font-size: 14px;
-    padding: 10px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 90%;
+    font-size: 15px;
+    padding: 14px 18px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.4;
+    border-radius: 30px;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .conteudo {
