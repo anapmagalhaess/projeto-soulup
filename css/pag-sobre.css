@@ -10,7 +10,9 @@ font-family: var(--fonte-texto);
 body {
 display: flex;
 flex-direction: column;
+min-height: 100vh;
 background: var(--cor-plano-de-fundo);
+margin: 0;
 }
 
 main {
@@ -18,22 +20,21 @@ flex: 1;
 display: flex;
 flex-direction: column;
 justify-content: center;
-gap: 20px;
+gap: 40px;
 padding: 20px;
 }
 
 .hero {
-padding: 20px 0 0 90px;
+padding: 40px 0 0 70px;
 text-align: left;
 }
 
 .hero__p {
-margin: 18px 0;
+margin: 18px 0 50px 0;
 max-width: 600px;
 line-height: 1.6;
 font-size: 20px;
 color: #2c5c5c;
-margin-bottom: 50px;
 }
 
 .hero__button {
@@ -45,16 +46,18 @@ font-size: 16px;
 border-radius: 25px;
 cursor: pointer;
 text-decoration: none;
+display: inline-block;
+transition: 0.2s;
 }
 
 .hero__button:hover {
 background: var(--cor-azul-escuro);
-transition: 0.2s;
 }
 
 .hero__title {
-font-size: 50px;
-line-height: 60px;
+font-size: clamp(30px, 5vw, 50px);
+line-height: 1.2;
+margin: 0;
 }
 
 .linha1 { color: #2c5c5c; }
@@ -63,7 +66,7 @@ line-height: 60px;
 .banner {
 position: relative;
 width: min(1700px, 95%);
-height: max(420px, 30vh);
+height: clamp(300px, 30vh, 420px);
 margin: 20px auto;
 border-radius: 15px;
 overflow: hidden;
@@ -88,7 +91,7 @@ align-items: flex-end;
 padding: clamp(15px, 4vw, 40px);
 color: white;
 text-align: right;
-background: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+background: linear-gradient(to left, rgba(0,0,0,0.3));
 }
 
 .titulo-banner {
@@ -102,132 +105,48 @@ margin-bottom: 15px;
 max-width: 400px;
 }
 
-
-@media (max-width: 1024px) and (min-width: 769px) { 
-.hero {
-padding: 20px 0 0 40px;
-}
-.conteudo__p {
-font-size: 15px;
-max-width: 400px;
-}
-.conteudo {
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-padding: clamp(15px, 4vw, 40px);
-color: white;
-text-align: right;
-background: linear-gradient(to left, rgba(0,0,0,0.6));
-}
-}
-
-@media (max-width: 768px ) and (min-width: 481px) {
-
-main {
-justify-content: flex-start;
-padding: 10px;
-}
-
-.hero {
+@media (max-width: 1024px) {
+    .hero {
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
-}
-
-.hero__title {
-    font-size: 35px;
-    line-height: 40px;
-}
-
-.hero__p {
-    font-size: 14px;
-    max-width: 100%;
-    margin: 15px auto;
-    padding-bottom: 20px;
-}
-
-.hero__button {
-    width: 100%;
-    max-width: 300px;
-}
-
-.banner {
-    width: 100%;
-    height: 350px;
-}
-
-.conteudo {
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-padding: clamp(15px, 4vw, 40px);
-color: white;
-text-align: center;
-background: linear-gradient(to left, rgba(0,0,0,0.6));
-}
-}
-
-@media (max-width: 480px) {
-
-.hero {
-    text-align: center;
-    padding: 20px;
-}
-.banner {
-    height: 280px;
-    margin: auto;
     }
-
-.hero__title {
-    font-size: 26px;
-    line-height: 32px;
+    .hero__p {
+        text-align: center;
+        justify-self: center;
+    }
+    .hero__title {
+        font-size: 35px;
+    }
 }
 
-.hero__p {
-    font-size: 14px;
+@media (max-width: 768px) {
+    main {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    .conteudo {
+        background: linear-gradient(to left, rgba(0,0,0,0.7));
+        gap: 20px;
+    }
+    .titulo-banner, .conteudo__p {
+        text-align: center;
+        justify-content: center;
+    }
+    .hero__p {
+        font-size: 18px;
+    }
 }
 
-.hero__button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    max-width: 90%;
-    font-size: 15px;
-    padding: 14px 18px;
-    margin: 20px auto;
-    text-align: center;
-    line-height: 1.4;
-    border-radius: 30px;
-    white-space: normal;
-    word-break: break-word;
-}
-
-.conteudo {
-    display: absolute;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(to left, rgba(0,0,0,0.7));
-}
-
-.conteudo__p {
-        margin-top: 50px;
-        font-size: 12px;
-        max-width: 250px;
-}
-
-.titulo-banner {
-    line-height: 20px;
-    font-size: 20px;
-}
+@media (max-width: 400px) {
+    .hero__title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .conteudo {
+        background: linear-gradient(to left, rgba(0,0,0,0.7));
+        gap: 20px;
+    }
+    .titulo-banner, .conteudo__p {
+        text-align: center;
+    }
 }
