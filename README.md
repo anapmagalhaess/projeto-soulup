@@ -108,19 +108,19 @@ O desenvolvimento deste projeto foi realizado utilizando as seguintes ferramenta
 
 ## 🖥️ Nosso Projeto 
 
-* **Página Inicial**
+### * **Página Inicial**
 
-* **Sobre**
+### * **Sobre**
 
-* **FAQ**
+### * **FAQ**
 
-* **Desafios**
+### * **Desafios**
 
-* **Soluções**
+### * **Soluções**
 
-* **Contato**
+### * **Contato**
 
-* **Quem Somos**
+### * **Quem Somos**
 
 ---
 
