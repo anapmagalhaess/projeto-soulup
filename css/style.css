@@ -96,7 +96,12 @@ body {
 }
 
 .nav__link:hover::after,
-.nav__link--active::after {
+.nav__menu:not(:has(.nav__link:hover)) .nav__link--active::after {
+  /*Selecione o menu desde que NÃO (:not) exista dentro dele (:has) um link que esteja com o mouse passando por cima
+
+  Se a condição de cima for real (o mouse fora do menu), o CSS vai até o link ativo (o da página atual, 
+  geralmente marcado com uma classe como .nav__link--active) e estiliza o ::after dele (que costuma ser aquela bordinha 
+  ou linha decorativa que fica embaixo do link).*/
   transform: scaleX(1);
 }
 
