@@ -28,11 +28,12 @@ text-align: left;
 }
 
 .hero__p {
-margin: 20px 0;
+margin: 18px 0;
 max-width: 600px;
 line-height: 1.6;
-font-size: 16px;
+font-size: 20px;
 color: #2c5c5c;
+margin-bottom: 50px;
 }
 
 .hero__button {
@@ -44,7 +45,6 @@ font-size: 16px;
 border-radius: 25px;
 cursor: pointer;
 text-decoration: none;
-user-select: none;
 }
 
 .hero__button:hover {
@@ -102,17 +102,15 @@ margin-bottom: 15px;
 max-width: 400px;
 }
 
-.footer__p {
-    color: var(--cor-azul-escuro);
-    text-align: center;
-    padding: 20px 0; /* Adicionado padding para o copyright não colar no fundo */
-}
 
 @media (max-width: 1024px) and (min-width: 769px) { 
 .hero {
 padding: 20px 0 0 40px;
 }
-
+.conteudo__p {
+font-size: 15px;
+max-width: 400px;
+}
 .conteudo {
 position: absolute;
 inset: 0;
@@ -125,7 +123,7 @@ align-items: flex-end;
 padding: clamp(15px, 4vw, 40px);
 color: white;
 text-align: right;
-background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+background: linear-gradient(to left, rgba(0,0,0,0.6));
 }
 }
 
@@ -174,8 +172,8 @@ justify-content: center;
 align-items: flex-end;
 padding: clamp(15px, 4vw, 40px);
 color: white;
-text-align: right;
-background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+text-align: center;
+background: linear-gradient(to left, rgba(0,0,0,0.6));
 }
 }
 
@@ -219,12 +217,12 @@ background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
     display: absolute;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(to left, rgba(0,0,0,0.6));
+    background: linear-gradient(to left, rgba(0,0,0,0.7));
 }
 
 .conteudo__p {
         margin-top: 50px;
-        font-size: 13px;
+        font-size: 12px;
         max-width: 250px;
 }
 
