@@ -10,7 +10,7 @@
 
 ## 🌎 Sobre o Projeto
 
-A **Soul Up** não é apenas um aplicativo; é uma revolução no modo como interagimos com o planeta. Nossa plataforma utiliza tecnologia de ponta para validar e recompensar suas atitudes sustentáveis no mundo físico. 
+A **Soul Up** não é apenas um aplicativo, é uma revolução no modo como interagimos com o planeta. Nossa plataforma utiliza tecnologia de ponta para validar e recompensar suas atitudes sustentáveis no mundo físico. 
 
 Através de um sistema integrado de IA, transformamos cada quilometro caminhado, cada quilo de material reciclado e cada Watt de energia solar gerada em pontos que se transformam em **economia real**.
 
@@ -20,7 +20,7 @@ Através de um sistema integrado de IA, transformamos cada quilometro caminhado,
 
 | 🌱 Sustentabilidade | 🤖 Tecnologia | 👥 Conexões | 💰 Recompensa |
 | :--- | :--- | :--- | :--- |
-| Atos sustentáveis se transformam em lucro real no nosso aplicativo, onde cada ação conta.  | Para deixar nosso sistema mais seguro, iremos desenvolver | Criamos uma rede global onde seu Avatar Único evolui conforme seu progresso no ranking ativo. | Suas boas ações viram pontos **ECOA**. O top #1 do ranking global garante a conta paga por nós! |
+| Nossa essência é transformar a consciência ambiental em hábito. Criamos um ecossistema focado no impacto real, onde a tecnologia impulsiona atitudes que preservam o planeta e constroem um futuro mais verde.  | Para deixar nosso sistema mais seguro, nossa inteligência artificial é o motor que valida a mudança no mundo real. Através do reconhecimento de imagens, ela comprova as ações ecológicas dos usuários com precisão, transformando atitudes sustentáveis em Pontos ECOA de forma confiável e automatizada. | Somos uma rede social que une pessoas e comunidades pelo mesmo propósito. Fortalecemos o engajamento através de desafios saudáveis, cooperação e o compartilhamento de conquistas ecológicas. | Fazemos o bem ao planeta gerar valor no bolso. Transformamos os esforços ecológicos dos usuários em benefícios tangíveis no mundo real, como descontos na conta de luz e vantagens em marcas parceiras. |
 
 ---
 
@@ -33,7 +33,59 @@ O desenvolvimento deste projeto foi realizado utilizando as seguintes ferramenta
 * **Hospedagem:** Vercel <img src="https://skillicons.dev/icons?i=vercel" height="17" alt="vercel logo"  />
 * **Front-end:** HTML, CSS e JavaScript <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" height="17" alt="javascript logo"  />  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="17" alt="html5 logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="17" alt="css logo"  />
+  
+---
 
+## 📁 Estrutura de Pastas do Projeto
+
+```text
+📁 projeto-soulup
+┣ 📂 assets
+┃ ┣ 📂 css
+┃ ┃ ┣ 📄 style.css
+┃ ┃ ┣ 📄 index.css
+┃ ┃ ┣ 📄 solucao.css
+┃ ┃ ┣ 📄 sobre.css
+┃ ┃ ┣ 📄 integrantes.css
+┃ ┃ ┣ 📄 contato.css
+┃ ┃ ┗ 📄 faq.css
+┃ ┣ 📂 imagens
+┃ ┃ ┣ 📄 1.1-img-integrante-ana.png
+┃ ┃ ┣ 📄 1.1-img-integrante-enzo.png
+┃ ┃ ┣ 📄 1.1-img-integrante-larissa.png
+┃ ┃ ┣ 📄 1.1-img-integrante-luis.png
+┃ ┃ ┣ 📄 1.1-img-integrante-pedro.png
+┃ ┃ ┣ 📄 img-banner.png
+┃ ┃ ┣ 📄 img-celular.webp
+┃ ┃ ┣ 📄 img-faq.webp
+┃ ┃ ┣ 📄 img-icon.ico
+┃ ┃ ┣ 📄 img-integrante-ana.webp
+┃ ┃ ┣ 📄 img-integrante-enzo.png
+┃ ┃ ┣ 📄 img-integrante-larissa.png
+┃ ┃ ┣ 📄 img-integrante-luis.webp
+┃ ┃ ┣ 📄 img-integrante-pedro.png
+┃ ┃ ┣ 📄 img-logo-github.png
+┃ ┃ ┣ 📄 img-logo-linkedin.webp
+┃ ┃ ┣ 📄 img-natureza.webp
+┃ ┃ ┣ 📄 img-oceano.webp
+┃ ┃ ┣ 📄 img-oceano2.webp
+┃ ┃ ┣ 📄 img-paisagem.webp
+┃ ┃ ┗ 📄 logo-soulup.webp
+┃ ┗ 📂 js
+┃ ┃ ┣ 📄 auth-check.js
+┃ ┃ ┣ 📄 btn-mobile.js
+┃ ┃ ┣ 📄 login.js
+┃ ┃ ┣ 📄 modal.js
+┃ ┃ ┗ 📄 faq.js
+┣ 📂 paginas
+┃ ┣ 📄 solucao.html
+┃ ┣ 📄 sobre.html
+┃ ┣ 📄 integrantes.html
+┃ ┣ 📄 contato.html
+┃ ┗ 📄 faq.html
+┣ 📄 index.html
+┗ 📄 README.md
+````
 ---
 
 ## 👥 Autores e Créditos
@@ -50,23 +102,27 @@ O desenvolvimento deste projeto foi realizado utilizando as seguintes ferramenta
 ## 🔗 Links do Projeto
 
 * **Repositório:** [https://github.com/anapmagalhaess/projeto-soulup](https://github.com/anapmagalhaess/projeto-soulup)
-* **Deploy (Live Demo):** [https://projeto-soulup.vercel.app/](https://projeto-soulup.vercel.app/)
+* **Deploy:** [https://projeto-soulup.vercel.app/](https://projeto-soulup.vercel.app/)
 
 ---
 
 ## ⚔️ Desafios 
-Ao longo da construção desse projeto, diferentes desafios surgiram, exigindo pesquisa, experimentação e adaptação constante. Esses obstáculos constribuiram diretamente para o aprimoramento técnico e de consolidação de boas práticas de desenvolvimento desse projeto.
+<p>Ao longo da construção desse projeto, diferentes desafios surgiram, exigindo pesquisa, experimentação e adaptação constante. Esses obstáculos constribuiram diretamente para o aprimoramento técnico e de consolidação de boas práticas de desenvolvimento desse projeto.</p>
 ---
 
 ## 🏆Soluções
-As soluçoes desse projeto foram projetadas para garantir eficiência, organização e escalabilidade, atendendo os requisitos propostos de forma estruturada e sustentavel 
+<p>As soluçoes desse projeto foram projetadas para garantir eficiência, organização e escalabilidade, atendendo os requisitos propostos de forma estruturada e sustentavel.</p>
 
 ## 📞 Contato e Suporte
 
-Para dúvidas, sugestões ou suporte técnico, pode entrar em contato através de qualquer um dos perfis do LinkedIn listados acima ou abrir uma *Issue* no repositório oficial do projeto.
----
+<p> Para dúvidas, sugestões ou suporte técnico, o contato pode ser realizado através de qualquer um dos perfis do LinkedIn listados acima ou abrir uma <bold>Issue</bold> no repositório oficial do projeto.<br>
+  
+<br>✉️ E-mail: nextgen.solucoestech@gmail.com
+<br>❓ Abra uma Issue aqui: https://github.com/anapmagalhaess/projeto-soulup/issues
+</p>
 
----
+##
+
 <p align="center">
   Desenvolvido com foco em um futuro mais verde 🌿
 </p>
