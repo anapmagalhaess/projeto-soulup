@@ -3,7 +3,6 @@
 body {
     display: flex;
     flex-direction: column;
-    background: var(--cor-plano-de-fundo);
 }
 
 /* layout lado a lado */

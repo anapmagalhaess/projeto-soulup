@@ -13,7 +13,7 @@
   --cor-branco: #ffffff;
   --cor-azul-escuro: #206f74;
   --cor-ciano-2: #35b9b7;
-  --cor-plano-de-fundo: linear-gradient(70deg, #f0ffff 40%, #b3dadb);
+  --cor-plano-de-fundo:  linear-gradient(to bottom, #ffffff, #eaf4f4);
   --fonte-texto: "Hind", sans-serif;
 }
 body {
