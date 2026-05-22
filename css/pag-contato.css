@@ -38,7 +38,6 @@ body {
     display: block;
     flex-direction: column;
     gap: 16px;
-    ;
 }
 
 .hero__a {
@@ -49,8 +48,12 @@ body {
     align-items: center;
     gap: 10px;
 }
+.hero__a:hover {
+    transition: 0.5s ease;
+    text-decoration: underline;
+}
 
-/* lado direito */
+/* lado direito*/
 .hero__container {
     display: grid;
     grid-template-columns: 500px 350px;
@@ -58,6 +61,8 @@ body {
     grid-template-rows: 300px 300px;
     /*vertical*/
     gap: 20px;
+    align-content: center; /*move o bloco todo*/
+    height: 80vh;
 }
 
 .hero__item {
@@ -136,14 +141,6 @@ body {
 
 /* footer*/
 .footer__p {
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: var(--cor-azul-escuro);
-    user-select: none;
     position: fixed;
     bottom: 0;
     left: 0;
