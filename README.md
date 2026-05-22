@@ -102,7 +102,7 @@ O desenvolvimento deste projeto foi realizado utilizando as seguintes ferramenta
 ## 🔗 Links do Projeto
 
 * **Repositório:** [https://github.com/anapmagalhaess/projeto-soulup](https://github.com/anapmagalhaess/projeto-soulup)
-* **Deploy (Live Demo):** [https://projeto-soulup.vercel.app/](https://projeto-soulup.vercel.app/)
+* **Deploy:** [https://projeto-soulup.vercel.app/](https://projeto-soulup.vercel.app/)
 
 ---
 
