@@ -53,7 +53,7 @@ background: var(--cor-plano-de-fundo);
     text-decoration: underline;
 }
 
-/* lado direito */
+/* lado direito*/
 .hero__container {
     display: grid;
     grid-template-columns: 500px 350px;
