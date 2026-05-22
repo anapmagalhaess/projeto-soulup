@@ -3,23 +3,43 @@
 :root {
     --fonte-serifada: 'Libre Caslon Text', serif;
 }
+
 html {
     background: linear-gradient(45deg, var(--cor-branco), var(--cor-azul-bebe))
 }
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+}
+
 /*Login*/
 .login__container {
-    flex: 1; 
+    flex: 1;
     display: flex;
     flex-direction: row;
-    align-items: center;    /* Centraliza verticalmente*/
+    align-items: center;
+    /* Centraliza verticalmente*/
     justify-content: center;
     width: 100%;
 }
+
 .form-login {
     display: flex;
     flex-direction: column;
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 .form-login__field {
     display: flex;
     flex-direction: column;
@@ -30,9 +50,16 @@ html {
     gap: 10px;
     border-radius: 20px;
     border: 0;
+<<<<<<< HEAD
     background-color: var(--cor-azul-bebe);  
 
 }
+=======
+    background: linear-gradient(to right, var(--cor-ciano), var(--cor-azul-bebe));
+
+}
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 .form-login__button {
     background-color: var(--cor-azul);
     color: var(--cor-branco);
@@ -46,29 +73,55 @@ html {
     margin-top: 20px;
     cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 .form-login__button:hover {
     color: var(--cor-azul);
     background-color: var(--cor-branco);
     transition: 0.3s;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 /*container pai*/
 .login__page {
     display: flex;
     width: 100%;
 }
+<<<<<<< HEAD
 /*container da direita*/
 .login-container__aside {
     height: 92vh;
     flex: 1;
     display: flex; 
     flex-direction: column; 
+=======
+
+/*container da direita*/
+.login-container__aside {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
     justify-content: space-between;
     color: var(--cor-branco);
     background: linear-gradient(45deg, var(--cor-azul), var(--cor-azul-bebe));
     padding: 60px;
+<<<<<<< HEAD
     min-height: 80vh;
     box-sizing: border-box; /* padding não quebra a altura */
 }
+=======
+    min-height: 0;
+    box-sizing: border-box;
+    /* padding não quebra a altura */
+}
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 /*titulo*/
 .login__title {
     text-align: center;
@@ -76,11 +129,19 @@ html {
     color: var(--cor-azul);
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 /*Labels*/
 .form-login__label {
     color: var(--cor-azul-escuro);
     font-size: 25px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 /*Inputs*/
 .form-login__input {
     padding: 25px 20px;
@@ -89,9 +150,18 @@ html {
     height: 45px;
     font-size: 16px;
 }
+<<<<<<< HEAD
 .form-login__input:focus { /* quando selecionado*/
     outline: 2px solid var(--cor-azul); 
 }
+=======
+
+.form-login__input:focus {
+    /* quando selecionado*/
+    outline: 2px solid var(--cor-azul);
+}
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 /*conteúdo do banner*/
 .banner-content {
     margin: 0;
@@ -100,17 +170,26 @@ html {
     justify-content: flex-start;
     align-items: flex-start;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 .banner-title {
     font-weight: 700;
     text-transform: lowercase;
     display: inline-block;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 .banner-title--highlight {
     font-family: var(--fonte-serifada);
     font-style: italic;
     font-weight: 400;
     text-transform: lowercase;
     display: inline-block;
+<<<<<<< HEAD
     margin-right: 15px; 
 }
 
@@ -118,26 +197,57 @@ html {
     padding: 10px;
     font-size: 5.5rem;
 }
+=======
+    margin-right: 15px;
+}
+
+.banner-title--highlight,
+.banner-title {
+    padding: 10px;
+    font-size: 5.5rem;
+}
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 .banner__logo-container {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: flex-end;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 .banner__logo-img {
     max-width: 100%;
     height: auto;
 }
 
+<<<<<<< HEAD
 .footer__copyright{
     text-align: center;
     padding: 20px;
     color: var(--cor-azul-escuro);
 }
+=======
+.footer__p {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    z-index: 10;
+    padding-right: 50px;
+
+}
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 /*modal*/
 .modal {
     display: flex;
     visibility: hidden;
+<<<<<<< HEAD
     position: fixed; /*fixa o modal na tela*/
     z-index: 1000;
     left: 0; top: 0;
@@ -145,6 +255,20 @@ html {
     background-color: rgba(0,0,0,0.5);
     align-items: center; /*vertical*/
     justify-content: center; /*horizontal*/
+=======
+    position: fixed;
+    /*fixa o modal na tela*/
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    /*vertical*/
+    justify-content: center;
+    /*horizontal*/
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 }
 
 .modal-content {
@@ -153,6 +277,7 @@ html {
     border-radius: 10px;
     width: 300px;
     text-align: center;
+<<<<<<< HEAD
     position: relative; /*permite o uso do position absolut na area definida */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transform: scale(0.7); /* Começa menor */
@@ -162,15 +287,40 @@ html {
     visibility: visible;
     opacity: 1;
 }
+=======
+    position: relative;
+    /*permite o uso do position absolut na area definida */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.7);
+    /* Começa menor */
+    transition: transform 0.4s ease-out;
+}
+
+.modal--active {
+    /*ativacao pelo js*/
+    visibility: visible;
+    opacity: 1;
+}
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
 /* quando o modal ativar, o conteúdo cresce para o tamanho normal */
 .modal--active .modal-content {
     transform: scale(1);
 }
 
 .close-button {
+<<<<<<< HEAD
     position: absolute; /*posiciona o 'x' de forma livre*/
     right: 15px; top: 10px;
     cursor: pointer; /*muda o ponteiro*/
+=======
+    position: absolute;
+    /*posiciona o 'x' de forma livre*/
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    /*muda o ponteiro*/
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
     font-size: 24px;
     color: var(--cor-azul);
 }
@@ -179,10 +329,21 @@ html {
 .modal-title {
     color: var(--cor-azul);
 }
+<<<<<<< HEAD
 @media (max-width: 1300px) { /*desktop/
 }
 
 @media (max-width: 768px) { /*tablet*/
+=======
+
+@media (max-width: 1190px) {
+
+    /*desktop*/
+    .footer__p {
+        width: 100%;
+    }
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
     .login-container__aside {
         display: none;
     }
@@ -192,6 +353,7 @@ html {
     }
 
     .form-login__field {
+<<<<<<< HEAD
         width: 100%;
         padding: 25px;
     }
@@ -201,6 +363,37 @@ html {
     }
 }
 @media (max-width: 480px) { /*celular*/
+=======
+        width: 60vw;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /*tablet*/
+    .login-container__aside {
+        display: none;
+    }
+
+    .login__container {
+        padding: 40px 20px;
+    }
+
+    .form-login__field {
+        width: 75vw;
+        padding: 25px;
+    }
+
+    .login__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*celular*/
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
     .login-container__aside {
         display: none;
     }
@@ -213,10 +406,18 @@ html {
         width: 100%;
         padding: 20px;
     }
+<<<<<<< HEAD
     
     .login__title {
         font-size: 25px;
     }
+=======
+
+    .login__title {
+        font-size: 25px;
+    }
+
+>>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
     .form-login__label {
         color: var(--cor-azul-escuro);
         font-size: 16px;

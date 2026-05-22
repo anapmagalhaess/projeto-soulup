@@ -92,17 +92,35 @@ O desenvolvimento deste projeto foi realizado utilizando as seguintes ferramenta
 
 | Foto | Nome | RM | Turma | GitHub | LinkedIn |
 | :---: | :--- | :---: | :---: | :---: | :---: |
-| <img src="./img/1.1-img-integrante-ana.png" width="120" height="120"/> | **Ana Clara Pereira de Magalhães** | 560871 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/anapmagalhaess) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anaclmagalhaes/) |
-| <img src="./img/1.1-img-integrante-luis.png" width="120" height="120"/> | **Luis Felipe Fernandes Esteves** | 569064 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/luisfelipe-fernandesesteves) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luis-felipe-f-b2a3983b3/) |
-| <img src="./img/1.1-img-integrante-larissa.png" width="120" height="120"/> | **Larissa Koprowski Ferreira** | 572983 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/lkoprowskif) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/larissa-koprowski-111b3a357/) |
-| <img src="./img/1.1-img-integrante-pedro.png" width="120" height="120"/> | **Pedro Henrique De Lima Reis** | 569178 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/pedrolimeisdev) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedrolimeis/) |
-| <img src="./img/1.1-img-integrante-enzo.png" width="120" height="120"/> | **Enzo Torres Estanguera** | 568937 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/enzoestanguera) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enzo-estanguera/) |
+| <img src="./img/1.1-img-integrante-ana.webp" width="120" height="120"/> | **Ana Clara Pereira de Magalhães** | 560871 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/anapmagalhaess) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anaclmagalhaes/) |
+| <img src="./img/1.1-img-integrante-luis.webp" width="120" height="120"/> | **Luis Felipe Fernandes Esteves** | 569064 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/luisfelipe-fernandesesteves) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luis-felipe-f-b2a3983b3/) |
+| <img src="./img/1.1-img-integrante-larissa.webp" width="120" height="120"/> | **Larissa Koprowski Ferreira** | 572983 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/lkoprowskif) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/larissa-koprowski-111b3a357/) |
+| <img src="./img/1.1-img-integrante-pedro.webp" width="120" height="120"/> | **Pedro Henrique De Lima Reis** | 569178 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/pedrolimeisdev) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedrolimeis/) |
+| <img src="./img/1.1-img-integrante-enzo.webp" width="120" height="120"/> | **Enzo Torres Estanguera** | 568937 | 1TDSPF | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/enzoestanguera) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enzo-estanguera/) |
 ---
 
 ## 🔗 Links do Projeto
 
 * **Repositório:** [https://github.com/anapmagalhaess/projeto-soulup](https://github.com/anapmagalhaess/projeto-soulup)
 * **Deploy:** [https://projeto-soulup.vercel.app/](https://projeto-soulup.vercel.app/)
+
+---
+
+## 🖥️ Nosso Projeto 
+
+### * **Página Inicial**
+
+### * **Sobre**
+
+### * **FAQ**
+
+### * **Desafios**
+
+### * **Soluções**
+
+### * **Contato**
+
+### * **Quem Somos**
 
 ---
 
