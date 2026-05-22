@@ -233,7 +233,7 @@ main {
     color: var(--cor-azul);
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1190px) {
 
     /*desktop*/
     .footer__p {
