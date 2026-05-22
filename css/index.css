@@ -22,7 +22,7 @@ main {
 /* container 1*/
 .hero__container {
     width: 100%;
-    padding: 20px 0 0 5%;
+    padding: 30px 0 0 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,7 +41,7 @@ main {
 .hero__title,
 .hero__title--highlight {
     line-height: 1.2;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .hero__title--highlight {

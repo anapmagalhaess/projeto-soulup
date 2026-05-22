@@ -30,11 +30,11 @@ main {
     text-align: left;
     width: min(1700px, 95%);
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .hero__title {
-    font-size: clamp(30px, 5vw, 50px);
+    font-size: 40px;
     line-height: 1.2;
     margin: 0;
 }
