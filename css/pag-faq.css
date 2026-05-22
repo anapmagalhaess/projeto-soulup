@@ -78,15 +78,22 @@ body {
 
 
 .resposta {
+    display: block;
+    height: auto;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
     opacity: 0;
+    width: 100%;
+    line-height: 1.8;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    word-break: normal;
+    white-space: normal;
 }
 
-
 .item.ativo .resposta {
-    max-height: 200px;
+    max-height: 1000px;
     opacity: 1;
     margin-top: 10px;
 }
@@ -94,7 +101,6 @@ body {
 .item.ativo .resposta {
     display: block;
 }
-
 
 .duvida {
     margin-top: 25px;
@@ -122,11 +128,10 @@ body {
     padding: 20px 0; /* Adicionado padding para o copyright não colar no fundo */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .faq {
         flex-direction: column; /* empilha */
-        padding: 15px;
     }
 
     .faq-left,
@@ -141,7 +146,8 @@ body {
 
     .faq-left img {
         width: 100%;
-        max-height: 250px; /* evita imagem gigante */
+        max-height: 300px; /* evita imagem gigante */
+        object-fit: cover;
     }
 
     .faq-right {
@@ -168,21 +174,5 @@ body {
         text-align: center;
         padding: 12px;
         margin-top: 10px;
-    }
-}
-
-@media (max-width: 1024px) {
-
-    .faq {
-        flex-direction: column;
-    }
-
-    .faq-left,
-    .faq-right {
-        width: 100%;
-    }
-
-    .faq-left img {
-        max-height: 300px;
     }
 }
