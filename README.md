@@ -70,20 +70,77 @@ O desenvolvimento deste projeto foi realizado utilizando as seguintes ferramenta
 
 ## 🖥️ Nosso Projeto 
 
-### * **Página Inicial**
+### 🏠 Página Inicial
+<img src="./img/pagina-inicial.webp" height="500"/>
+<img src="./img/pagina-inicial-2.webp" height="500"/>
 
-### * **Sobre**
+A interface abre com a tela de boas-vindas da plataforma, projetada para introduzir o usuário ao ecossistema do projeto e da empresa. Esta seção inicial destaca os valores fundamentais que nos movem e apresenta uma visão geral clara de como funciona a dinâmica e a proposta de valor da SoulUp.
 
-### * **FAQ**
+Na sequência da navegação, a página apresenta blocos dedicados a cada link acessível do site. Cada seção traz uma breve descrição do conteúdo que o usuário irá encontrar, acompanhada de um botão de redirecionamento direto para a página escolhida. Logo abaixo, um container especial detalha os quatro pilares essenciais do projeto: Sustentabilidade, Tecnologia, Conexões e Recompensa.
 
-### * **Desafios**
+---
 
-### * **Soluções**
+### 🌱 Sobre
+<img src="./img/pagina-sobre.webp" height="500"/>
+<img src="./img/pagina-sobre-2.webp" height="500"/>
+<img src="./img/pagina-sobre-3.webp" height="500"/>
 
-### * **Contato**
+Nesta área, o projeto aprofunda-se em seu propósito central, contextualizando o problema real do impacto individual no cuidado com o planeta. O conteúdo aborda como a falta de ferramentas práticas e o sentimento de isolamento geram desengajamento ecológico, justificando a criação de uma solução que valide, una e recompense atitudes sustentáveis.
 
-### * **Quem Somos**
+A mecânica de funcionamento é detalhada logo em seguida, explicando de forma visual e textual o fluxo do sistema de ações e como a inteligência artificial atua na validação de cada atividade enviada pelo usuário.
 
+Para fechar a jornada de conscientização, a página exibe o catálogo de recompensas disponíveis, ilustrando os tipos de benefícios e prêmios que os usuários podem resgatar utilizando os "Pontos Souls" acumulados através de suas práticas ecológicas.
+
+---
+
+### ❓ FAQ
+<img src="./img/pagina-faq.webp" height="500"/>
+
+A página de FAQ foi estruturada para responder de maneira rápida e clara às perguntas mais recorrentes dos usuários sobre o funcionamento da plataforma. Pensando na experiência do usuário, a interface inclui um botão de redirecionamento para a página de contato, caso a dúvida específica não esteja listada na lista de perguntas frequentes.
+
+---
+
+### 🏆 Desafios
+<img src="./img/pagina-desafios.webp" height="500"/>
+<img src="./img/pagina-desafios-2.webp" height="500"/>
+
+A seção de Desafios apresenta a dinâmica de gamificação da plataforma, mostrando como o ganho de pontos está diretamente atrelado às ações do usuário. A tela exibe uma lista de missões disponíveis, onde cada tarefa oferece uma pontuação diferenciada baseada na complexidade da atividade e no nível de impacto ambiental medido.
+
+Complementando essa seção, é apresentada a interface de validação. Trata-se do espaço onde o usuário envia o registro visual de sua ação sustentável, seja por foto ou vídeo, e recebe o retorno imediato com a confirmação e computação dos seus pontos.
+
+---
+
+### 💡 Soluções
+<img src="./img/pagina-solucoes.webp" height="500"/>
+<img src="./img/pagina-solucoes-2.webp" height="500"/>
+
+Esta página destaca o ecossistema tecnológico que sustenta a SoulUp, focando no funcionamento da Inteligência Artificial. O texto detalha o processo de filtragem automatizada das ações submetidas e os pilares de desenvolvimento tecnológico que garantem a segurança e a precisão do sistema.
+
+Integrada a esta seção, encontra-se a calculadora de pontos. Essa ferramenta interativa permite ao usuário simular o ganho de Pontos Souls em tempo real, calculando o retorno com base no tipo e na magnitude da ação sustentável realizada.
+
+---
+
+### 📞 Contato
+<img src="./img/pag-contato.webp" height="500"/>
+
+Uma página limpa e objetiva que reúne todos os canais de comunicação oficiais da empresa. Ela permite que usuários, parceiros ou investidores entrem em contato direto com a equipe de suporte e administração do projeto.
+
+---
+
+### 👥 Quem Somos
+<img src="./img/pag-quem-somos.webp" height="500"/>
+
+Espaço dedicado à apresentação do time responsável pela ideia, design e desenvolvimento da SoulUp.
+
+---
+
+### 🔐 Login e Autenticação
+<img src="./img/pag-login.webp" height="500"/>
+<img src="./img/pag-logado.webp" height="500"/>
+
+A jornada de acesso conta com a tela de login padrão, onde o usuário insere suas credenciais para acessar a conta. Para garantir a consistência das regras de negócio e segurança, o sistema inclui um modal de tratamento de erro que é disparado caso haja uma validação de idade inválida durante o preenchimento dos dados. 
+
+<p>Após a autenticação bem-sucedida, o usuário é redirecionado para a página inicial em seu estado logado, que passa a exibir o painel personalizado com seu nome ao invés do botão de login.</p>
 ---
 
 ## ⚔️ Desafios 
