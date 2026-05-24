@@ -40,49 +40,11 @@ O desenvolvimento deste projeto foi realizado utilizando as seguintes ferramenta
 
 ```text
 📁 projeto-soulup
-┣ 📂 assets
 ┃ ┣ 📂 css
-┃ ┃ ┣ 📄 style.css
-┃ ┃ ┣ 📄 index.css
-┃ ┃ ┣ 📄 solucao.css
-┃ ┃ ┣ 📄 sobre.css
-┃ ┃ ┣ 📄 integrantes.css
-┃ ┃ ┣ 📄 contato.css
-┃ ┃ ┗ 📄 faq.css
 ┃ ┣ 📂 imagens
-┃ ┃ ┣ 📄 1.1-img-integrante-ana.png
-┃ ┃ ┣ 📄 1.1-img-integrante-enzo.png
-┃ ┃ ┣ 📄 1.1-img-integrante-larissa.png
-┃ ┃ ┣ 📄 1.1-img-integrante-luis.png
-┃ ┃ ┣ 📄 1.1-img-integrante-pedro.png
-┃ ┃ ┣ 📄 img-banner.png
-┃ ┃ ┣ 📄 img-celular.webp
-┃ ┃ ┣ 📄 img-faq.webp
-┃ ┃ ┣ 📄 img-icon.ico
-┃ ┃ ┣ 📄 img-integrante-ana.webp
-┃ ┃ ┣ 📄 img-integrante-enzo.png
-┃ ┃ ┣ 📄 img-integrante-larissa.png
-┃ ┃ ┣ 📄 img-integrante-luis.webp
-┃ ┃ ┣ 📄 img-integrante-pedro.png
-┃ ┃ ┣ 📄 img-logo-github.png
-┃ ┃ ┣ 📄 img-logo-linkedin.webp
-┃ ┃ ┣ 📄 img-natureza.webp
-┃ ┃ ┣ 📄 img-oceano.webp
-┃ ┃ ┣ 📄 img-oceano2.webp
-┃ ┃ ┣ 📄 img-paisagem.webp
-┃ ┃ ┗ 📄 logo-soulup.webp
-┃ ┗ 📂 js
-┃ ┃ ┣ 📄 auth-check.js
-┃ ┃ ┣ 📄 btn-mobile.js
-┃ ┃ ┣ 📄 login.js
-┃ ┃ ┣ 📄 modal.js
-┃ ┃ ┗ 📄 faq.js
+┃ ┣ 📂 js
+┃ ┣ 📂 paginas
 ┣ 📂 paginas
-┃ ┣ 📄 solucao.html
-┃ ┣ 📄 sobre.html
-┃ ┣ 📄 integrantes.html
-┃ ┣ 📄 contato.html
-┃ ┗ 📄 faq.html
 ┣ 📄 index.html
 ┗ 📄 README.md
 ````
