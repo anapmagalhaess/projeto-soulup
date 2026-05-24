@@ -204,6 +204,9 @@ main {
 .calculator__title i {
     color: var(--cor-azul);
 }
+.eco-progress-text, .eco-badge {
+    color: var(--cor-azul);
+}
 
 .calculator__description {
     color: #555;
