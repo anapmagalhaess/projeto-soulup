@@ -40,7 +40,7 @@ main {
 }
 
 .linha1 {
-    color: #2c5c5c;
+    color: var(--cor-azul-escuro);
 }
 
 .linha2 {
@@ -107,12 +107,12 @@ main {
 }
 
 .titulo-banner {
-    font-size: clamp(18px, 2.5vw, 26px);
+    font-size: clamp(18px, 2.5vw, 26px); /*clamp(minimo, ideal, maximo)*/
     font-weight: 700;
 }
 
 .conteudo__p {
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(14px, 1.5vw, 16px); /*utiliza unidades relativas vw, rem ou % para criar a fluidez na pag.*/
     margin-bottom: 15px;
     max-width: 400px;
 }
@@ -131,7 +131,7 @@ main {
 
 .acoes__header h2 {
     font-size: clamp(24px, 3vw, 32px);
-    color: #2c5c5c;
+    color: var(--cor-azul-escuro);
     margin-bottom: 15px;
 }
 
@@ -186,7 +186,7 @@ main {
 
 .acao-card h3 {
     font-size: 20px;
-    color: #2c5c5c;
+    color: var(--cor-azul-escuro);
     margin: 0;
 }
 
@@ -286,7 +286,7 @@ main {
     width: min(1700px, 95%);
     margin: 40px auto 60px;
     padding: 40px 20px;
-    background: #ffffff;
+    background: var(--cor-branco);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
@@ -298,7 +298,7 @@ main {
 
 .recompensas__header h2 {
     font-size: clamp(24px, 3vw, 32px);
-    color: #2c5c5c;
+    color: var(--cor-azul-escuro);
     margin-bottom: 10px;
 }
 
@@ -314,7 +314,7 @@ main {
 }
 
 .recompensas-grupo {
-    background: #f8ffff;
+    background: var(--cor-branco);
     border-radius: 15px;
     padding: 30px;
     border: 1px solid #e0f2f2;
@@ -341,7 +341,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
+    background: var(--cor-branco);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.03);
