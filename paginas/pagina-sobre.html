@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="../js/auth-check.js" defer></script>
     <script src="../js/btn-mobile.js" defer></script>
+    <script src="../js/btn-resgatar.js" defer></script>
 </head>
 
 <body>
@@ -37,12 +38,15 @@
             </h1>
 
             <p class="hero__p">
-                A SoulUp nasce com o propósito de transformar a conscientização ambiental em ação prática e mensurável. Nós acreditamos 
-                que grandes mudanças começam com pequenos hábitos diários, e que a tecnologia deve ser o catalisador que torna a sustentabilidade 
-                acessível, envolvente e vantajosa para todos, conectando a responsabilidade ecológica ao bem-estar social e econômico.
+                A SoulUp nasce com o propósito de transformar a conscientização ambiental em ação prática e mensurável.
+                Nós acreditamos
+                que grandes mudanças começam com pequenos hábitos diários, e que a tecnologia deve ser o catalisador que
+                torna a sustentabilidade
+                acessível, envolvente e vantajosa para todos, conectando a responsabilidade ecológica ao bem-estar
+                social e econômico.
             </p>
 
-            <a href='./pagina-solucao.html' class="hero__button">Um pouco mais sobre o nosso projeto.. ⟶</a>
+            <a href="#sobre-o-projeto" class="hero__button">Um pouco mais sobre o nosso projeto.. ⟶</a>
 
         </section>
 
@@ -50,21 +54,143 @@
             <img src="../img/img-natureza.webp" alt="Natureza" class="banner__img">
 
             <div class="conteudo">
-                <h2 class="titulo-banner">
+                <h2 id="sobre-o-projeto" class="titulo-banner">
                     Um futuro sustentável
                     <span>começa com você</span>
                 </h2>
 
                 <p class="conteudo__p">
-                    A dificuldade em medir o impacto individual e o sentimento de que "uma ação isolada não faz diferença" geram desengajamento. O mercado carece de ferramentas que não apenas 
+                    A dificuldade em medir o impacto individual e o sentimento de que "uma ação isolada não faz
+                    diferença" geram desengajamento. O mercado carece de ferramentas que não apenas
                     ensinem sobre o meio ambiente, mas que validem, unam e recompensem as pessoas por suas atitudes.
                 </p>
+            </div>
+        </section>
+
+        <section class="acoes-sustentaveis">
+            <div class="acoes__header">
+                <h2>Suas Atitudes Verdes Valem Muito!</h2>
+                <p>Na SoulUp, cada ação sustentável que você realiza é recompensada com <strong>Pontos Soul</strong>.
+                    <br> Veja um pouco pontuar na nossa plataforma.</p>
+            </div>
+            <div class="acoes__grid">
+                <div class="acao-card">
+                    <div class="acao-card__icon">🚴</div>
+                    <h3>Mobilidade Limpa</h3>
+                    <p>Vá de bicicleta, patinete ou transporte público, menos emissão de carbono, é mais para nosso
+                        planeta.</p>
+                    <span class="acao-card__pontos">+50 Pontos Soul</span>
+                </div>
+                <div class="acao-card">
+                    <div class="acao-card__icon">👚</div>
+                    <h3>Doar</h3>
+                    <p>Não descarte suas roupas, repasse para quem possa precisar!</p>
+                    <span class="acao-card__pontos">+30 Pontos Soul</span>
+                </div>
+                <div class="acao-card">
+                    <div class="acao-card__icon">💡</div>
+                    <h3>Consumo Consciente</h3>
+                    <p>Redução do uso de energia e água no dia a dia.</p>
+                    <span class="acao-card__pontos">+40 Pontos Soul</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="ia-impacto">
+            <div class="ia-impacto__conteudo">
+                <div class="ia-impacto__texto">
+                    <h2>Inteligência Artificial a Favor do Planeta 🤖</h2>
+                    <p>Nossa plataforma utiliza <strong>Inteligência Artificial</strong> para analisar o registro de
+                        cada ação sustentável enviada por você.</p>
+                    <p>A IA avalia o impacto ambiental real de cada atitude e distribui a pontuação de forma
+                        inteligente. Quanto maior a complexidade e o benefício para o mundo, mais <strong>Pontos
+                            Soul</strong> você acumula para trocar por recompensas exclusivas!</p>
+                </div>
+                <div class="ia-impacto__destaque">
+                    <div class="destaque-item">
+                        <span class="destaque-icon">👁️</span>
+                        <span>Análise e Validação </span>
+                    </div>
+                    <div class="destaque-item">
+                        <span class="destaque-icon">🌍</span>
+                        <span>Cálculo de Impacto</span>
+                    </div>
+                    <div class="destaque-item">
+                        <span class="destaque-icon">🏆</span>
+                        <span>Pontuação Justa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recompensas-menu">
+            <div class="recompensas__header">
+                <h2>Troque seus Pontos Soul!</h2>
+                <p>Acumule pontos e escolha recompensas exclusivas focadas em impacto sustentável.</p>
+            </div>
+
+            <div class="recompensas__container">
+                <!-- Recompensas Digitais -->
+                <div class="recompensas-grupo">
+                    <h3 class="grupo-titulo"><span class="icon">🌐</span> Recompensas Digitais</h3>
+                    <div class="recompensas-lista">
+                        <div class="recompensa-card">
+                            <div class="recompensa-info">
+                                <h4>💰 PIX</h4>
+                                <p>Receba o valor direto na sua conta.</p>
+                            </div>
+                            <button class="btn-resgatar">Resgatar</button>
+                        </div>
+                        <div class="recompensa-card">
+                            <div class="recompensa-info">
+                                <h4>⚡ Desconto na Conta de Luz</h4>
+                                <p>Economia inteligente e sustentável.</p>
+                            </div>
+                            <button class="btn-resgatar">Resgatar</button>
+                        </div>
+                        <div class="recompensa-card">
+                            <div class="recompensa-info">
+                                <h4>🛍️ Parceiros Eco</h4>
+                                <p>Vouchers exclusivos em lojas parceiras.</p>
+                            </div>
+                            <button class="btn-resgatar">Resgatar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recompensas Tangíveis -->
+                <div class="recompensas-grupo">
+                    <h3 class="grupo-titulo"><span class="icon">📦</span> Recompensas Tangíveis</h3>
+                    <div class="recompensas-lista">
+                        <div class="recompensa-card">
+                            <div class="recompensa-info">
+                                <h4>👜 SoulBag (Ecobag)</h4>
+                                <p>Leve o conceito de impacto com você.</p>
+                            </div>
+                            <button class="btn-resgatar">Resgatar</button>
+                        </div>
+                        <div class="recompensa-card">
+                            <div class="recompensa-info">
+                                <h4>💧 Garrafa Soul</h4>
+                                <p>Hidratação sustentável em material premium.</p>
+                            </div>
+                            <button class="btn-resgatar">Resgatar</button>
+                        </div>
+                        <div class="recompensa-card">
+                            <div class="recompensa-info">
+                                <h4>🥤 Canudo de Metal</h4>
+                                <p>Reduza plásticos descartáveis no seu dia a dia.</p>
+                            </div>
+                            <button class="btn-resgatar" id="btn-resgatar">Resgatar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <footer>
             <p class="footer__p">&copy; 2026 SOUL UP. Todos os direitos reservados.</p>
         </footer>
-</body>
+    </body>
 
 </html>

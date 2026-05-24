@@ -58,7 +58,7 @@ main {
 
 .hero__button {
     background: #2bb3b3;
-    color: white;
+    color: var(--cor-branco);
     border: none;
     padding: 12px 25px;
     font-size: 16px;
@@ -101,7 +101,7 @@ main {
     justify-content: center;
     align-items: flex-end;
     padding: clamp(15px, 4vw, 40px);
-    color: white;
+    color: var(--cor-branco);
     text-align: right;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent);
 }
@@ -115,6 +115,280 @@ main {
     font-size: clamp(14px, 1.5vw, 16px);
     margin-bottom: 15px;
     max-width: 400px;
+}
+
+/* AÇÕES SUSTENTÁVEIS */
+
+.acoes-sustentaveis {
+    width: min(1700px, 95%);
+    margin: 40px auto;
+    padding: 40px 20px;
+    background: var(--cor-branco);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.acoes__header h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    color: #2c5c5c;
+    margin-bottom: 15px;
+}
+
+.acoes__header p {
+    font-size: clamp(16px, 1.8vw, 18px);
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.acoes__header strong {
+    color: #2bb3b3;
+}
+
+.acoes__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.acao-card {
+    background: var(--cor-branco);
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.acao-card:hover {
+    transform: translateY(-10px);
+    border-color: #2bb3b3;
+    box-shadow: 0 15px 30px rgba(43, 179, 179, 0.15);
+}
+
+.acao-card__icon {
+    font-size: 48px;
+    background: var(--cor-branco);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.acao-card h3 {
+    font-size: 20px;
+    color: #2c5c5c;
+    margin: 0;
+}
+
+.acao-card p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.acao-card__pontos {
+    background: #2bb3b3;
+    color: var(--cor-branco);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* IA IMPACTO */
+.ia-impacto {
+    width: min(1700px, 95%);
+    margin: 40px auto;
+    padding: 50px 30px;
+    background: linear-gradient(135deg, var(--cor-azul), var(--cor-azul-bebe));
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    color: var(--cor-branco);
+}
+
+.ia-impacto__conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ia-impacto__texto {
+    flex: 1 1 500px;
+}
+
+.ia-impacto__texto h2 {
+    font-size: clamp(26px, 3.5vw, 36px);
+    margin-bottom: 20px;
+    color: var(--cor-branco);
+}
+
+.ia-impacto__texto p {
+    font-size: clamp(16px, 1.8vw, 18px);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: var(--cor-branco)2;
+}
+
+.ia-impacto__texto strong {
+    color: var(--cor-branco);
+    font-weight: 700;
+}
+
+.ia-impacto__destaque {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--cor-ciano-2);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.destaque-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.destaque-item:hover {
+    transform: translateX(10px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.destaque-icon {
+    font-size: 24px;
+}
+
+/* RECOMPENSAS MENU */
+.recompensas-menu {
+    width: min(1700px, 95%);
+    margin: 40px auto 60px;
+    padding: 40px 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.recompensas__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recompensas__header h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    color: #2c5c5c;
+    margin-bottom: 10px;
+}
+
+.recompensas__header p {
+    font-size: clamp(16px, 1.8vw, 18px);
+    color: #555;
+}
+
+.recompensas__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.recompensas-grupo {
+    background: #f8ffff;
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid #e0f2f2;
+}
+
+.grupo-titulo {
+    font-size: 22px;
+    color: #2c5c5c;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed #b3dadb;
+}
+
+.recompensas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recompensa-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+    gap: 15px;
+}
+
+.recompensa-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(43, 179, 179, 0.1);
+}
+
+.recompensa-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #2c5c5c;
+}
+
+.recompensa-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.btn-resgatar {
+    background: #2bb3b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-resgatar:hover {
+    background: #1f8a8a;
+}
+
+.btn-resgatar.resgatado {
+    background: #e0e0e0;
+    color: #888;
+    cursor: not-allowed;
+    transform: scale(0.95);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* TABLET */
