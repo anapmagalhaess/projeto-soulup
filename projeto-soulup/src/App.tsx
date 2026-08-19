@@ -1,5 +1,3 @@
 export default function App() {
-  <div>
-    <h1>Teste</h1>
-  </div>
+  return null
 }
