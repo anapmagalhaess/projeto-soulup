@@ -1,6 +1,9 @@
+import PaginaAtiva from "../Pagina-Ativa/Pagina-Ativa";
+
 export default function(){
     return(
         <header className="header__container">
+        <PaginaAtiva/>
             <img src="./img/logo-soulup.webp" alt="SoulUp" className="header__logo"/>
             <nav className="nav__container">
                 <button id="btn-mobile">☰</button>
