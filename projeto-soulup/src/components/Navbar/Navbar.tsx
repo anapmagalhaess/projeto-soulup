@@ -1,23 +1,30 @@
-import PaginaAtiva from "../Pagina-Ativa/Pagina-Ativa";
+import { NavLink, Link } from 'react-router-dom';
 
-export default function(){
-    return(
+export default function Navbar() {
+    
+    //Adição de estilo ao link com base na página atual (condição simples)
+    const definirClasse = ({isActive}: {isActive: boolean}) => isActive ? "nav__link nav__link--active" : "nav__link";
+
+    return (
         <header className="header__container">
-        <PaginaAtiva/>
-            <img src="./img/logo-soulup.webp" alt="SoulUp" className="header__logo"/>
-            <nav className="nav__container">
-                <button id="btn-mobile">☰</button>
-                <div className="nav__menu">
-                    <a href="./index.html" className="nav__link">Página Inicial</a>
-                    <a href="./paginas/pagina-sobre.html" className="nav__link">Sobre</a>
-                    <a href="./paginas/pagina-faq.html" className="nav__link">FAQ</a>
-                    <a href="./paginas/pagina-desafio.html" className="nav__link">Desafios</a>
-                    <a href="./paginas/pagina-solucao.html" className="nav__link">Soluções</a>
-                    <a href="./paginas/pagina-contato.html" className="nav__link">Contato</a>
-                    <a href="./paginas/pagina-quem-somos.html" className="nav__link">Quem somos?</a>
-                </div>
-                <a href="./paginas/pagina-login.html" className="nav-btn__login">Entrar</a>
-            </nav>
+        <Link to="/">
+        <img src="/img/logo-soulup.webp" alt="SoulUp" className="header__logo" />
+        </Link>
+
+        <nav className="nav__container">
+            <button id="btn-mobile">☰</button>
+            <div className="nav__menu">
+                {/* substituição do 'a href' por 'NavLink to' com rotas simples que iniciam-se com '/' */}
+                <NavLink to="/" className={definirClasse}>Página Inicial</NavLink>
+                <NavLink to="/pagina-sobre" className={definirClasse}>Sobre</NavLink>
+                <NavLink to="/pagina-faq" className={definirClasse}>FAQ</NavLink>
+                <NavLink to="/pagina-desafio" className={definirClasse}>Desafios</NavLink>
+                <NavLink to="/pagina-solucao" className={definirClasse}>Soluções</NavLink>
+                <NavLink to="/pagina-contato" className={definirClasse}>Contato</NavLink>
+                <NavLink to="/pagina-quem-somos" className={definirClasse}>Quem somos?</NavLink>
+            </div>
+            <NavLink to="/pagina-login" className="nav-btn__login">Entrar</NavLink>
+        </nav>
         </header>
     );
 }
