@@ -1,4 +1,6 @@
 import { NavLink, Link } from 'react-router-dom';
+//img import (/components/src/img/)
+import logoSoulup from '../../img/logo-soulup.webp';
 
 export default function Navbar() {
     
@@ -8,7 +10,7 @@ export default function Navbar() {
     return (
         <header className="header__container">
         <Link to="/">
-        <img src="/img/logo-soulup.webp" alt="SoulUp" className="header__logo" />
+        <img src={logoSoulup} alt="SoulUp" className="header__logo" />
         </Link>
 
         <nav className="nav__container">
