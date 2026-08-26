@@ -60,6 +60,6 @@ if (form) {
         //Caso tudo estiver correto
         sessionStorage.setItem('usuarioLogado', 'true'); //Armazena dados por sessao
         sessionStorage.setItem('nomeUsuario', nome.split(' ')[0]); //Resgata o primeiro nome
-        window.location.href = "../index.html"; //Leva o usuário para página inicial
+        window.location.href = "../../index.html"; //Leva o usuário para página inicial
     });
 }
