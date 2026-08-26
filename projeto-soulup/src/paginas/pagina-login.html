@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/pag-login.css" />
+    <link rel="shortcut icon" href="../img/img-icon.ico" type="image/x-icon" />
+    <!--==== Fontes ====-->
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!--==== Scripts ====-->
+    <script src="../js/login.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/auth-check.js" defer></script>
+    <script src="../js/btn-mobile.js" defer></script>
+</head>
+
+<body class="page-login">
+    <!--==== Header ====-->
+    <header class="header-container">
+        <!--==== Animação ====-->
+        <span class="nav-brand"> soul <span class="nav-brand-badge">UP</span></span> 
+        <nav class="nav-container">
+            <button id="btn-mobile">☰</button>
+            <div class="nav-menu">
+                <a href="../css/index.css" class="nav-link">início</a>
+                <a href="../css/pag-sobre.css" class="nav-link">sobre</a>
+                <a href="../css/pag-faq.css" class="nav-link">faq</a>
+                <a href="../css/pag-desafio.css" class="nav-link">desafios</a>
+                <a href="../css/pag-solucao.css" class="nav-link">soluções</a>
+                <a href="../css/pag-contato.css" class="nav-link">contato</a>
+                <a href="../css/pag-quem-somos.css" class="nav-link">quem somos?</a>
+                <a href="../css/pag-login.css" class="nav-link nav-btn-login nav-link--active">entrar</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <div class="pagina">
+      <div class="form-painel">
+        <div class="form-head">
+          <span class="eyebrow">✦ cadastro rapidinho</span>
+          <h1 class="form-title">bora criar sua<br />conta soul up?</h1>
+          <p class="form-sub">
+            2 minutos e você já pode começar a trocar atitude sustentável por
+            recompensa de verdade.
+          </p>
+        </div>
+
+        <form>
+          <div class="field">
+            <label for="pais">País</label>
+            <select id="pais">
+              <option value="">Selecione</option>
+              <option>Brasil</option>
+              <option>Portugal</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="doc">Documento</label>
+            <input id="doc" type="text" min="8" max="15" placeholder="CPF ou documento de identificação"/>
+          </div>
+
+          <div class="field">
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" min="2" max="120" placeholder="Como podemos te chamar"/>
+          </div>
+
+          <div class="row-2">
+            <div class="field">
+              <label for="nasc">Data de nascimento</label>
+              <input id="nasc" type="date"/>
+            </div>
+
+            <div class="field">
+              <label for="cel">Celular</label>
+              <input id="cel" type="tel" min="11" max="12" placeholder="(00) 00000-0000"/>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" min="5" max="30" placeholder="seuemail@email.com"/>
+          </div>
+
+          <label class="terms">
+            <input type="checkbox"/>
+            <span>Li e aceito os <a href="#">termos e condições</a> do Programa
+              Soul Up.</span>
+          </label>
+
+          <button class="submit-btn" type="submit">criar minha conta</button>
+        </form>
+
+        <div class="form-footer">soul up · atitude vira recompensa</div>
+      </div>
+      <!-- == PAINEL DIREITO : MENSAGEM DE IMPACTO == -->
+
+      <div class="impact-panel">
+        <div class="impact-top">
+        </div>
+        <div class="impact-message">
+          <span class="highlight">✦ programa soul up</span>
+          <h2>seu clique é <span class="mark"><span class="text1-highlight">digital</span></span>,<br/>mas o impacto é
+            <span class="mark mark-alt"><span class="text2-highlight">real</span></span>.</h2>
+          <p>curtiu, participou, mudou de hábito? isso conta ponto. e ponto aqui
+          vira recompensa de verdade — sem enrolação.</p>
+
+        <!-- == STATUS == -->
+        </div>
+          <div class="stat-row">
+            <div class="stat">
+              <span class="num">12k+</span>
+              <span class="label">ações registradas</span>
+            </div>
+            <div class="stat">
+              <span class="num">3,8k</span>
+              <span class="label">recompensas resgatadas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+    <footer>
+      <p class="footer-p">&copy; 2026 SOUL UP. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
