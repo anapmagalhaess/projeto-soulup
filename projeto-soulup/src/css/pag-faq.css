@@ -128,16 +128,6 @@ body {
     border: 1px solid #1aa7a1;
 }
 
-.footer__p {
-    color: var(--cor-branco);
-<<<<<<< HEAD
-=======
-    text-align: center;
-    padding: 20px;
-    width: 100%;
->>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
-}
-
 @media (max-width: 1024px) {
 
     .faq {
@@ -155,26 +145,13 @@ body {
     }
 
     .faq-left img {
-<<<<<<< HEAD
         width: 100%;
         max-height: 300px; /* evita imagem gigante */
         object-fit: cover;
-=======
-        width: 80%;
-        max-width: 400px;
-        height: auto;
-        max-height: 280px; /* mantém a imagem num tamanho agradavel sem empurrar o conteúdo principal p baixo */
-        object-fit: contain; /* evita que a imagem seja cortada */
->>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
     }
 
     .faq-right {
         padding: 20px;
-<<<<<<< HEAD
-=======
-        width: 70%;
-        align-self: center;
->>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32
     }
 
     .faq__titulo {
@@ -193,31 +170,9 @@ body {
 
     .btn-faq {
         display: block;
-<<<<<<< HEAD
         width: 100%;
         text-align: center;
         padding: 12px;
         margin-top: 10px;
     }
 }
-=======
-        width: 70%;
-        text-align: center;
-        padding: 12px;
-        margin: 10px auto;
-    }
-}
-    @media (max-width: 768px) {
-        .duvida {
-            font-size: 23px;
-        }
-}
-    @media (max-width: 480px) {
-        .duvida {
-            font-size: 20px;
-        }
-        .faq__titulo {
-            font-size: 30px;
-        }
-}
->>>>>>> dcf7d29b9d1691159403fb6eea9c2fcd4f3adc32

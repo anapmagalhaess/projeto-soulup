@@ -15,7 +15,7 @@ export default function App() {
         <title>Soul Up</title>
         <link rel="stylesheet" href="./css/index.css"/>
         <link rel="shortcut icon" href={iconSoulUp} type="image/x-icon"/>
-        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
         <script src="./js/auth-check.js" defer></script>
         <script src="./js/btn-mobile.js" defer></script>

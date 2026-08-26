@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nome = sessionStorage.getItem('nomeUsuario');
 
    //resgata elementos da pagina atual
-    const loginBtn = document.querySelector('.nav-btn__login');
+    const loginBtn = document.querySelector('.nav-btn-login');
 
     //executa apenas se o usuario estiver logado e se existir os elementos na pagina
     if (isLogado === 'true' && loginBtn && nome) {
