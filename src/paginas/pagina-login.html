@@ -39,61 +39,63 @@
     <main>
     <div class="pagina">
       <div class="form-painel">
-        <div class="form-head">
-          <span class="eyebrow">✦ cadastro rapidinho</span>
-          <h1 class="form-title">bora criar sua<br />conta soul up?</h1>
-          <p class="form-sub">
-            2 minutos e você já pode começar a trocar atitude sustentável por
-            recompensa de verdade.
-          </p>
+        <div class="form-content">
+          <div class="form-head">
+            <span class="eyebrow">✦ cadastro rapidinho</span>
+            <h1 class="form-title">bora criar sua<br />conta soul up?</h1>
+            <p class="form-sub">
+              2 minutos e você já pode começar a trocar atitude sustentável por
+              recompensa de verdade.
+            </p>
+          </div>
+
+          <form>
+            <div class="field">
+              <label for="pais">País</label>
+              <select id="pais">
+                <option value="">Selecione</option>
+                <option>Brasil</option>
+                <option>Portugal</option>
+                <option>Outro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="doc">Documento</label>
+              <input id="doc" type="text" min="8" max="15" placeholder="CPF ou documento de identificação"/>
+            </div>
+
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input id="nome" type="text" min="2" max="120" placeholder="Como podemos te chamar"/>
+            </div>
+
+            <div class="row-2">
+              <div class="field">
+                <label for="nasc">Data de nascimento</label>
+                <input id="nasc" type="date"/>
+              </div>
+
+              <div class="field">
+                <label for="cel">Celular</label>
+                <input id="cel" type="tel" min="11" max="12" placeholder="(00) 00000-0000"/>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" type="email" min="5" max="30" placeholder="seuemail@email.com"/>
+            </div>
+
+            <label class="terms">
+              <input type="checkbox"/>
+              <span>Li e aceito os <a href="#">termos e condições</a> do Programa
+                Soul Up.</span>
+            </label>
+
+            <button class="submit-btn" type="submit">criar minha conta</button>
+          </form>
         </div>
-
-        <form>
-          <div class="field">
-            <label for="pais">País</label>
-            <select id="pais">
-              <option value="">Selecione</option>
-              <option>Brasil</option>
-              <option>Portugal</option>
-              <option>Outro</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="doc">Documento</label>
-            <input id="doc" type="text" min="8" max="15" placeholder="CPF ou documento de identificação"/>
-          </div>
-
-          <div class="field">
-            <label for="nome">Nome completo</label>
-            <input id="nome" type="text" min="2" max="120" placeholder="Como podemos te chamar"/>
-          </div>
-
-          <div class="row-2">
-            <div class="field">
-              <label for="nasc">Data de nascimento</label>
-              <input id="nasc" type="date"/>
-            </div>
-
-            <div class="field">
-              <label for="cel">Celular</label>
-              <input id="cel" type="tel" min="11" max="12" placeholder="(00) 00000-0000"/>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="email">E-mail</label>
-            <input id="email" type="email" min="5" max="30" placeholder="seuemail@email.com"/>
-          </div>
-
-          <label class="terms">
-            <input type="checkbox"/>
-            <span>Li e aceito os <a href="#">termos e condições</a> do Programa
-              Soul Up.</span>
-          </label>
-
-          <button class="submit-btn" type="submit">criar minha conta</button>
-        </form>
 
         <div class="form-footer">soul up · atitude vira recompensa</div>
       </div>
