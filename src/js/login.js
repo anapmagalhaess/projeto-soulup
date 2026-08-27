@@ -25,6 +25,19 @@ form.addEventListener('submit', (event) => {  //Ao dar enter no botão, irá exe
     let idade = hoje.getFullYear() - nascimento.getFullYear();
     const mes = hoje.getMonth() - nascimento.getMonth(); 
 
+    // Verificação
+    document.addEventListener("DOMContentLoaded", () =>{
+    const usuarioLogado = sessionStorage.getItem('usuarioLogado');
+    const nomeUsuario = sessionStorage.getItem('nomeUsuario');
+    const linkLogin = document.getElementById('link-login');
+
+    if(usuarioLogado === 'true' && linkLogin){
+        linkLogin.textContent = `perfil (${nomeUsuario})`;
+        linkLogin.href = "../pages/perfil.html";
+        linkLogin.classList.remove('nav-link--active');
+    }
+    });
+
     //Verifica se o mês do aniversário do usuário já passou
     if (mes < 0 || (mes == 0 && hoje.getDate() < nascimento.getDate())) {
         idade--;                                                        // mes < 0 = aniversario ainda nao chegou, logo decrementa a idade
