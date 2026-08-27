@@ -82,6 +82,7 @@
   }
 
   /* ---------------- HEADER / NAVBAR ---------------- */
+ /* ---------------- HEADER / NAVBAR ---------------- */
   .header-container {
     width: 100%;
     min-height: 75px;
@@ -144,6 +145,8 @@
     cursor: pointer;
   }
   #btn-mobile.ativo { background: var(--cor-branco); color: var(--cor-azul-bebe); }
+
+  /* Links com o efeito da barrinha carregando embaixo */
   .nav-link {
     position: relative;
     text-decoration: none;
@@ -168,15 +171,58 @@
   .nav-menu:not(:has(.nav-link:hover)) .nav-link--active::after {
     transform: scaleX(1);
   }
+
+  /* Botão de destaque/CTA mantendo o formato original */
   .nav-cta {
-    padding: 10px 20px; border-radius: 999px;
-    background: var(--coral); color: var(--cor-branco);
-    font-family: var(--fonte-titulo); font-weight: 600; font-size: 14px;
-    box-shadow: 0 4px 0 var(--coral-deep);
-    transition: transform .12s ease, box-shadow .12s ease;
+    position: relative;
+    text-decoration: none;
+    color: var(--cor-azul);
+    font-size: 15px;
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    padding: 10px 5px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
   }
-  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--coral-deep); }
-  .nav-cta:focus-visible { outline: 2px solid var(--cor-azul-escuro); outline-offset: 3px; }
+  
+  .nav-cta::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 5px;
+    width: 100%; height: 1px;
+    background-color: var(--cor-azul);
+    transform: scaleX(0);
+    transition: 0.3s;
+  }
+  
+  .nav-cta:hover::after,
+  .nav-menu:not(:has(.nav-cta:hover)) .nav-cta--active::after,
+  .nav-cta.nav-link--active::after {
+    transform: scaleX(1);
+  }
+  
+  .nav-cta:focus-visible { 
+    outline: 2px solid var(--cor-azul-escuro); 
+    outline-offset: 3px; 
+  }
+
+  @media (max-width: 900px) {
+    #btn-mobile { display: inline-flex; }
+    .nav-menu {
+      display: none;
+      position: absolute; top: 70px; right: 20px;
+      flex-direction: column; align-items: flex-end; gap: 14px;
+      background: var(--cor-branco);
+      padding: 20px 24px; border-radius: 16px;
+      box-shadow: 0 12px 28px -12px rgba(32,111,116,0.35);
+    }
+    .nav-menu.aberto { display: flex; }
+    .header-container { padding: 0 24px; }
+  }
 
   @media (max-width: 900px) {
     #btn-mobile { display: inline-flex; }
