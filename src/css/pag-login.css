@@ -496,3 +496,18 @@ form {
     outline: 2px solid var(--cor-coral-escuro);
     outline-offset: 3px;
   }
+
+  /* == FOOTER DA PAGINA LOGIN == */
+  .page-login footer {
+    padding: 32px 54px;
+    background: var(--cor-creme);
+    border-top: 1px solid var(--cor-creme-destaque);
+  }
+
+  .page-login .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
