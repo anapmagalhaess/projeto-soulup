@@ -284,13 +284,6 @@ form {
     outline-offset: 3px; 
   }
 
-  .form-footer {
-    padding-top: 32px;
-    font-size: 12.5px;
-    color: #A9BDB5;
-    font-weight: 600;
-  }
-
   /* == PAINEL ESQUERDO == */
 
   .impact-panel {
