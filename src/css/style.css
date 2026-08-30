@@ -6,19 +6,24 @@
 }
 /*paleta de cores, fonte e gradiente*/
 :root {
-  --cor-ciano: #41c6c4;
-  --cor-azul: #13969f;
-  --cor-turquesa: #459796;
-  --cor-azul-bebe: #99d1d5;
-  --cor-branco: #ffffff;
-  --cor-azul-escuro: #206f74;
-  --cor-ciano-2: #35b9b7;
-  --cor-coral:       #FF6B57;
-  --cor-coral-escuro:  #E4523F;
-  --cor-roxo-escuro:        #170F2E;
-  --cor-creme:       #FFFBF1;
-  --cor-creme-destaque:  #F0E7D4;
-  --fonte-titulo: 'Fredoka', sans-serif;
+  --cor-ciano:                      #41c6c4;
+  --cor-azul:                       #13969f;
+  --cor-turquesa:                   #459796;
+  --cor-azul-bebe:                  #99d1d5;
+  --cor-branco:                     #ffffff;
+  --cor-azul-escuro:                #206f74;
+  --cor-ciano-2:                    #35b9b7;
+  --cor-coral:                      #FF6B57;
+  --cor-coral-escuro:               #E4523F;
+  --cor-roxo-escuro:                #170F2E;
+  --cor-creme:                      #FFFBF1;
+  --cor-creme-destaque:             #F0E7D4;
+  --cor-plano-de-fundo:             linear-gradient(70deg, #f0ffff 40%, #b3dadb);
+  --fonte-titulo:                   'Fredoka', sans-serif;
+  --fonte-texto:                    "Hind", sans-serif;
+}
+html {
+  scroll-behavior: smooth; /*uma transição suave e animada de deslize até o outro ponto de navegação.*/
 }
 body {
     user-select: none;
