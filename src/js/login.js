@@ -17,11 +17,12 @@ if (form) {
         const pais = document.getElementById('pais').value;
         const doc = document.getElementById('doc').value;
         const nome = document.getElementById('nome').value;
+        const user = document.getElementById('username').value;
         const dataNasc = document.getElementById('nasc').value;
         const cel = document.getElementById('cel').value;
         const email = document.getElementById('email').value;
         const terms = document.getElementById('terms').checked;
-        
+
         //validação de campos vazios
         if (pais.trim() === '' || doc.trim() === '' || nome.trim() === '' || dataNasc === '' || cel.trim() === '' || email.trim() === '') {
             alterarTexto('modal-title', "Atenção!");
@@ -57,9 +58,18 @@ if (form) {
             return;
         }
 
-        //Caso tudo estiver correto
-        sessionStorage.setItem('usuarioLogado', 'true'); //Armazena dados por sessao
-        sessionStorage.setItem('nomeUsuario', nome.split(' ')[0]); //Resgata o primeiro nome
-        window.location.href = "../../index.html"; //Leva o usuário para página inicial
+        
+        //Caso tudo estiver correto, salva dados na memoria do navegador
+        //Armazena dados por sessao
+        sessionStorage.setItem('usuarioLogado', 'true'); 
+        sessionStorage.setItem('nomeUsuario', nome);
+        sessionStorage.setItem('userUsuario', user);
+
+        //Leva o usuário para página inicial
+        window.location.href = "../../index.html";
+
     });
 }
+
+
+
