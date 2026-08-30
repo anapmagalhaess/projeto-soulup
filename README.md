@@ -36,6 +36,7 @@ O desenvolvimento deste projeto foi realizado utilizando as seguintes ferramenta
   <img src="https://skillicons.dev/icons?i=ts" height="52" alt="TypeScript logo" />
   <img src="https://skillicons.dev/icons?i=vite" height="52" alt="Vite logo" />
   <img src="https://skillicons.dev/icons?i=nodejs" height="52" alt="Node.js logo" />
+  <img src="https://skillicons.dev/icons?i=tailwind" height="52" alt="Tailwind logo" />
   <img src="https://skillicons.dev/icons?i=vercel" height="52" alt="Vercel logo" />
 </div>
   
