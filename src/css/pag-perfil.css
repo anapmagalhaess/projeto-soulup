@@ -181,25 +181,6 @@ section {
   margin-right: 10px;
 }
 
-.btn-edit-prof {
-  padding: 12px 20px; 
-  border-radius: 14px;
-  border: 2px dashed var(--cor-azul);
-  background: transparent; 
-  color: var(--cor-azul-escuro);
-  font-family: var(--fonte-titulo); 
-  font-weight: 600; 
-  font-size: 13.5px;
-  cursor: pointer; 
-  transition: background .15s ease, transform .12s ease;
-  margin-left: auto;
-}
-
-  .btn-edit-prof:hover { 
-  background: rgba(255,255,255,0.6); 
-  transform: translateY(-2px);
-}
-
 /* === GRID DE ESTATÍSTICAS === */
 
 .stats-section { 
