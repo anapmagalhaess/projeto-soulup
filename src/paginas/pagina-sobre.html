@@ -1,198 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
-    <link rel="stylesheet" href="../css/pag-sobre.css">
-    <link rel="shortcut icon" href="../img/img-icon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="../js/auth-check.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/pag-sobre.css" />
+    <link rel="shortcut icon" href="../img/img-icon.ico" type="image/x-icon" />
+    <!--==== Fontes ====-->
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--==== Scripts ====-->
     <script src="../js/auth-check.js" defer></script>
     <script src="../js/btn-mobile.js" defer></script>
 </head>
-
 <body>
-    <header class="header__container">
-        <img src="../img/logo-soulup.webp" alt="SoulUp" class="header__logo">
-        <nav class="nav__container">
-            <button id="btn-mobile">☰</button>
-            <div class="nav__menu">
-                <a href="../index.html" class="nav__link">Página Inicial</a>
-                <a href="./pagina-sobre.html" class="nav__link nav__link--active">Sobre</a>
-                <a href="./pagina-faq.html" class="nav__link">FAQ</a>
-                <a href="./pagina-desafio.html" class="nav__link">Desafios</a>
-                <a href="./pagina-solucao.html" class="nav__link">Soluções</a>
-                <a href="./pagina-contato.html" class="nav__link">Contato</a>
-                <a href="./pagina-quem-somos.html" class="nav__link">Quem somos?</a>
+<!--==== Header ====-->
+<header class="header-container">
+    <!--==== Logotipo ====-->
+    <span class="nav-brand"> soul <span class="nav-brand-badge">UP</span></span> 
+    <nav class="nav-container">
+        <!--==== Navegação ====-->
+        <button id="btn-mobile">☰</button>
+        <div class="nav-menu">
+            <a href="../../index.html" class="nav-link">início</a>
+            <a href="./pagina-sobre.html" class="nav-link nav-link--active">sobre</a>
+            <a href="./pagina-faq.html" class="nav-link">faq</a>
+            <a href="./pagina-desafio.html" class="nav-link">desafios</a>
+            <a href="./pagina-solucao.html" class="nav-link">soluções</a>
+            <a href="./pagina-contato.html" class="nav-link">contato</a>
+            <a href="./pagina-quem-somos.html" class="nav-link">quem somos?</a>
+            <a href="./pagina-perfil.html" class="nav-link nav-btn-login">perfil</a>
+        </div>
+    </nav>
+</header>
+
+<!--=== HERO === -->
+<section class="hero">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="wrap hero-inner">
+        <span class="tag">✦ sobre o projeto</span>
+        <h1>a soul up transforma sua <span class="mark"><span>atitude</span></span> em <span class="mark mark-alt"><span>resultado real</span></span>.</h1>
+        <p class="lead">criamos um ciclo simples, transparente e verificado por IA — pra ninguém ficar na dúvida se o esforço sustentável do dia a dia realmente virou alguma coisa.</p>
+    </div>
+</section>
+
+<!-- == FLUXO DA SOLUÇÃO == -->
+<section class="flow-section">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="tag">✦ o ciclo soul up</span>
+            <h2>da ação até a recompensa</h2>
+            <p>cada etapa existe pra garantir que o que você faz de bom pelo planeta vire retorno justo e mensurável.</p>
+        </div>
+    <!-- == STEPS == -->
+    <div class="flow">
+        <div class="flow-step">
+            <span class="step-num">1</span>
+            <div class="step-icon">
+                <i class="fa-solid fa-shield"></i>
             </div>
-            <a href="./pagina-login.html" class="nav-btn__login">Entrar</a>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1 class="hero__title">
-                <span class="linha1">Pequenas atitudes,</span>
-                <span class="linha2">grandes transformações.</span>
-            </h1>
+            <h3>ação feita</h3>
+            <p>você registra uma atitude sustentável real do seu dia a dia.</p>
+        </div>
 
-            <p class="hero__p">
-                A SoulUp nasce com o propósito de transformar a conscientização ambiental em ação prática e mensurável.
-                Nós acreditamos
-                que grandes mudanças começam com pequenos hábitos diários, e que a tecnologia deve ser o catalisador que
-                torna a sustentabilidade
-                acessível, envolvente e vantajosa para todos, conectando a responsabilidade ecológica ao bem-estar
-                social e econômico.
-            </p>
+        <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
 
-            <a href="#sobre-o-projeto" class="hero__button">Um pouco mais sobre o nosso projeto.. ⟶</a>
-
-        </section>
-
-        <section class="banner">
-            <img src="../img/img-natureza.webp" alt="Natureza" class="banner__img">
-
-            <div class="conteudo">
-                <h2 id="sobre-o-projeto" class="titulo-banner">
-                    Um futuro sustentável
-                    <span>começa com você</span>
-                </h2>
-
-                <p class="conteudo__p">
-                    A dificuldade em medir o impacto individual e o sentimento de que "uma ação isolada não faz
-                    diferença" geram desengajamento. O mercado carece de ferramentas que não apenas
-                    ensinem sobre o meio ambiente, mas que validem, unam e recompensem as pessoas por suas atitudes.
-                </p>
+        <div class="flow-step">
+            <span class="step-num">2</span>
+            <div class="step-icon">
+                <i class="fa-solid fa-robot"></i>
             </div>
-        </section>
+            <h3>validação da IA</h3>
+            <p>nossa inteligência artificial confere se a ação registrada é consistente e verdadeira.</p>
+        </div>
 
-        <section class="acoes-sustentaveis">
-            <div class="acoes__header">
-                <h2>Suas Atitudes Verdes Valem Muito!</h2>
-                <p>Na SoulUp, cada ação sustentável que você realiza é recompensada com <strong>Pontos Soul</strong>.
-                    <br> Veja um pouco pontuar na nossa plataforma.
-                </p>
+        <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+
+        <div class="flow-step">
+            <span class="step-num">3</span>
+            <div class="step-icon">
+                <i class="fa-solid fa-wallet"></i>
             </div>
-            <div class="acoes__grid">
-                <div class="acao-card">
-                    <div class="acao-card__icon">🚴</div>
-                    <h3>Mobilidade Limpa</h3>
-                    <p>Vá de bicicleta, patinete ou transporte público, menos emissão de carbono, é mais para nosso
-                        planeta.</p>
-                    <span class="acao-card__pontos">+50 Pontos Soul</span>
-                </div>
-                <div class="acao-card">
-                    <div class="acao-card__icon">👚</div>
-                    <h3>Doar</h3>
-                    <p>Não descarte suas roupas, repasse para quem possa precisar!</p>
-                    <span class="acao-card__pontos">+30 Pontos Soul</span>
-                </div>
-                <div class="acao-card">
-                    <div class="acao-card__icon">💡</div>
-                    <h3>Consumo Consciente</h3>
-                    <p>Redução do uso de energia e água no dia a dia.</p>
-                    <span class="acao-card__pontos">+40 Pontos Soul</span>
-                </div>
+            <h3>pontos na carteira</h3>
+            <p>os pontos entram na sua carteira com valor proporcional ao esforço medido da ação.</p>
+        </div>
+
+        <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+
+        <div class="flow-step">
+            <span class="step-num">4</span>
+            <div class="step-icon">
+                <i class="fa-solid fa-ranking-star"></i>
             </div>
-        </section>
+            <h3>sobe no ranking global</h3>
+            <p>sua pontuação te posiciona entre os usuários mais engajados do planeta.</p>
+        </div>
 
-        <section class="ia-impacto">
-            <div class="ia-impacto__conteudo">
-                <div class="ia-impacto__texto">
-                    <h2>Inteligência Artificial a Favor do Planeta 🤖</h2>
-                    <p>Nossa plataforma utiliza <strong>Inteligência Artificial</strong> para analisar o registro de
-                        cada ação sustentável enviada por você.</p>
-                    <p>A IA avalia o impacto ambiental real de cada atitude e distribui a pontuação de forma
-                        inteligente. Quanto maior a complexidade e o benefício para o mundo, mais <strong>Pontos
-                            Soul</strong> você acumula para trocar por recompensas exclusivas!</p>
-                </div>
-                <div class="ia-impacto__destaque">
-                    <div class="destaque-item">
-                        <span class="destaque-icon">👁️</span>
-                        <span>Análise e Validação </span>
-                    </div>
-                    <div class="destaque-item">
-                        <span class="destaque-icon">🌍</span>
-                        <span>Cálculo de Impacto</span>
-                    </div>
-                    <div class="destaque-item">
-                        <span class="destaque-icon">🏆</span>
-                        <span>Pontuação Justa</span>
-                    </div>
-                </div>
+        <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+
+        <div class="flow-step">
+            <span class="step-num">5</span>
+            <div class="step-icon">
+                <i class="fa-solid fa-award"></i>
             </div>
-        </section>
-
-        <section class="recompensas-menu">
-            <div class="recompensas__header">
-                <h2>Troque seus Pontos Soul!</h2>
-                <p>Acumule pontos e escolha recompensas exclusivas focadas em impacto sustentável.</p>
+            <h3>resgate por recompensas</h3>
+            <p>troque seus pontos por benefícios reais em marcas parceiras — sem pegadinha.</p>
             </div>
+        </div>
+    </div>
+</section>
 
-            <div class="recompensas__container">
-                <!-- Recompensas Digitais -->
-                <div class="recompensas-grupo">
-                    <h3 class="grupo-titulo"><span class="icon">🌐</span> Recompensas Digitais</h3>
-                    <div class="recompensas-lista">
-                        <div class="recompensa-card">
-                            <div class="recompensa-info">
-                                <h4>💰 PIX</h4>
-                                <p>Receba o valor direto na sua conta.</p>
-                            </div>
-                            <button class="btn-resgatar">Resgatar</button>
-                        </div>
-                        <div class="recompensa-card">
-                            <div class="recompensa-info">
-                                <h4>⚡ Desconto na Conta de Luz</h4>
-                                <p>Economia inteligente e sustentável.</p>
-                            </div>
-                            <button class="btn-resgatar">Resgatar</button>
-                        </div>
-                        <div class="recompensa-card">
-                            <div class="recompensa-info">
-                                <h4>🛍️ Parceiros Eco</h4>
-                                <p>Vouchers exclusivos em lojas parceiras.</p>
-                            </div>
-                            <button class="btn-resgatar">Resgatar</button>
-                        </div>
-                    </div>
-                </div>
+<!-- == VITRINE DE PONTOS == -->
+<section class="points-showcase">
+    <div class="wrap">
+        <div class="showcase-card">
+        <h2>suas atitudes verdes valem muito!</h2>
+        <p>na soul up, cada ação sustentável que você realiza é recompensada com <strong>pontos soul</strong>. veja um pouco do que pontua na nossa plataforma.</p>
 
-                <!-- Recompensas Tangíveis -->
-                <div class="recompensas-grupo">
-                    <h3 class="grupo-titulo"><span class="icon">📦</span> Recompensas Tangíveis</h3>
-                    <div class="recompensas-lista">
-                        <div class="recompensa-card">
-                            <div class="recompensa-info">
-                                <h4>👜 SoulBag (Ecobag)</h4>
-                                <p>Leve o conceito de impacto com você.</p>
-                            </div>
-                            <button class="btn-resgatar">Resgatar</button>
-                        </div>
-                        <div class="recompensa-card">
-                            <div class="recompensa-info">
-                                <h4>💧 Garrafa Soul</h4>
-                                <p>Hidratação sustentável em material premium.</p>
-                            </div>
-                            <button class="btn-resgatar">Resgatar</button>
-                        </div>
-                        <div class="recompensa-card">
-                            <div class="recompensa-info">
-                                <h4>🥤 Canudo de Metal</h4>
-                                <p>Reduza plásticos descartáveis no seu dia a dia.</p>
-                            </div>
-                            <button class="btn-resgatar" id="btn-resgatar">Resgatar</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="showcase-grid">
+            <div class="showcase-item">
+                <div class="icon-list">🚲</div>
+                <h3>mobilidade limpa</h3>
+                <p>vá de bicicleta, patinete ou transporte público — menos emissão de carbono, e mais pro nosso planeta.</p>
+                <span class="points-pill">+50 pontos soul</span>
             </div>
-        </section>
+            <div class="showcase-item">
+                <div class="icon-list">👕</div>
+                <h3>doar</h3>
+                <p>não descarte suas roupas — repasse pra quem possa precisar!</p>
+                <span class="points-pill">+30 pontos soul</span>
+            </div>
+            <div class="showcase-item">
+                <div class="icon-list">💡</div>
+                <h3>consumo consciente</h3>
+                <p>redução do uso de energia e água no dia a dia.</p>
+                <span class="points-pill">+40 pontos soul</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <footer>
-            <p class="footer__p">&copy; 2026 SOUL UP. Todos os direitos reservados.</p>
-        </footer>
-    </main>
+<!-- DESTAQUE IA -->
+<section class="ai-highlight">
+    <div class="wrap">
+        <div class="ai-card">
+        <div class="ai-text">
+            <h2>inteligência artificial a favor do planeta 🤖</h2>
+            <p>nossa plataforma utiliza <strong>inteligência artificial</strong> pra analisar o registro de cada ação sustentável enviada por você.</p>
+            <p>a ia avalia o impacto ambiental real de cada atitude e distribui a pontuação de forma inteligente. quanto maior a complexidade e o benefício pro mundo, mais <strong>pontos soul</strong> você acumula pra trocar por recompensas exclusivas!</p>
+        </div>
+        <div class="ai-list">
+            <div class="ai-list-item"><span class="icon-list">👁️</span> análise e validação</div>
+            <div class="ai-list-item"><span class="icon-list">🌍</span> cálculo de impacto</div>
+            <div class="ai-list-item"><span class="icon-list">🏆</span> pontuação justa</div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+        <div class="footer">
+        <span class="footer-brand">soul<span class="brand-badge">UP</span></span>
+        <span class="footer-p">soul up · atitude vira recompensa · © 2026</span>
+        </div>
+</footer>
+
+
 </body>
-
 </html>
