@@ -13,173 +13,347 @@
     <script src="../js/auth-check.js" defer></script>
     <script src="../js/btn-mobile.js" defer></script>
 </head>
-<body >
-<!--==== Header ====-->
-<header class="header-container">
-    <!--==== Logotipo ====-->
-    <span class="nav-brand"> soul <span class="nav-brand-badge">UP</span></span> 
-    <nav class="nav-container">
-        <!--==== Navegação ====-->
-        <button id="btn-mobile">☰</button>
-        <div class="nav-menu">
-            <a href="../../index.html" class="nav-link">início</a>
-            <a href="./pagina-sobre.html" class="nav-link">sobre</a>
-            <a href="./pagina-faq.html" class="nav-link">faq</a>
-            <a href="./pagina-desafio.html" class="nav-link">desafios</a>
-            <a href="./pagina-solucao.html" class="nav-link">soluções</a>
-            <a href="./pagina-contato.html" class="nav-link">contato</a>
-            <a href="./pagina-quem-somos.html" class="nav-link">quem somos?</a>
-            <a href="./pagina-perfil.html" class="nav-link nav-btn-login nav-link--active">perfil</a>
-        </div>
-    </nav>
-</header>
 
-<!--==== CABEÇALHO DO PERFIL ====-->
-<section class="profile-hero">
-    <div class="bubble bubble-1"></div>
-    <div class="bubble bubble-2"></div>
-    <div class="wrap profile-header">
-    
-    <!--==== AVATAR ====-->
-    <div class="avatar-wrap">
-        <div class="avatar">
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="avatar-edit" title="alterar foto">
-            <i class="fa-regular fa-pen-to-square pencil"></i>
-        </div>
-    </div>
-    <!--==== DADOS ====-->
-    <div class="profile-id">
-        <div class="name-row">
-            <h1 id="display-name">marina duarte</h1><span class="profile-tier"><i class="fa-solid fa-star"></i>tier 1</span>
-        </div>
-        <p class="username"><span id="display-user"></span> · na soul up desde ago 2026</p>
-        <p class="streak-progress"><i class="fa-solid fa-fire-flame-curved streak-icon"></i>0 dias em sequência</p>
-    </div>
-</section>
-
-<!-- === ESTATÍSTICAS === -->
-<section class="stats-section">
-    <div class="wrap">
-        <div class="stats-grid">
-        <!-- === CARTEIRA === -->
-        <div class="stat-card stat-card-wallet">
-            <div>
-                <i class="fa-solid fa-wallet wallet-icon"></i>
-                <div class="stat-label">carteira soul</div>
-                <div class="stat-value">50 pontos</div>
-                <div class="stat-note">pontos acumulados até agora</div>
+<body>
+    <!--==== Header ====-->
+    <header class="header-container">
+        <!--==== Logotipo ====-->
+        <span class="nav-brand"> soul <span class="nav-brand-badge">UP</span></span>
+        <nav class="nav-container">
+            <!--==== Navegação ====-->
+            <button id="btn-mobile">☰</button>
+            <div class="nav-menu">
+                <a href="../../index.html" class="nav-link">início</a>
+                <a href="./pagina-sobre.html" class="nav-link">sobre</a>
+                <a href="./pagina-faq.html" class="nav-link">faq</a>
+                <a href="./pagina-desafio.html" class="nav-link">desafios</a>
+                <a href="./pagina-solucao.html" class="nav-link">soluções</a>
+                <a href="./pagina-contato.html" class="nav-link">contato</a>
+                <a href="./pagina-quem-somos.html" class="nav-link">quem somos?</a>
+                <a href="./pagina-perfil.html" class="nav-link nav-btn-login nav-link--active">perfil</a>
             </div>
-            <div class="wallet-redeemed">
-                <div class="points-redeemed">0</div>
-                <div class="points-value">pontos<br>resgatados</div>
-            </div>
-        </div>
+        </nav>
+    </header>
 
-        <!-- === TIER === -->
-        <div class="stat-card">
-            <i class="fa-solid fa-shield stat-icons stat-icon"></i>
-            <div class="stat-label">tier da conta</div>
-            <div class="stat-value">tier 1</div>
-            <div class="stat-note">ainda sem benefícios liberados — continue pontuando pra evoluir de tier.</div>
-        </div>
+    <!--==== CABEÇALHO DO PERFIL ====-->
+    <section class="profile-hero">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="wrap profile-header">
 
-        <!-- === RANKING === -->
-        <div class="stat-card">
-            <i class="fa-solid fa-award stat-icon"></i>
-            <div class="stat-label">posição no ranking</div>
-            <div class="stat-value">#12.261</div>
-            <div class="stat-note">ranking global — suba pontuando com mais ações.</div>
-        </div>
-
-        <!-- === COMUNIDADES CONTAINER === -->
-        <div class="stat-card stat-card--communities">
-            <i class="fa-solid fa-user-group stat-icon"></i>
-            <div class="stat-label">comunidades ativas</div>
-            <div class="community-cards">
-                <!-- === COMUNIDADES === -->
-                <span class="community-card"><span class="dot"></span>mobilidade verde</span>
-                <span class="community-card"><span class="dot"></span>consumo consciente</span>
-                <span class="community-card"><span class="dot"></span>reciclagem sp</span>
-            </div>
-        </div>
-
-        <!-- === CONQUISTAS CONTEINER === -->
-        <div class="stat-card stat-card--achievements">
-            <div class="achv-head">
-                <div class="achievements-text">
-                    <i class="fa-solid fa-trophy stat-icon"></i>
-                    <div class="stat-label">conquistas</div>
+            <!--==== AVATAR ====-->
+            <div class="avatar-wrap">
+                <div class="avatar">
+                    <i class="fa-solid fa-user"></i>
                 </div>
-            <span class="achv-count">3 de 8 desbloqueadas</span>
-        </div>
-        <!-- === BADGES === -->
-        <div class="achv-grid">
-            <div class="badge">
-                <div class="badge-icon"><i class="fa-solid fa-seedling"></i></div>
-                <div class="badge-name">primeira ação</div>
-                <div class="badge-desc">registrou sua primeira atitude sustentável</div>
+                <div class="avatar-edit" title="alterar foto">
+                    <i class="fa-regular fa-pen-to-square pencil"></i>
+                </div>
             </div>
 
-            <div class="badge">
-                <div class="badge-icon"><i class="fa-solid fa-bicycle"></i></div>
-                <div class="badge-name">mobilidade limpa</div>
-                <div class="badge-desc">fez sua primeira ação de mobilidade</div>
-            </div>
+            <!--==== DADOS ====-->
+            <div class="profile-id">
+                <div class="name-row">
+                    <h1 id="display-name"></h1>
+                    <span class="profile-tier"><i class="fa-solid fa-leaf"></i> nível verde</span>
+                </div>
+                <p class="username"><span id="display-user"></span>· na soul up desde ago 2026</p>
 
-            <div class="badge">
-                <div class="badge-icon"><i class="fa-solid fa-users"></i></div>
-                <div class="badge-name">comunidade ativa</div>
-                <div class="badge-desc">entrou em 3 comunidades soul up</div>
-            </div>
-            <!-- === BADGES BLOQUEADAS === -->
-            <div class="badge locked">
-                <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
-                <div class="badge-icon"><i class="fa-solid fa-fire"></i></div>
-                <div class="badge-name">sequência de 7 dias</div>
-                <div class="badge-desc">continue por 7 dias seguidos</div>
-            </div>
-
-            <div class="badge locked">
-                <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
-                <div class="badge-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                <div class="badge-name">consumo consciente</div>
-                <div class="badge-desc">registre uma ação de economia de energia</div>
-            </div>
-
-            <div class="badge locked">
-                <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
-                <div class="badge-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                <div class="badge-name">doador(a)</div>
-                <div class="badge-desc">faça sua primeira doação</div>
-            </div>
-
-            <div class="badge locked">
-                <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
-                <div class="badge-icon"><i class="fa-solid fa-coins"></i></div>
-                <div class="badge-name">100 pontos</div>
-                <div class="badge-desc">acumule 100 pontos soul</div>
-            </div>
-
-            <div class="badge locked">
-                <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
-                <div class="badge-icon"><i class="fa-solid fa-trophy"></i></div>
-                <div class="badge-name">top 10 mil</div>
-                <div class="badge-desc">entre no top 10.000 do ranking global</div>
+                <!-- ==== STREAK + CONEXÕES ==== -->
+                <div class="profile-badges-row">
+                    <div class="streak-badge">
+                        <i class="fa-solid fa-fire-flame-curved streak-icon"></i>
+                        <div class="streak-info">
+                            <span class="streak-num">0</span>
+                            <span class="streak-label">dias em sequência</span>
+                        </div>
+                    </div>
+                    <div class="connections-badge">
+                        <i class="fa-solid fa-user-group connections-icon"></i>
+                        <div class="connections-info">
+                            <span class="connections-num">24</span>
+                            <span class="connections-label">conexões</span>
+                        </div>
+                    </div>
+                    <div class="rank-badge">
+                        <i class="fa-solid fa-trophy rank-icon"></i>
+                        <div class="rank-info">
+                            <span class="rank-num">#12.302</span>
+                            <span class="rank-label">posição no ranking</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-</div>
-</section>
+    <!-- === ESTATÍSTICAS === -->
+    <section class="stats-section">
+        <div class="wrap">
+            <div class="stats-grid">
 
-<!-- FOOTER -->
-<footer>
+                <!-- === CARTEIRA (hover com histórico) === -->
+                <div class="stat-card stat-card-wallet">
+                    <div class="wallet-main">
+                        <div class="wallet-icon"><i class="fa-solid fa-wallet"></i></div>
+                        <div class="stat-label">carteira soul</div>
+                        <div class="stat-value">50 pontos</div>
+                        <div class="stat-note">pontos acumulados até agora</div>
+                    </div>
+                    <div class="wallet-redeemed">
+                        <div class="points-redeemed">0</div>
+                        <div class="points-value">pontos<br>resgatados</div>
+                    </div>
+                    <!--  === Painel histórico ( aparece no hover)  === -->
+                    <div class="wallet-history">
+                        <div class="wallet-history-title">
+                            <i class="fa-solid fa-clock-rotate-left"></i> histórico de pontos
+                        </div>
+                        <ul class="history-list">
+                            <li class="history-item gain">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <span class="h-desc">missão: mobilidade verde</span>
+                                <span class="h-pts">+30 pts</span>
+                            </li>
+                            <li class="history-item gain">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <span class="h-desc">missão: reciclagem consciente</span>
+                                <span class="h-pts">+20 pts</span>
+                            </li>
+                            <li class="history-item loss">
+                                <i class="fa-solid fa-circle-minus"></i>
+                                <span class="h-desc">resgate: ecobag reutilizável</span>
+                                <span class="h-pts">-0 pts</span>
+                            </li>
+                            <li class="history-item gain">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <span class="h-desc">bônus de entrada</span>
+                                <span class="h-pts">+10 pts</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- === TIER DA CONTA (barra de progresso + tooltip) === -->
+                <div class="stat-card stat-card-tier">
+                    <div class="tier-top">
+                        <div class="tier-header-left">
+                            <i class="fa-solid fa-shield tier-shield-icon"></i>
+                            <div class="stat-label">tier da conta</div>
+                        </div>
+                        <!-- Bolinha de informação + Tooltip legível -->
+                        <div class="tier-info-wrap">
+                            <button class="tier-info-btn" aria-label="Informações sobre tiers">
+                                <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <div class="tier-tooltip" role="tooltip">
+                                <div class="tooltip-title">níveis soul up</div>
+                                <div class="tooltip-tier t-verde">
+                                    <span class="tt-dot"></span>
+                                    <div>
+                                        <strong>Verde (atual)</strong> · 0–2.999 pts
+                                        <p>Nível inicial para todos os novos membros. Cumpra missões diárias e metas de sustentabilidade para acumular pontos e desbloquear o próximo nível!</p>
+                                    </div>
+                                </div>
+                                <div class="tooltip-tier t-prata">
+                                    <span class="tt-dot"></span>
+                                    <div>
+                                        <strong>Prata</strong> · 3.000 pts
+                                        <p>Desbloqueia maior taxa de acúmulo de pontos em todas as missões concluídas e acesso antecipado a novos desafios sustentáveis.</p>
+                                    </div>
+                                </div>
+                                <div class="tooltip-tier t-ouro">
+                                    <span class="tt-dot"></span>
+                                    <div>
+                                        <strong>Ouro</strong> · 5.500 pts
+                                        <p>Acesso exclusivo a missões especiais, descontos e recompensas na loja de resgate, além de selo exclusivo no perfil.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tier-current-row">
+                        <span class="tier-badge-pill t-verde-pill"><i class="fa-solid fa-leaf"></i> nível verde</span>
+                        
+                        <div class="tier-next-container">
+                            <span>próximo:</span>
+                            <i class="fa-solid fa-shield silver-shield-icon"></i>
+                            <strong class="tier-next-name">prata</strong>
+                            <i class="fa-solid fa-chevron-right" style="font-size: 11px;"></i>
+                        </div>
+                    </div>
+
+                    <div class="tier-progress-wrap">
+                        <div class="tier-progress-bar">
+                            <div class="tier-progress-fill" style="width: 1.67%"></div>
+                        </div>
+                        <div class="tier-progress-info">
+                            <span class="tp-current">50 pts</span>
+                            <span class="tp-missing">faltam 2.950 pts para prata</span>
+                            <span class="tp-goal">3.000 pts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- === COMUNIDADES === -->
+                <div class="stat-card stat-card--communities">
+                    <i class="fa-solid fa-user-group stat-icon"></i>
+                    <div class="stat-label">comunidades ativas</div>
+                    <div class="community-cards">
+                        <span class="community-card"><span class="dot"></span>mobilidade verde</span>
+                        <span class="community-card"><span class="dot"></span>consumo consciente</span>
+                        <span class="community-card"><span class="dot"></span>reciclagem sp</span>
+                    </div>
+                </div>
+
+                <!-- === CONQUISTAS === -->
+                <div class="stat-card stat-card--achievements">
+                    <div class="achv-head">
+                        <div class="achievements-text">
+                            <i class="fa-solid fa-trophy stat-icon"></i>
+                            <div class="stat-label">conquistas</div>
+                        </div>
+                        <span class="achv-count">3 de 8 desbloqueadas</span>
+                    </div>
+                    <!-- === BADGES DESBLOQUEADAS === -->
+                    <div class="achv-grid">
+                        <div class="badge">
+                            <div class="badge-icon"><i class="fa-solid fa-seedling"></i></div>
+                            <div class="badge-name">primeira ação</div>
+                            <div class="badge-desc">registrou sua primeira atitude sustentável</div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon"><i class="fa-solid fa-bicycle"></i></div>
+                            <div class="badge-name">mobilidade limpa</div>
+                            <div class="badge-desc">fez sua primeira ação de mobilidade</div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="badge-name">comunidade ativa</div>
+                            <div class="badge-desc">entrou em 3 comunidades soul up</div>
+                        </div>
+                        <!-- === BADGES BLOQUEADAS === -->
+                        <div class="badge locked">
+                            <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
+                            <div class="badge-icon"><i class="fa-solid fa-fire"></i></div>
+                            <div class="badge-name">sequência de 7 dias</div>
+                            <div class="badge-desc">continue por 7 dias seguidos</div>
+                        </div>
+                        <div class="badge locked">
+                            <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
+                            <div class="badge-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div class="badge-name">consumo consciente</div>
+                            <div class="badge-desc">registre uma ação de economia de energia</div>
+                        </div>
+                        <div class="badge locked">
+                            <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
+                            <div class="badge-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                            <div class="badge-name">doador(a)</div>
+                            <div class="badge-desc">faça sua primeira doação</div>
+                        </div>
+                        <div class="badge locked">
+                            <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
+                            <div class="badge-icon"><i class="fa-solid fa-coins"></i></div>
+                            <div class="badge-name">100 pontos</div>
+                            <div class="badge-desc">acumule 100 pontos soul</div>
+                        </div>
+                        <div class="badge locked">
+                            <span class="lock-pin"><i class="fa-solid fa-lock"></i></span>
+                            <div class="badge-icon"><i class="fa-solid fa-trophy"></i></div>
+                            <div class="badge-name">top 10 mil</div>
+                            <div class="badge-desc">entre no top 10.000 do ranking global</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- === RESUMO DE ATIVIDADES === -->
+                <div class="stat-card stat-card--activity">
+                    <div class="activity-head">
+                        <div class="activity-head-left">
+                            <i class="fa-solid fa-chart-simple activity-head-icon"></i>
+                            <div class="stat-label">resumo de atividades</div>
+                        </div>
+                        <button class="btn-relatorios" type="button">
+                            <i class="fa-solid fa-file-lines"></i> ver relatórios
+                        </button>
+                    </div>
+                    <div class="activity-grid">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <div class="activity-value">7</div>
+                            <div class="activity-label">missões concluídas</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fa-solid fa-person-walking"></i>
+                            </div>
+                            <div class="activity-value">14,3 km</div>
+                            <div class="activity-label">distância caminhada</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="activity-value">5h 20min</div>
+                            <div class="activity-label">tempo total de atividades</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon act-eco">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div class="activity-value">~3,2 kg</div>
+                            <div class="activity-label">CO₂ evitado</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /stats-grid -->
+        </div><!-- /wrap -->
+    </section>
+
+    <!-- === EXTRA PERFIL === -->
+    <section class="extra-profile-section">
+        <div class="wrap">
+            <div class="extra-profile-card">
+                <a href="#" class="extra-profile-item">
+                    <span class="ep-icon ep-blue"><i class="fa-solid fa-user-group"></i></span>
+                    <span class="ep-label">meus amigos</span>
+                    <i class="fa-solid fa-chevron-right ep-arrow"></i>
+                </a>
+                <a href="#" class="extra-profile-item">
+                    <span class="ep-icon ep-coral"><i class="fa-solid fa-gift"></i></span>
+                    <span class="ep-label">minhas recompensas</span>
+                    <i class="fa-solid fa-chevron-right ep-arrow"></i>
+                </a>
+                <a href="#" class="extra-profile-item">
+                    <span class="ep-icon ep-green"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                    <span class="ep-label">causas apoiadas</span>
+                    <i class="fa-solid fa-chevron-right ep-arrow"></i>
+                </a>
+                <a href="#" class="extra-profile-item">
+                    <span class="ep-icon ep-purple"><i class="fa-solid fa-circle-question"></i></span>
+                    <span class="ep-label">central de ajuda</span>
+                    <i class="fa-solid fa-chevron-right ep-arrow"></i>
+                </a>
+                <a href="#" class="extra-profile-item ep-last">
+                    <span class="ep-icon ep-gray"><i class="fa-solid fa-shield-halved"></i></span>
+                    <span class="ep-label">privacidade e segurança</span>
+                    <i class="fa-solid fa-chevron-right ep-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
         <div class="footer">
-        <span class="footer-brand">soul<span class="brand-badge">UP</span></span>
-        <span class="footer-p">soul up · atitude vira recompensa · © 2026</span>
+            <span class="footer-brand">soul<span class="brand-badge">UP</span></span>
+            <span class="footer-p">soul up · atitude vira recompensa · © 2026</span>
         </div>
-</footer>
+    </footer>
 </body>
+
 </html>
