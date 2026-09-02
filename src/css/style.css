@@ -28,6 +28,26 @@ html {
 body {
     user-select: none;
     font-family: var(--fonte-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Garante que o conteúdo principal cresce e empurra o footer para o fim 
+
+body > *: Seleciona todos os elementos que são filhos diretos da tag <body>
+
+:not(footer):not(header): Remove o cabeçalho (<header>) e o rodapé (<footer>) 
+dessa seleção. */
+
+body > *:not(footer):not(header) {
+    flex: 1 0 auto; 
+    /* Diz ao elemento central para crescer e absorver 100% do espaço vertical excedente 
+    no contêiner pai. Ao expandir, ele empurra o que vem depois dele para baixo. */
+}
+
+footer {
+    margin-top: auto;
 }
 
 /*Cabeçalho da página*/
