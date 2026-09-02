@@ -28,6 +28,18 @@ html {
 body {
     user-select: none;
     font-family: var(--fonte-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Garante que o conteúdo principal cresce e empurra o footer para o fim */
+body > *:not(footer):not(header) {
+    flex: 1 0 auto;
+}
+
+footer {
+    margin-top: auto;
 }
 
 /*Cabeçalho da página*/
