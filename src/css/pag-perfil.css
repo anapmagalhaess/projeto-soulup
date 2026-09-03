@@ -14,7 +14,9 @@ body {
   user-select: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--fonte-titulo);
   margin: 0;
 }
@@ -69,7 +71,7 @@ section {
   opacity: 0.45;
 }
 
-/* == HEADER PERFIL ==*/ 
+/* == HEADER PERFIL ==*/
 .profile-header {
   position: relative;
   z-index: 2;
@@ -79,6 +81,7 @@ section {
   flex-wrap: wrap;
   width: 100%;
 }
+
 /* == AVATAR ==*/
 .avatar-wrap {
   position: relative;
@@ -117,6 +120,7 @@ section {
   color: var(--cor-branco);
   font-size: 13px;
 }
+
 /* == DADOS ==*/
 .profile-id {
   flex: 1;
@@ -150,6 +154,7 @@ section {
   padding: 5px 13px;
   border-radius: 999px;
 }
+
 /* == USER ==*/
 .username {
   font-size: 13.5px;
@@ -157,6 +162,7 @@ section {
   font-weight: 600;
   margin-bottom: 18px;
 }
+
 /* == BADGES ==*/
 .profile-badges-row {
   display: flex;
@@ -322,6 +328,7 @@ section {
   font-weight: 500;
   line-height: 1.5;
 }
+
 /* == CARTEIRA ==*/
 .stat-card-wallet {
   grid-column: span 2;
@@ -389,6 +396,7 @@ section {
   margin-top: 3px;
   line-height: 1.4;
 }
+
 /* == HISTORICO ==*/
 .wallet-history {
   position: absolute;
@@ -444,8 +452,13 @@ section {
   flex-shrink: 0;
 }
 
-.history-item.gain i { color: #6EE7B7; }
-.history-item.loss i { color: #FCA5A5; }
+.history-item.gain i {
+  color: #6EE7B7;
+}
+
+.history-item.loss i {
+  color: #FCA5A5;
+}
 
 .h-desc {
   flex: 1;
@@ -458,8 +471,13 @@ section {
   flex-shrink: 0;
 }
 
-.history-item.gain .h-pts { color: #6EE7B7; }
-.history-item.loss .h-pts { color: #FCA5A5; }
+.history-item.gain .h-pts {
+  color: #6EE7B7;
+}
+
+.history-item.loss .h-pts {
+  color: #FCA5A5;
+}
 
 /* == TIER CARD ==*/
 .stat-card-tier {
@@ -508,6 +526,7 @@ section {
   justify-content: center;
   transition: all 0.2s ease;
 }
+
 /* == TOOLTIP ==*/
 
 .tier-info-btn:hover {
@@ -571,10 +590,22 @@ section {
   flex-shrink: 0;
   margin-top: 4px;
 }
+
 /* == RANKS ==*/
-.t-verde .tt-dot { background: #4ade80; box-shadow: 0 0 8px rgba(74, 222, 128, 0.5); }
-.t-prata .tt-dot { background: #cbd5e1; box-shadow: 0 0 8px rgba(203, 213, 225, 0.5); }
-.t-ouro  .tt-dot { background: #fbbf24; box-shadow: 0 0 8px rgba(251, 191, 36, 0.5); }
+.t-verde .tt-dot {
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+}
+
+.t-prata .tt-dot {
+  background: #cbd5e1;
+  box-shadow: 0 0 8px rgba(203, 213, 225, 0.5);
+}
+
+.t-ouro .tt-dot {
+  background: #fbbf24;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+}
 
 .tooltip-tier strong {
   font-size: 14.5px;
@@ -636,6 +667,7 @@ section {
   color: #475569;
   font-weight: 700;
 }
+
 /* == BARRA DE PROGRESSO ==*/
 .tier-progress-wrap {
   margin-top: 4px;
@@ -665,7 +697,8 @@ section {
   gap: 8px;
 }
 
-.tp-current, .tp-goal {
+.tp-current,
+.tp-goal {
   font-size: 11.5px;
   font-weight: 700;
   color: var(--cor-azul-escuro);
@@ -678,43 +711,9 @@ section {
   text-align: center;
   flex: 1;
 }
-/* == COMUNIDADE ==*/
-.stat-card--communities {
-  grid-column: span 4;
-}
 
-.community-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 6px;
-}
-
-.community-card {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #E3F6F5;
-  border: 1px solid var(--cor-azul-bebe);
-  color: var(--cor-azul-escuro);
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.community-card .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: var(--cor-azul);
-}
-/* == CONQUISTAS ==*/
-.stat-card--achievements {
-  grid-column: span 4;
-}
-
-.achv-head {
+/* == CABEÇALHO UNIFICADO DOS CARDS == */
+.card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -723,15 +722,113 @@ section {
   margin-bottom: 20px;
 }
 
-.achievements-text {
+.card-header-left {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.achievements-text .stat-icon {
+.card-header-left .stat-icon {
+  font-size: 20px;
+  color: var(--cor-azul);
   margin-bottom: 0;
-  display: inline;
+}
+
+.card-header-left .stat-label {
+  margin-bottom: 0;
+}
+
+/* == COMUNIDADES ATIVAS == */
+.stat-card--communities {
+  grid-column: span 4;
+}
+
+.comm-count {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--cor-turquesa);
+  background: #E3F6F5;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+.community-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.community-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.community-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.community-card .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* Color Palette for Communities */
+.comm-verde {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+}
+.comm-verde .dot { background: #22C55E; }
+
+.comm-laranja {
+  background: #FFEDD5;
+  color: #C2410C;
+  border: 1px solid #FED7AA;
+}
+.comm-laranja .dot { background: #F97316; }
+
+.comm-azul {
+  background: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid #BAE6FD;
+}
+.comm-azul .dot { background: #0284C7; }
+
+.comm-roxo {
+  background: #F3E8FF;
+  color: #6B21A8;
+  border: 1px solid #E9D5FF;
+}
+.comm-roxo .dot { background: #9333EA; }
+
+.comm-rosa {
+  background: #FCE7F3;
+  color: #BE185D;
+  border: 1px solid #FBCFE8;
+}
+.comm-rosa .dot { background: #EC4899; }
+
+/* == CONQUISTAS == */
+.stat-card--achievements {
+  grid-column: span 4;
+}
+
+.achv-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .achv-count {
@@ -743,12 +840,35 @@ section {
   border-radius: 999px;
 }
 
+.btn-more-achv {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: 1.5px solid var(--cor-azul-bebe);
+  color: var(--cor-azul);
+  font-family: var(--fonte-titulo);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-more-achv:hover {
+  background: var(--cor-azul);
+  color: var(--cor-branco);
+  border-color: var(--cor-azul);
+}
+
 .achv-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
-/* == BADGES ==*/
+
+/* == BADGES E CORES DIVERSAS == */
 .badge {
   display: flex;
   flex-direction: column;
@@ -762,8 +882,9 @@ section {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: default;
 }
+
 .badge:not(.locked):hover {
-  transform: scale(1.05);
+  transform: translateY(-4px);
   box-shadow: 0 14px 30px -10px rgba(32, 111, 116, 0.24);
 }
 
@@ -774,11 +895,43 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FF8B7A;
   color: var(--cor-branco);
   font-size: 20px;
-  box-shadow: 0 8px 18px -8px rgba(255, 139, 122, 0.6);
   transition: transform 0.2s ease;
+}
+
+/* Distinct Badge Color Styles */
+.badge-verde .badge-icon {
+  background: linear-gradient(135deg, #4ADE80 0%, #16A34A 100%);
+  box-shadow: 0 8px 18px -6px rgba(34, 197, 94, 0.5);
+}
+.badge-azul .badge-icon {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
+  box-shadow: 0 8px 18px -6px rgba(2, 132, 199, 0.5);
+}
+.badge-roxo .badge-icon {
+  background: linear-gradient(135deg, #C084FC 0%, #9333EA 100%);
+  box-shadow: 0 8px 18px -6px rgba(147, 51, 234, 0.5);
+}
+.badge-laranja .badge-icon {
+  background: linear-gradient(135deg, #FB923C 0%, #EA580C 100%);
+  box-shadow: 0 8px 18px -6px rgba(234, 88, 12, 0.5);
+}
+.badge-amarelo .badge-icon {
+  background: linear-gradient(135deg, #FACC15 0%, #CA8A04 100%);
+  box-shadow: 0 8px 18px -6px rgba(202, 138, 4, 0.5);
+}
+.badge-rosa .badge-icon {
+  background: linear-gradient(135deg, #F472B6 0%, #DB2777 100%);
+  box-shadow: 0 8px 18px -6px rgba(219, 39, 119, 0.5);
+}
+.badge-turquesa .badge-icon {
+  background: linear-gradient(135deg, #2DD4BF 0%, #0D9488 100%);
+  box-shadow: 0 8px 18px -6px rgba(13, 148, 136, 0.5);
+}
+.badge-coral .badge-icon {
+  background: linear-gradient(135deg, #FF8B7A 0%, #E0523D 100%);
+  box-shadow: 0 8px 18px -6px rgba(255, 139, 122, 0.5);
 }
 
 .badge:not(.locked):hover .badge-icon {
@@ -800,6 +953,7 @@ section {
   line-height: 1.4;
   margin-top: 8px;
 }
+
 /* == BADGES TRANCADAS ==*/
 .badge.locked {
   background: #FAFAF7;
@@ -834,6 +988,7 @@ section {
   font-size: 9px;
   color: #B9AF9C;
 }
+
 /* == RESUMO DE ATIVIDADES ==*/
 .stat-card--activity {
   grid-column: span 4;
@@ -862,6 +1017,7 @@ section {
 .activity-head-left .stat-label {
   margin-bottom: 0;
 }
+
 /* == RELATORIOS BOTAO FANTASMA (nao leva a nada) ==*/
 .btn-relatorios {
   display: inline-flex;
@@ -941,6 +1097,7 @@ section {
   color: var(--cor-turquesa);
   line-height: 1.3;
 }
+
 /* == secao extra ==*/
 .extra-profile-section {
   padding: 0 0 80px;
@@ -987,11 +1144,30 @@ section {
   transform: scale(1.08);
 }
 
-.ep-blue { background: #E3F6F5; color: var(--cor-azul); }
-.ep-coral { background: #FFF0ED; color: var(--cor-coral); }
-.ep-green { background: #dcfce7; color: #16a34a; }
-.ep-purple { background: #EDE9FE; color: #7C3AED; }
-.ep-gray { background: #F3F4F6; color: #6B7280; }
+.ep-blue {
+  background: #E3F6F5;
+  color: var(--cor-azul);
+}
+
+.ep-coral {
+  background: #FFF0ED;
+  color: var(--cor-coral);
+}
+
+.ep-green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.ep-purple {
+  background: #EDE9FE;
+  color: #7C3AED;
+}
+
+.ep-gray {
+  background: #F3F4F6;
+  color: #6B7280;
+}
 
 .ep-label {
   flex: 1;
