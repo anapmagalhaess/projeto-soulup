@@ -1,81 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato</title>
-    <link rel="stylesheet" href="../css/pag-contato.css">
-    <link rel="shortcut icon" href="../img/img-icon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/pag-contato.css" />
+    <link rel="shortcut icon" href="../img/img-icon.ico" type="image/x-icon" />
+    <!--==== Fontes & Ícones ====-->
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--==== Scripts ====-->
     <script src="../js/auth-check.js" defer></script>
     <script src="../js/btn-mobile.js" defer></script>
 </head>
-
 <body>
-    <header class="header__container">
-        <img src="../img/logo-soulup.webp" alt="SoulUp" class="header__logo">
-        <nav class="nav__container">
-            <button id="btn-mobile">☰</button>
-            <div class="nav__menu">
-                <a href="../index.html" class="nav__link">Página Inicial</a>
-                <a href="./pagina-sobre.html" class="nav__link">Sobre</a>
-                <a href="./pagina-faq.html" class="nav__link">FAQ</a>
-                <a href="./pagina-desafio.html" class="nav__link">Desafios</a>
-                <a href="./pagina-solucao.html" class="nav__link">Soluções</a>
-                <a href="./pagina-contato.html" class="nav__link nav__link--active">Contato</a>
-                <a href="./pagina-quem-somos.html" class="nav__link">Quem somos?</a>
-            </div>
-            <a href="./pagina-login.html" class="nav-btn__login">Entrar</a>
-        </nav>
-    </header>
-    <main class="main__layout">
-        <section class="contato__section">
-            <h1 class="hero__title">Contato</h1>
-            <ul class="contato__list">
-                <li>
-                    <a class="hero__a" href="mailto:nextgen.solucoestech@gmail.com" target="_blank">
-                        <i class="fa-solid fa-envelope"></i> nextgensolucoestech@gmail.com
-                    </a>
-                </li>
-                <li>
-                    <a class="hero__a" href="https://github.com/anapmagalhaess/projeto-soulup" target="_blank">
-                        <i class="fa-brands fa-github"></i> Github
-                    </a>
-                <li>
-                    <a class="hero__a" href="https://instagram.com/nextgentech" target="_blank">
-                        <i class="fa-brands fa-instagram"></i> Instagram
-                    </a>
-                </li>
-                <li>
-                    <a class="hero__a" href="tel:11951483339" target="_blank">
-                        <i class="fa-solid fa-phone"></i></i> Ligue para nós.
-                    </a>
-                </li>
-            </ul>
-        </section>
+<!--==== Header ====-->
+<header class="header-container">
+    <!--==== Logotipo ====-->
+    <span class="nav-brand"> soul <span class="nav-brand-badge">UP</span></span> 
+    <nav class="nav-container">
+        <!--==== Navegação ====-->
+        <button id="btn-mobile">☰</button>
+        <div class="nav-menu">
+            <a href="../../index.html" class="nav-link">início</a>
+            <a href="./pagina-sobre.html" class="nav-link">sobre</a>
+            <a href="./pagina-faq.html" class="nav-link">faq</a>
+            <a href="./pagina-desafio.html" class="nav-link">desafios</a>
+            <a href="./pagina-solucao.html" class="nav-link">soluções</a>
+            <a href="./pagina-contato.html" class="nav-link nav-link--active">contato</a>
+            <a href="./pagina-quem-somos.html" class="nav-link">quem somos?</a>
+            <a href="./pagina-login.html" class="nav-link nav-btn-login">entrar</a>
+        </div>
+    </nav>
+</header>
 
-        <section class="hero__container">
-            <div class="hero__item item__oceano">
-                <img class="hero__img hero__img-01" src="../img/img-oceano.webp" alt="Vista ao oceano">
-                <a href="./pagina-sobre.html" class="icon__plus">+</a>
-                <p class="text__overlay">Seu clique é digital.<br>O impacto é real.</p>
-            </div>
 
-            <div class="hero__item item__block">
-                <h2 class="hero__subtitle">O primeiro <br>algoritmo <br>regenerativo <br>do mundo.</h2>
-            </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="wrap hero-inner">
+        <span class="tag">✦ fala com a gente</span>
+        <h1>contato</h1>
+        <p class="lead">tem alguma dúvida, sugestão ou proposta de parceria? escolhe o canal que for melhor pra você.</p>
+    </div>
+</section>
 
-            <div class="grid__item item__waterfall">
-                <img class="hero__img hero__img-02" src="../img/img-paisagem.webp" alt="Vista de uma cachoeira">
-            </div>
-        </section>
-    </main>
+<!-- CANAIS DE CONTATO -->
+<section class="contact-section">
+    <div class="wrap">
+        <div class="contact-grid">
 
-    <footer>
-        <p class="footer__p">&copy; 2026 SOUL UP. Todos os direitos reservados.</p>
-    </footer>
+        <div class="contact-card">
+            <div class="ic"><i class="fa-solid fa-envelope"></i></div>
+            <div class="label">e-mail</div>
+            <a class="value" href="mailto:nextgen.solucoestech@gmail.com">nextgen.solucoestech@gmail.com</a>
+        </div>
+
+        <div class="contact-card">
+            <div class="ic"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="label">whatsapp</div>
+            <a class="value" href="#">(11) 91234-5678</a>
+        </div>
+
+        <div class="contact-card">
+            <div class="ic"><i class="fa-solid fa-phone"></i></div>
+            <div class="label">telefone</div>
+            <a class="value" href="tel:+551140028922">(11) 4002-8922</a>
+        </div>
+
+        <div class="contact-card">
+            <div class="ic"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="label">endereço</div>
+            <span class="value">av. das nações, 850 · são paulo, sp</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- BANNER DE DÚVIDA -->
+    <section class="doubt-section">
+        <div class="wrap">
+            <div class="doubt-card">
+                <div class="bubble bubble-a"></div>
+                <div class="bubble bubble-b"></div>
+                <div class="doubt-text">
+                    <h2>tá com alguma dúvida?</h2>
+                        <p>abre uma issue e nossa equipe te responde o quanto antes!</p>
+        </div>
+        <a class="btn-issue" target="_blank" href="https://github.com/anapmagalhaess/projeto-soulup/issues"><i class="fa-solid fa-headset"></i> abrir issue</a>
+        </div>
+    </div>
+</section>
+
+<!-- REDES SOCIAIS -->
+<section class="social-section">
+    <div class="wrap">
+        <p>ou nos encontre nas redes sociais</p>
+        <div class="social-row">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Soul Up"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Soul Up"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok da Soul Up"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) da Soul Up"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+        <div class="footer">
+            <span class="footer-brand">soul<span class="brand-badge">UP</span></span>
+            <span class="footer-p">soul up · atitude vira recompensa · © 2026</span>
+        </div>
+</footer>
+
 </body>
-
 </html>
