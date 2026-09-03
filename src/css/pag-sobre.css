@@ -382,6 +382,12 @@ section {
     padding: 0 0 88px; 
 }
 
+.section-ai{
+    text-align: center; 
+    max-width: 580px; 
+    margin: 0 auto 20px; 
+}
+
 .ai-card {
     background: linear-gradient(135deg, #0F525F 0%, #206F74 60%, #154D55 100%);
     border-radius: 32px;
