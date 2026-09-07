@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter__btn');
-    const challengeCards = document.querySelectorAll('.challenge__card');
+    // === ELEMENTOS DO FILTRO E CARDS DE DESAFIO ===
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const challengeCards = document.querySelectorAll('.challenge-card');
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             challengeCards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
-                
+
                 if (category === 'all' || cardCategory === category) {
                     card.classList.remove('hidden');
                 } else {
@@ -21,15 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const startButtons = document.querySelectorAll('.challenge__btn');
+    // === BOTÃO INICIAR DESAFIO ===
+    const startButtons = document.querySelectorAll('.challenge-btn');
     const challengeSelect = document.getElementById('challenge-select');
     const simulatorSection = document.getElementById('simulator');
 
     startButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            const card = e.target.closest('.challenge__card');
-            const challengeId = card.getAttribute('data-id');
-            
+            const card = e.target.closest('.challenge-card');
+            const challengeId = card ? card.getAttribute('data-id') : null;
+
             if (challengeSelect && challengeId) {
                 challengeSelect.value = challengeId;
             }
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // === SIMULADOR DE AUDITORIA POR IA ===
     const simulatorForm = document.getElementById('simulator-form');
     const actionFile = document.getElementById('action-file');
     const fileLabel = document.getElementById('file-label');
@@ -57,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
         actionFile.addEventListener('change', (e) => {
             if (e.target.files.length > 0) {
                 const fileName = e.target.files[0].name;
-                fileLabel.innerHTML = `<i class="fa-solid fa-file-circle-check" style="color: #00e676;"></i> <strong>${fileName}</strong><br><span style="font-size: 13px; color: #2e7d32;">Comprovante carregado com sucesso!</span>`;
-                fileLabel.style.borderColor = '#00e676';
-                fileLabel.style.background = '#f0fbfb';
+                fileLabel.innerHTML = `<i class="fa-solid fa-file-circle-check" style="color: #41c6c4;"></i> <strong>${fileName}</strong><br><span style="font-size: 11.5px; color: #206f74;">Comprovante carregado com sucesso!</span>`;
+                fileLabel.style.borderColor = '#41c6c4';
+                fileLabel.style.background = '#EAFBF9';
             } else {
                 resetFileLabel();
             }
@@ -68,13 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function resetFileLabel() {
         if (fileLabel) {
-            fileLabel.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Tente tirar uma foto ou enviar imagem<br><span>(Formatos aceitos: JPG, PNG)</span>`;
+            fileLabel.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Tire uma foto ou envie uma imagem<br><span>(Formatos aceitos: JPG, PNG)</span>`;
             fileLabel.style.borderColor = 'var(--cor-azul-bebe)';
-            fileLabel.style.background = '#fafafa';
+            fileLabel.style.background = '#F5FDFD';
         }
     }
 
-    function typeWriter(element, text, speed = 25, callback) {
+    function typeWriter(element, text, speed = 20, callback) {
         element.textContent = '';
         let i = 0;
         const timer = setInterval(() => {
@@ -102,14 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             submitBtn.disabled = true;
-            
+
             const selectedOption = challengeSelect.options[challengeSelect.selectedIndex];
             const points = selectedOption.getAttribute('data-points') || '100';
 
             if (displayDefaultText) {
                 displayDefaultText.style.display = 'none';
             }
-            
+
             displaySpinner.style.display = 'flex';
 
             runTerminalSimulation(points);
@@ -118,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function runTerminalSimulation(points) {
         let progress = 0;
-        
+
         const logs = [
-            "Conectando com o servidor de Visão Computacional (SoulUp-AI v1.0.4)...",
+            "Conectando com o servidor de visão computacional (soulup-ai v1.0.4)...",
             "Analisando metadados EXIF da imagem de comprovação...",
             "Validando geolocalização e carimbo de tempo contra fraudes... [OK]",
             "Executando rede neural profunda para detecção de padrões verdes...",
@@ -134,20 +137,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (progress === 10) {
-                typeWriter(spinnerLabel, logs[0], 15);
+                typeWriter(spinnerLabel, logs[0]);
             } else if (progress === 30) {
-                typeWriter(spinnerLabel, logs[1], 15);
+                typeWriter(spinnerLabel, logs[1]);
             } else if (progress === 50) {
-                typeWriter(spinnerLabel, logs[2], 15);
+                typeWriter(spinnerLabel, logs[2]);
             } else if (progress === 70) {
-                typeWriter(spinnerLabel, logs[3], 15);
+                typeWriter(spinnerLabel, logs[3]);
             } else if (progress === 90) {
-                typeWriter(spinnerLabel, logs[4], 15);
+                typeWriter(spinnerLabel, logs[4]);
             }
 
             if (progress >= 100) {
                 clearInterval(progressInterval);
-                
+
                 setTimeout(() => {
                     displaySpinner.style.display = 'none';
                     if (successScreen) {
@@ -156,21 +159,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (successPoints) {
                         successPoints.textContent = `+${points} Pontos Soul`;
                     }
-                }, 600);
+                }, 500);
             }
-        }, 35); 
+        }, 30);
     }
-    
+
     if (resetBtn) {
         resetBtn.addEventListener('click', () => {
             simulatorForm.reset();
             resetFileLabel();
-            
+
             if (successScreen) {
                 successScreen.style.display = 'none';
             }
             if (displayDefaultText) {
-                displayDefaultText.style.display = 'flex';
+                displayDefaultText.style.display = 'block';
             }
             if (progressFill) {
                 progressFill.style.width = '0%';
