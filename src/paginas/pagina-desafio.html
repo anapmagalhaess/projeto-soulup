@@ -4,243 +4,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafios - Soul Up</title>
+    <title>Desafios</title>
     <link rel="stylesheet" href="../css/pag-desafio.css">
     <link rel="shortcut icon" href="../img/img-icon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--==== Fontes & Ícones ====-->
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--==== Scripts ====-->
     <script src="../js/auth-check.js" defer></script>
     <script src="../js/btn-mobile.js" defer></script>
     <script src="../js/pagina-desafio.js" defer></script>
 </head>
 
 <body>
-    <header class="header__container">
-        <img src="../img/logo-soulup.webp" alt="SoulUp" class="header__logo">
-        <nav class="nav__container">
+    <!--==== Header / Navegação ====-->
+    <header class="header-container">
+        <!--==== Logotipo ====-->
+        <span class="nav-brand"> soul <span class="nav-brand-badge">UP</span></span>
+        <nav class="nav-container">
+            <!--==== Navegação ====-->
             <button id="btn-mobile">☰</button>
-            <div class="nav__menu">
-                <a href="../index.html" class="nav__link">Página Inicial</a>
-                <a href="./pagina-sobre.html" class="nav__link">Sobre</a>
-                <a href="./pagina-faq.html" class="nav__link">FAQ</a>
-                <a href="./pagina-desafio.html" class="nav__link nav__link--active">Desafios</a>
-                <a href="./pagina-solucao.html" class="nav__link">Soluções</a>
-                <a href="./pagina-contato.html" class="nav__link">Contato</a>
-                <a href="./pagina-quem-somos.html" class="nav__link">Quem somos?</a>
+            <div class="nav-menu">
+                <a href="../../index.html" class="nav-link">início</a>
+                <a href="./pagina-sobre.html" class="nav-link">sobre</a>
+                <a href="./pagina-faq.html" class="nav-link">faq</a>
+                <a href="./pagina-desafio.html" class="nav-link nav-link--active">desafios</a>
+                <a href="./pagina-solucao.html" class="nav-link">soluções</a>
+                <a href="./pagina-contato.html" class="nav-link">contato</a>
+                <a href="./pagina-quem-somos.html" class="nav-link">quem somos?</a>
+                <a href="./pagina-login.html" class="nav-link nav-btn-login">entrar</a>
             </div>
-            <a href="./pagina-login.html" class="nav-btn__login">Entrar</a>
         </nav>
     </header>
 
     <main>
-        <section class="desafios-hero">
-            <h1 class="desafios-hero__title">
-                Desafie-se diariamente.
-                <span>Ganhe pontos reais pelo planeta.</span>
-            </h1>
-            <p class="desafios-hero__p">
-                Nosso ecossistema transforma atitudes sustentáveis em economia no mundo real. Escolha desafios em sua comunidade ou residência, comprove o impacto enviando uma foto para a nossa IA e acumule os desejados <strong>Pontos Soul</strong> para trocar por descontos e prêmios incríveis!
-            </p>
-        </section>
-
-        <section class="filters__container">
-            <button class="filter__btn active" data-category="all">
-                <i class="fa-solid fa-leaf"></i> Todos
-            </button>
-            <button class="filter__btn" data-category="mobilidade">
-                <i class="fa-solid fa-person-hiking"></i> Mobilidade
-            </button>
-            <button class="filter__btn" data-category="reciclagem">
-                <i class="fa-solid fa-recycle"></i> Reciclagem
-            </button>
-            <button class="filter__btn" data-category="consumo">
-                <i class="fa-solid fa-bolt"></i> Consumo Consciente
-            </button>
-        </section>
-
-        <section class="challenges__container">
-            <div class="challenges__grid">
-                
-                <!-- Desafio 1 -->
-                <article class="challenge__card" data-category="reciclagem" data-id="pet-recycling">
-                    <div class="challenge__header">
-                        <span class="challenge__category">Reciclagem</span>
-                        <span class="challenge__difficulty diff--facil">Fácil</span>
-                    </div>
-                    <h3 class="challenge__title">Coleta de Garrafas PET</h3>
-                    <p class="challenge__description">
-                        Separe e envie a foto de pelo menos 5 garrafas de plástico PET descartadas de forma correta em um coletor seletivo de sua casa ou bairro.
-                    </p>
-                    <div class="challenge__footer">
-                        <span class="challenge__points">
-                            <i class="fa-solid fa-coins"></i> +5 Pontos
-                        </span>
-                        <button class="challenge__btn">Iniciar Desafio</button>
-                    </div>
-                </article>
-
-                <!-- Desafio 2 -->
-                <article class="challenge__card" data-category="mobilidade" data-id="eco-walk">
-                    <div class="challenge__header">
-                        <span class="challenge__category">Mobilidade</span>
-                        <span class="challenge__difficulty diff--medio">Médio</span>
-                    </div>
-                    <h3 class="challenge__title">Caminhada Ecológica</h3>
-                    <p class="challenge__description">
-                        Reduza as emissões de carbono! Realize um percurso a pé de pelo menos 4 quilômetros em um único dia e envie a captura da tela de seu app de corrida ou mapas.
-                    </p>
-                    <div class="challenge__footer">
-                        <span class="challenge__points">
-                            <i class="fa-solid fa-coins"></i> +20 Pontos
-                        </span>
-                        <button class="challenge__btn">Iniciar Desafio</button>
-                    </div>
-                </article>
-
-                <!-- Desafio 3 -->
-                <article class="challenge__card" data-category="consumo" data-id="natural-light">
-                    <div class="challenge__header">
-                        <span class="challenge__category">Consumo</span>
-                        <span class="challenge__difficulty diff--facil">Fácil</span>
-                    </div>
-                    <h3 class="challenge__title">Luz Natural no Estudo</h3>
-                    <p class="challenge__description">
-                        Desligue as lâmpadas artificiais do seu quarto ou local de trabalho/estudo durante a manhã ou tarde por pelo menos 4 horas e aproveite a luz solar natural.
-                    </p>
-                    <div class="challenge__footer">
-                        <span class="challenge__points">
-                            <i class="fa-solid fa-coins"></i> +5 Pontos
-                        </span>
-                        <button class="challenge__btn">Iniciar Desafio</button>
-                    </div>
-                </article>
-
-                <!-- Desafio 4 -->
-                <article class="challenge__card" data-category="reciclagem" data-id="e-waste">
-                    <div class="challenge__header">
-                        <span class="challenge__category">Reciclagem</span>
-                        <span class="challenge__difficulty diff--medio">Médio</span>
-                    </div>
-                    <h3 class="challenge__title">Descarte de Lixo Eletrônico</h3>
-                    <p class="challenge__description">
-                        Leve pilhas, baterias usadas, cabos ou aparelhos quebrados antigos a um posto credenciado de e-lixo e envie uma foto realizando o descarte sustentável.
-                    </p>
-                    <div class="challenge__footer">
-                        <span class="challenge__points">
-                            <i class="fa-solid fa-coins"></i> +20 Pontos
-                        </span>
-                        <button class="challenge__btn">Iniciar Desafio</button>
-                    </div>
-                </article>
-
-                <!-- Desafio 5 -->
-                <article class="challenge__card" data-category="consumo" data-id="energy-save">
-                    <div class="challenge__header">
-                        <span class="challenge__category">Consumo</span>
-                        <span class="challenge__difficulty diff--dificil">Difícil</span>
-                    </div>
-                    <h3 class="challenge__title">Corte de 10% na Conta</h3>
-                    <p class="challenge__description">
-                        Economize eletricidade real na sua residência! Tire uma foto da sua fatura demonstrando uma redução no consumo de energia (kWh) de pelo menos 10% comparado ao mês passado.
-                    </p>
-                    <div class="challenge__footer">
-                        <span class="challenge__points">
-                            <i class="fa-solid fa-coins"></i> +25 Pontos
-                        </span>
-                        <button class="challenge__btn">Iniciar Desafio</button>
-                    </div>
-                </article>
-
-                <!-- Desafio 6 -->
-                <article class="challenge__card" data-category="mobilidade" data-id="bike-ride">
-                    <div class="challenge__header">
-                        <span class="challenge__category">Mobilidade</span>
-                        <span class="challenge__difficulty diff--facil">Fácil</span>
-                    </div>
-                    <h3 class="challenge__title">Pedalada Sustentável</h3>
-                    <p class="challenge__description">
-                        Substitua o carro ou transporte público por uma pedalada de pelo menos 5 quilômetros para ir e voltar das suas tarefas diárias ou estudos.
-                    </p>
-                    <div class="challenge__footer">
-                        <span class="challenge__points">
-                            <i class="fa-solid fa-coins"></i> +10 Pontos
-                        </span>
-                        <button class="challenge__btn">Iniciar Desafio</button>
-                    </div>
-                </article>
-
+        <!--==== HERO ====-->
+        <section class="hero">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="wrap hero-inner">
+                <span class="tag">✦ bora se desafiar?</span>
+                <h1>desafie-se diariamente.<br>ganhe pontos <span class="mark"><span>reais</span></span> pelo planeta.</h1>
+                <p class="lead">
+                    Nosso ecossistema transforma atitudes sustentáveis em economia no mundo real. Escolha um desafio, comprove o impacto enviando uma foto para a nossa IA e acumule <strong>pontos soul</strong> para trocar por descontos e prêmios incríveis!
+                </p>
             </div>
         </section>
 
-        <section class="simulator__container" id="simulator">
-            <h2 class="simulator__title">Simulador de Validação por IA</h2>
-            <p class="simulator__description">
-                Após realizar o seu desafio ecológico no mundo físico, você deve registrar uma foto e enviá-la em nosso aplicativo. Experimente nosso simulador para ver como a Inteligência Artificial integrada da Soul Up valida suas imagens de maneira automatizada e segura em tempo real!
-            </p>
+        <!--==== FILTROS DE CATEGORIA ====-->
+        <section class="filters-section">
+            <div class="wrap">
+                <div class="filters-row">
+                    <button type="button" class="filter-btn active" data-category="all"><i class="fa-solid fa-leaf"></i> todos</button>
+                    <button type="button" class="filter-btn" data-category="mobilidade"><i class="fa-solid fa-person-hiking"></i> mobilidade</button>
+                    <button type="button" class="filter-btn" data-category="reciclagem"><i class="fa-solid fa-recycle"></i> reciclagem</button>
+                    <button type="button" class="filter-btn" data-category="consumo"><i class="fa-solid fa-bolt"></i> consumo consciente</button>
+                    <button type="button" class="filter-btn" data-category="doacao"><i class="fa-solid fa-hand-holding-heart"></i> doação</button>
+                </div>
+            </div>
+        </section>
 
-            <div class="simulator__content">
-                <form class="simulator__form" id="simulator-form">
-                    <div class="form__group">
-                        <label class="form__label" for="challenge-select">1. Escolha o Desafio Realizado</label>
-                        <select class="form__select" id="challenge-select" required>
-                            <option value="" disabled selected>-- Selecione o desafio --</option>
-                            <option value="pet-recycling" data-points="100">Coleta de Garrafas PET (+100 Pontos)</option>
-                            <option value="eco-walk" data-points="180">Caminhada Ecológica (+180 Pontos)</option>
-                            <option value="natural-light" data-points="80">Luz Natural no Estudo (+80 Pontos)</option>
-                            <option value="e-waste" data-points="250">Descarte de Lixo Eletrônico (+250 Pontos)</option>
-                            <option value="energy-save" data-points="300">Corte de 10% na Conta (+300 Pontos)</option>
-                            <option value="bike-ride" data-points="120">Pedalada Sustentável (+120 Pontos)</option>
-                        </select>
-                    </div>
+        <!--==== CARDS DE DESAFIO ====-->
+        <section class="challenges-section">
+            <div class="wrap">
+                <div class="challenges-grid">
 
-                    <div class="form__group">
-                        <label class="form__label">2. Carregue a Imagem de Comprovação</label>
-                        <div class="form__file-wrapper">
-                            <input class="form__file-hidden" type="file" id="action-file" accept="image/*" required>
-                            <label class="form__file-label" for="action-file" id="file-label">
-                                <i class="fa-solid fa-cloud-arrow-up"></i>
-                                Tente tirar uma foto ou enviar imagem
-                                <span>(Formatos aceitos: JPG, PNG)</span>
-                            </label>
+                    <article class="challenge-card" data-category="reciclagem" data-id="pet-recycling">
+                        <div class="challenge-head">
+                            <span class="chip-category">reciclagem</span>
+                            <span class="chip-diff diff-facil">fácil</span>
                         </div>
-                    </div>
-
-                    <button class="form__btn-submit" type="submit" id="submit-btn">
-                        <i class="fa-solid fa-circle-check"></i> Validar Atitude Verde
-                    </button>
-                </form>
-
-                <div class="simulator__display" id="simulator-display">
-                    <div class="display__title">SOULUP VISION AI v1.0.4 - TERMINAL AUDITOR</div>
-                    
-                    <div class="display__text-container" id="display-default-text">
-                        <p class="display__text highlight">> STATUS: AGUARDANDO ENVIO...</p>
-                        <p class="display__text">> Selecione um desafio ao lado e envie a imagem de comprovação.</p>
-                        <p class="display__text">> A inteligência artificial irá decodificar e processar os padrões visuais para creditar os seus Pontos ECOA instantaneamente.</p>
-                    </div>
-
-                    <div class="display__spinner" id="display-spinner">
-                        <div class="spinner__icon"></div>
-                        <span class="spinner__text" id="spinner-label">Iniciando análise de imagem...</span>
-                        <div class="display__progress-bar">
-                            <div class="progress-bar__fill" id="progress-fill"></div>
+                        <h3>Coleta de garrafas PET</h3>
+                        <p>Separe e envie a foto de pelo menos 5 garrafas PET descartadas corretamente em um coletor seletivo da sua casa ou bairro.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +5 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="display__success-screen" id="display-success-screen">
-                        <i class="fa-solid fa-circle-check success__icon"></i>
-                        <h4 class="success__title">AÇÃO VERIFICADA COM SUCESSO!</h4>
-                        <p class="success__desc">A inteligência artificial confirmou o impacto ambiental positivo desta atitude ecológica.</p>
-                        <div class="success__points" id="success-points">+100 Pontos Soul</div>
-                        <button class="success__reset-btn" id="reset-btn">Validar Outra Ação</button>
+                    <article class="challenge-card" data-category="mobilidade" data-id="eco-walk">
+                        <div class="challenge-head">
+                            <span class="chip-category">mobilidade</span>
+                            <span class="chip-diff diff-medio">médio</span>
+                        </div>
+                        <h3>Caminhada ecológica</h3>
+                        <p>Reduza as emissões de carbono! Faça um percurso a pé de pelo menos 4 km em um dia e envie a captura de tela do seu app de corrida ou mapas.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +20 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="consumo" data-id="natural-light">
+                        <div class="challenge-head">
+                            <span class="chip-category">consumo</span>
+                            <span class="chip-diff diff-facil">fácil</span>
+                        </div>
+                        <h3>Luz natural no estudo</h3>
+                        <p>Desligue as lâmpadas artificiais do seu quarto ou local de estudo por pelo menos 4 horas e aproveite a luz solar natural.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +5 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="reciclagem" data-id="e-waste">
+                        <div class="challenge-head">
+                            <span class="chip-category">reciclagem</span>
+                            <span class="chip-diff diff-medio">médio</span>
+                        </div>
+                        <h3>Descarte de lixo eletrônico</h3>
+                        <p>Leve pilhas, baterias, cabos ou aparelhos quebrados a um posto credenciado de e-lixo e envie uma foto do descarte sustentável.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +20 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="consumo" data-id="energy-save">
+                        <div class="challenge-head">
+                            <span class="chip-category">consumo</span>
+                            <span class="chip-diff diff-dificil">difícil</span>
+                        </div>
+                        <h3>Corte de 10% na conta</h3>
+                        <p>Economize eletricidade de verdade! Envie a foto da sua fatura mostrando redução de pelo menos 10% no consumo (kWh) comparado ao mês passado.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +25 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="mobilidade" data-id="bike-ride">
+                        <div class="challenge-head">
+                            <span class="chip-category">mobilidade</span>
+                            <span class="chip-diff diff-facil">fácil</span>
+                        </div>
+                        <h3>Pedalada sustentável</h3>
+                        <p>Substitua o carro ou transporte público por uma pedalada de pelo menos 5 km para ir e voltar das suas tarefas diárias.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +10 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="reciclagem" data-id="compostagem">
+                        <div class="challenge-head">
+                            <span class="chip-category">reciclagem</span>
+                            <span class="chip-diff diff-medio">médio</span>
+                        </div>
+                        <h3>Compostagem doméstica</h3>
+                        <p>Separe seus resíduos orgânicos e monte uma composteira caseira. Envie uma foto mostrando o processo funcionando.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +15 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="mobilidade" data-id="carona-solidaria">
+                        <div class="challenge-head">
+                            <span class="chip-category">mobilidade</span>
+                            <span class="chip-diff diff-medio">médio</span>
+                        </div>
+                        <h3>Carona solidária</h3>
+                        <p>Compartilhe uma carona ou use transporte coletivo em vez de ir sozinho de carro. Envie um print do trajeto feito.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +15 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="consumo" data-id="chuveiro-rapido">
+                        <div class="challenge-head">
+                            <span class="chip-category">consumo</span>
+                            <span class="chip-diff diff-facil">fácil</span>
+                        </div>
+                        <h3>Chuveiro rápido</h3>
+                        <p>Reduza o tempo de banho para no máximo 5 minutos por 3 dias seguidos. Registre com um cronômetro ou timer do celular.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +8 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="doacao" data-id="doacao-roupas">
+                        <div class="challenge-head">
+                            <span class="chip-category">doação</span>
+                            <span class="chip-diff diff-facil">fácil</span>
+                        </div>
+                        <h3>Doação de roupas</h3>
+                        <p>Doe peças de roupa em bom estado para uma instituição ou brechó solidário. Envie uma foto no momento da doação.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +15 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="doacao" data-id="doacao-alimentos">
+                        <div class="challenge-head">
+                            <span class="chip-category">doação</span>
+                            <span class="chip-diff diff-medio">médio</span>
+                        </div>
+                        <h3>Doação de alimentos</h3>
+                        <p>Contribua com uma cesta básica ou alimentos não perecíveis para uma instituição de apoio. Envie o comprovante da doação.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +20 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card" data-category="doacao" data-id="doacao-sangue">
+                        <div class="challenge-head">
+                            <span class="chip-category">doação</span>
+                            <span class="chip-diff diff-dificil">difícil</span>
+                        </div>
+                        <h3>Doação de sangue</h3>
+                        <p>Realize uma doação de sangue em um banco de sangue credenciado e envie o comprovante da doação.</p>
+                        <div class="challenge-footer">
+                            <span class="challenge-points"><i class="fa-solid fa-coins"></i> +40 pontos</span>
+                            <button type="button" class="challenge-btn">iniciar desafio</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==== SIMULADOR DE VALIDAÇÃO IA ====-->
+        <section class="simulator-section" id="simulator">
+            <div class="wrap">
+                <div class="simulator-head">
+                    <span class="tag">✦ inteligência artificial auditora</span>
+                    <h2>Simulador de Validação por IA</h2>
+                    <p>Depois de realizar seu desafio no mundo físico, você registra uma foto e envia no app. Experimente o simulador e veja como a IA da Soul Up valida sua imagem automaticamente, em tempo real.</p>
+                </div>
+
+                <div class="simulator-content">
+                    <form class="sim-form" id="simulator-form">
+                        <div class="form-group">
+                            <label class="form-label" for="challenge-select">1. Escolha o desafio realizado</label>
+                            <select class="form-select" id="challenge-select" required>
+                                <option value="" disabled selected>-- Selecione o desafio --</option>
+                                <option value="pet-recycling" data-points="100">Coleta de garrafas PET (+100 pontos)</option>
+                                <option value="eco-walk" data-points="180">Caminhada ecológica (+180 pontos)</option>
+                                <option value="natural-light" data-points="80">Luz natural no estudo (+80 pontos)</option>
+                                <option value="e-waste" data-points="250">Descarte de lixo eletrônico (+250 pontos)</option>
+                                <option value="energy-save" data-points="300">Corte de 10% na conta (+300 pontos)</option>
+                                <option value="bike-ride" data-points="120">Pedalada sustentável (+120 pontos)</option>
+                                <option value="compostagem" data-points="150">Compostagem doméstica (+150 pontos)</option>
+                                <option value="carona-solidaria" data-points="160">Carona solidária (+160 pontos)</option>
+                                <option value="chuveiro-rapido" data-points="90">Chuveiro rápido (+90 pontos)</option>
+                                <option value="doacao-roupas" data-points="130">Doação de roupas (+130 pontos)</option>
+                                <option value="doacao-alimentos" data-points="200">Doação de alimentos (+200 pontos)</option>
+                                <option value="doacao-sangue" data-points="400">Doação de sangue (+400 pontos)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">2. Carregue a imagem de comprovação</label>
+                            <div class="file-wrapper">
+                                <input class="file-hidden" type="file" id="action-file" accept="image/*" required>
+                                <label class="file-label" for="action-file" id="file-label">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    Tire uma foto ou envie uma imagem
+                                    <span>(Formatos aceitos: JPG, PNG)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn-submit" type="submit" id="submit-btn">
+                            <i class="fa-solid fa-circle-check"></i> Validar Atitude Verde
+                        </button>
+                    </form>
+
+                    <div class="sim-display" id="simulator-display">
+                        <div class="display-title">SOULUP VISION AI v1.0.4 — TERMINAL AUDITOR</div>
+
+                        <div class="display-body">
+                            <div id="display-default-text">
+                                <p class="display-text highlight">&gt; STATUS: AGUARDANDO ENVIO...</p>
+                                <p class="display-text">&gt; Selecione um desafio ao lado e envie a imagem de comprovação.</p>
+                                <p class="display-text">&gt; A inteligência artificial vai decodificar os padrões visuais e creditar seus pontos Soul instantaneamente.</p>
+                            </div>
+
+                            <div class="display-spinner" id="display-spinner">
+                                <div class="spinner-icon"></div>
+                                <span class="spinner-text" id="spinner-label">Iniciando análise de imagem...</span>
+                                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                            </div>
+
+                            <div class="display-success" id="display-success-screen">
+                                <i class="fa-solid fa-circle-check success-icon"></i>
+                                <h4 class="success-title">Ação verificada com sucesso!</h4>
+                                <p class="success-desc">A inteligência artificial confirmou o impacto ambiental positivo desta atitude ecológica.</p>
+                                <div class="success-points" id="success-points">+100 Pontos Soul</div>
+                                <button type="button" class="reset-btn" id="reset-btn">Validar outra ação</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!--==== Footer ====-->
     <footer>
-        <p class="footer__p">&copy; 2026 SOUL UP. Todos os direitos reservados.</p>
+        <div class="footer wrap">
+            <p><span class="footer-brand">soul<span class="brand-badge">UP</span></span></p>
+            <p><span class="footer-p">soul up · atitude vira recompensa · © 2026</span></p>
+        </div>
     </footer>
 </body>
 
