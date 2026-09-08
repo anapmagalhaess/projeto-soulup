@@ -70,7 +70,7 @@ export default function FAQ() {
               text-[var(--cor-turquesa)]
             "
           >
-            tudo que você precisa saber sobre pontos soul, ranking e recompensas
+            tudo que você precisa saber sobre nossa solução gamificada
             — direto ao ponto.
           </p>
         </div>
@@ -133,9 +133,9 @@ export default function FAQ() {
                   </p>
 
                   <ul>
-                    <li>desconto na sua conta de luz</li>
-                    <li>desconto em produtos de empresas parceiras</li>
-                    <li>dinheiro direto na sua conta via pix</li>
+                    <li>- desconto na sua conta de luz</li>
+                    <li>- desconto em produtos de empresas parceiras</li>
+                    <li>- dinheiro direto na sua conta via pix</li>
                   </ul>
 
                   <p className="mt-[10px]">
