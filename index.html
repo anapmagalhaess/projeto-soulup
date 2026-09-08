@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soul Up</title>
-    <link rel="stylesheet" href="./src/css/index.css">
     <link rel="shortcut icon" href="./img/img-icon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -15,156 +14,9 @@
     <script src="./src/js/auth-check.js" defer></script>
     <script src="./src/js/btn-mobile.js" defer></script>
 </head>
-<!--==== Header ====-->
-<header class="header-container">
-    <!--==== Logotipo ====-->
-    <span class="nav-brand"> soul <span class="nav-brand-badge">UP</span></span>
-    <nav class="nav-container">
-        <!--==== Navegação ====-->
-        <button id="btn-mobile">☰</button>
-        <div class="nav-menu">
-            <a href="./index.html" class="nav-link nav-link--active">início</a>
-            <a href="./src/paginas/pagina-sobre.html" class="nav-link">sobre</a>
-            <a href="./src/paginas/pagina-faq.html" class="nav-link">faq</a>
-            <a href="./src/paginas/pagina-desafio.html" class="nav-link">desafios</a>
-            <a href="./src/paginas/pagina-solucao.html" class="nav-link">soluções</a>
-            <a href="./src/paginas/pagina-contato.html" class="nav-link">contato</a>
-            <a href="./src/paginas/pagina-quem-somos.html" class="nav-link">quem somos?</a>
-            <a href="./src/paginas/pagina-login.html" class="nav-link nav-btn-login">entrar</a>
-        </div>
-    </nav>
-</header>
-
 <body>
-    <!--==== HERO ====-->
-    <section class="hero">
-        <div class="wrap hero-inner">
-            <div class="hero-copy">
-                <p><span class="tag">✦ bem-vindo(a) à soul up</span></p>
-                <h1 class="fir-title">a primeira <span class="mark"><span class="sec-title">rede social</span></span> de
-                    <span class="mark mark-alt"><span>impacto sustentável</span></span> do planeta.
-                </h1>
-                <p class="lead">conecte-se com gente que também quer fazer diferença, registre suas atitudes
-                    sustentáveis do dia a dia e troque cada uma delas por recompensas de verdade.</p>
-                <div class="hero-ctas">
-                    <a class="btn-signup" href="./src/paginas/pagina-login.html">criar minha conta</a>
-                    <a class="btn-info" href="./src/paginas/pagina-sobre.html">ver como funciona</a>
-                </div>
-                <!--==== STATUS DA PLATAFORMA ====-->
-                <div class="hero-stats">
-                    <div class="hstat"><p><span class="num">12k+</span><span class="label">ações registradas</span></p></div>
-                    <div class="hstat"><p><span class="num">3,8k</span><span class="label">recompensas resgatadas</span></p>
-                    </div>
-                    <div class="hstat"><p><span class="num">40+</span><span class="label">marcas parceiras</span></p></div>
-                </div>
-            </div>
-            <!--==== COMPOSIÇÃO HERO ====-->
-            <div class="hero-visual">
-                <div class="bubble bubble-1"></div>
-                <div class="bubble bubble-2"></div>
-
-                <!--==== CARD DO PAINEL ====-->
-                <div class="panel-visual-card">
-                    <p><span class="panel-card-title">meta da semana</span></p>
-                    <h3 class="card-points">+120 pontos</h3>
-                    <p class="card-subtitle">faltam 3 ações pra trocar por um brinde parceiro</p>
-                    <div class="vc-line">
-                        <!--==== Scalable Vector Graphics ====-->
-                        <svg class="card-graphic" viewBox="0 0 150 42" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
-                            <path d="M4 36C24 36 28 27 42 23C58 19 64 11 82 8C100 5 108 12 132 7" stroke="#FFFFFF"
-                                stroke-width="1.6" stroke-linecap="round" stroke-dasharray="1 7" opacity="0.6" />
-                            <circle class="graphic-circle" cx="4" cy="36" r="3.5" />
-                            <circle class="graphic-circle" cx="42" cy="23" r="3.5" />
-                            <circle class="graphic-circle" cx="82" cy="8" r="3.5" />
-                            <circle class="graphic-circle" cx="132" cy="7" r="7" />
-                            <path class="graphic-check" d="M129 7L131.5 9.5L135.5 4.5" />
-                        </svg>
-                    </div>
-                </div>
-    </section>
-
-    <!-- == SEÇÃO : COMO FUNCIONA  -->
-    <section class="how-to-work" id="como-funciona">
-        <div class="wrap">
-            <div class="section-head">
-                <p><span class="tag section">✦ simples assim</span></p>
-                <h2>de atitude a recompensa em 3 passos</h2>
-                <p>sem burocracia, sem letra miúda — só ação de verdade virando retorno de verdade.</p>
-            </div>
-            <div class="how-grid">
-                <div class="how-card">
-                    <p><span class="step-card">1</span></p>
-                    <div class="icon-card">
-                        <i class="fa-solid fa-shield"></i>
-                    </div>
-                    <h3>registre sua ação</h3>
-                    <p>reciclou, foi de bike, economizou água? conta pra gente — cada gesto sustentável entra no seu
-                        histórico.</p>
-                </div>
-                <div class="how-card">
-                    <span class="step-card">2</span>
-                    <div class="icon-card">
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <h3>acumule pontos reais</h3>
-                    <p>cada ação verificada vira pontos na sua conta. quanto mais consistente, mais rápido você sobe de
-                        nível.</p>
-                </div>
-                <div class="how-card">
-                    <span class="step-card">3</span>
-                    <div class="icon-card">
-                        <i class="fa-solid fa-gift"></i>
-                    </div>
-                    <h3>troque por recompensa</h3>
-                    <p>use seus pontos em marcas parceiras — descontos, produtos e experiências de verdade te esperando.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- == SEÇÃO : META DA COMUNIDADE == -->
-    <section class="community-goal">
-
-        <!-- COMPOSIÇÃO VISUAL -->
-        <div class="community-goal-visual">
-            <div class="bubble bubble-3"></div>
-            <div class="bubble bubble-4"></div>
-        </div>
-        <!-- CONTEÚDO : META -->
-        <div class="wrap community-goal-content">
-            <div class="community-goal-panel">
-                <div class="community-goal-header">
-                    <p><span class="tag">✦ meta da comunidade</span></p>
-                    <h2 class="community-goal-title">50.000 usuários ativos</h2>
-                    <p class="community-goal-description">
-                        estamos quase lá! junte-se a nós para alcançarmos nossa próxima grande meta de impacto positivo.
-                    </p>
-                </div>
-                <!-- BARRA DE PROGRESSO -->
-                <div class="community-goal-progress">
-                    <div class="community-goal-progress-bar">
-                        <div class="community-goal-progress-fill"></div>
-                    </div>
-                    <div class="community-goal-progress-labels">
-                        <p><span class="community-goal-progress-current">25.000 alcançados</span></p>
-                        <p><span class="community-goal-progress-target">50.000</span></p>
-                    </div>
-                </div>
-                <p class="community-goal-subdescription"><strong>meta cumprida = cupom de 10% a todos</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!--==== FOOTER ====-->
-    <footer>
-        <div class="footer wrap">
-            <p><span class="footer-brand">soul<span class="brand-badge">UP</span></span></p>
-            <p><span class="footer-p">soul up · atitude vira recompensa · © 2026</span></p>
-        </div>
-    </footer>
-
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
