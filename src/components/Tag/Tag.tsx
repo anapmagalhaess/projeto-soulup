@@ -23,6 +23,7 @@ export default function Tag({
         tracking-[0.02em]
         text-[var(--cor-coral-escuro)]
         rotate-[-1.5deg]
+        mb-[30px]
         ${className}
         `}
     >
