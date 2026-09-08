@@ -1,33 +1,42 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
-import "./css/index.css";
-//img import
-import iconSoulUp from "./img/img-icon.ico";
+
+// Importando as páginas
+import Home from "./paginas/Home";
+import Sobre from "./paginas/Sobre";
+import Faq from "./paginas/Faq";
+import Desafios from "./paginas/Desafios";
+import Solucao from "./paginas/Solucao";
+import Contato from "./paginas/Contato";
+import QuemSomos from "./paginas/QuemSomos";
+import Login from "./paginas/Login";
+import Perfil from "./paginas/Perfil";
+
 export default function App() {
   //Imports
 
   return (
     <BrowserRouter>
-      <head>
-        <meta charSet="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Soul Up</title>
-        <link rel="stylesheet" href="./css/index.css"/>
-        <link rel="shortcut icon" href={iconSoulUp} type="image/x-icon"/>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-        <script src="./js/auth-check.js" defer></script>
-        <script src="./js/btn-mobile.js" defer></script>
-      </head>
-      <div>
-        <Navbar/>
-          <div style={{ padding: "50px", textAlign: "center", minHeight: "60vh" }}>
-            <h2>Testando Navbar e Footer.</h2>
-            <p>Conteudo muito legal.</p>
-          </div>
-        <Footer/>
-    </div>
+        <div>
+        {/* Navbar e Footer ficam fixos em todas as páginas */}
+          <Navbar/>
+            <main>
+              <Routes>
+                {/* Cada Route define qual página aparece em uma URL específica */}
+                <Route path="/" element={<Home />} />
+                <Route path="/pagina-sobre" element={<Sobre />} />
+                <Route path="/pagina-faq" element={<Faq />} />
+                <Route path="/pagina-desafio" element={<Desafios />} />
+                <Route path="/pagina-solucao" element={<Solucao />} />
+                <Route path="/pagina-contato" element={<Contato />} />
+                <Route path="/pagina-quem-somos" element={<QuemSomos />} />
+                <Route path="/pagina-login" element={<Login />} />
+                <Route path="/pagina-perfil" element={<Perfil />} />
+              </Routes>
+            </main>
+          <Footer/>
+      </div>
     </BrowserRouter>
   );
 }
