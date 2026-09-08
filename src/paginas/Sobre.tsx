@@ -78,17 +78,27 @@ export default function Sobre() {
   return (
     <main
       className="
-        m-0 w-full min-h-screen p-0
+        relative
+        left-1/2
+        w-screen
+        max-w-none
+        -translate-x-1/2
+        box-border
+        m-0
+        min-h-screen
+        overflow-x-hidden
         bg-[var(--cor-creme)]
+        p-0
         text-[var(--cor-azul-escuro)]
         [font-family:var(--fonte-texto)]
-        antialiased select-none
+        antialiased
+        select-none
       "
     >
       {/* ==================== HERO ==================== */}
       <section
         className="
-          relative overflow-hidden
+          relative w-full overflow-hidden
           bg-[linear-gradient(180deg,#F1FCFC_0%,#DFF4F5_100%)]
           pt-[76px] pb-[84px]
           text-center
@@ -129,7 +139,7 @@ export default function Sobre() {
       </section>
 
       {/* ==================== FLUXO ==================== */}
-      <section className="relative pt-[90px] pb-[96px]">
+      <section className="relative w-full pt-[90px] pb-[96px]">
         <div className="mx-auto w-full max-w-[1180px] px-10">
           <div className="mx-auto mb-[60px] max-w-[580px] text-center">
             <Tag texto="o ciclo da nossa solução" />
@@ -200,7 +210,7 @@ export default function Sobre() {
       </section>
 
       {/* ==================== VITRINE ==================== */}
-      <section className="relative pb-[60px]">
+      <section className="relative w-full pb-[60px]">
         <div className="mx-auto w-full max-w-[1180px] px-10">
           <div className="rounded-[32px] border border-[var(--cor-creme-destaque)] bg-[var(--cor-branco)] px-[44px] pt-[48px] pb-[44px] text-center shadow-[0_24px_50px_-30px_rgba(32,111,116,0.18)] max-[768px]:px-5 max-[768px]:py-8">
             <Tag texto="ganhe pontos soul" />
@@ -256,7 +266,7 @@ export default function Sobre() {
       </section>
 
       {/* ==================== IA ==================== */}
-      <section className="relative pb-[88px]">
+      <section className="relative w-full pb-[88px]">
         <div className="mx-auto w-full max-w-[1180px] px-10">
           <div className="mx-auto mb-[34px] max-w-[580px] text-center">
             <Tag texto="validação por ia" />
@@ -304,7 +314,7 @@ export default function Sobre() {
       </section>
 
       {/* ==================== MINI LOJA ==================== */}
-      <section className="relative pb-[96px]">
+      <section className="relative w-full pb-[96px]">
         <div className="mx-auto w-full max-w-[1180px] px-10">
           <div className="mx-auto mb-[60px] max-w-[580px] text-center">
             <Tag texto="mini loja de recompensas" />
