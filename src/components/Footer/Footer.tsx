@@ -2,11 +2,21 @@ export default function Footer() {
   return (
     <footer
       className="
+        relative
+        left-1/2
+        w-screen
+        max-w-none
+        -translate-x-1/2
+
+        box-border
+        m-0
         mt-auto
-        w-full
+        overflow-x-hidden
+
         border-t
         border-[var(--cor-creme-destaque)]
         bg-[var(--cor-creme)]
+
         px-[54px]
         py-[32px]
       "
@@ -30,6 +40,7 @@ export default function Footer() {
             inline-flex
             items-center
             gap-[8px]
+
             [font-family:var(--fonte-titulo)]
             text-[17px]
             font-semibold
@@ -45,8 +56,11 @@ export default function Footer() {
               w-[26px]
               items-center
               justify-center
+
               rounded-[58%_42%_63%_37%/45%_58%_42%_55%]
+
               bg-[var(--cor-ciano-2)]
+
               [font-family:var(--fonte-titulo)]
               text-[9.5px]
               font-semibold
@@ -61,10 +75,11 @@ export default function Footer() {
         <p
           className="
             m-0
+
+            [font-family:var(--fonte-texto)]
             text-[12.5px]
             font-semibold
             text-[var(--cor-turquesa)]
-            [font-family:var(--fonte-texto)]
           "
         >
           <strong>soul up · atitude vira recompensa · © 2026</strong>
