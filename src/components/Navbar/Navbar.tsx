@@ -25,10 +25,8 @@ export default function Navbar() {
       after:right-[5px]
       after:bottom-[5px]
       after:h-[1px]
-
       after:origin-center
       after:bg-[var(--cor-azul)]
-
       after:transition-transform
       after:duration-[400ms]
 
@@ -52,15 +50,23 @@ export default function Navbar() {
   return (
     <header
       className="
+        relative
+        left-1/2
+        w-screen
+        max-w-none
+        -translate-x-1/2
+
         box-border
         m-0
         flex
         min-h-[75px]
-        w-full
-        max-w-full
+
         items-center
-        overflow-hidden
+
+        overflow-x-hidden
+
         bg-[var(--cor-creme)]
+
         px-[clamp(20px,2.5vw,50px)]
         py-0
       "
@@ -138,10 +144,14 @@ export default function Navbar() {
             cursor-pointer
             items-center
             justify-center
+
             rounded-[15px]
+
             border
             border-[var(--cor-azul-bebe)]
+
             bg-[linear-gradient(to_right,var(--cor-azul),var(--cor-ciano))]
+
             text-[15px]
             text-[var(--cor-branco)]
           "
