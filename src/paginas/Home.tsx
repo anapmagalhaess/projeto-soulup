@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Tag from "../components/Tag/Tag";
 
 export default function Home() {
   return (
@@ -51,25 +52,7 @@ export default function Home() {
           {/* Conteúdo do Hero */}
           <div>
             <p className="m-0">
-              <span
-                className="
-                  mb-5
-                  inline-flex
-                  rotate-[-1.5deg]
-                  items-center
-                  gap-[6px]
-                  rounded-full
-                  bg-[#FFE9E4]
-                  px-[14px]
-                  py-[6px]
-                  [font-family:var(--fonte-titulo)]
-                  text-[12.5px]
-                  tracking-[0.02em]
-                  text-[var(--cor-coral-escuro)]
-                "
-              >
-                <strong>✦ bem-vindo(a) à soul up</strong>
-              </span>
+              <Tag texto="bem-vindo(a) à soulup" />
             </p>
 
             <h1
@@ -328,27 +311,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1180px] px-10">
           <div className="mx-auto mb-[52px] max-w-[560px] text-center">
             <p className="m-0">
-              <span
-                className="
-                  mx-auto
-                  mb-5
-                  mt-[50px]
-                  inline-flex
-                  rotate-[-1.5deg]
-                  items-center
-                  gap-[6px]
-                  rounded-full
-                  bg-[#FFE9E4]
-                  px-[14px]
-                  py-[6px]
-                  [font-family:var(--fonte-titulo)]
-                  text-[12.5px]
-                  tracking-[0.02em]
-                  text-[var(--cor-coral-escuro)]
-                "
-              >
-                <strong>✦ simples assim</strong>
-              </span>
+              <Tag texto="simples assim" />
             </p>
 
             <h2
@@ -501,25 +464,7 @@ export default function Home() {
           >
             <div className="mb-[30px] w-full max-w-[600px]">
               <p className="m-0">
-                <span
-                  className="
-                    mb-5
-                    inline-flex
-                    rotate-[-1.5deg]
-                    items-center
-                    gap-[6px]
-                    rounded-full
-                    bg-[#FFE9E4]
-                    px-[14px]
-                    py-[6px]
-                    [font-family:var(--fonte-titulo)]
-                    text-[12.5px]
-                    tracking-[0.02em]
-                    text-[var(--cor-coral-escuro)]
-                  "
-                >
-                  <strong>✦ meta da comunidade</strong>
-                </span>
+                <Tag texto="metas da comunidade" />
               </p>
 
               <h2
