@@ -35,6 +35,7 @@ export default function Home() {
           bg-[linear-gradient(70deg,#f0ffff_40%,#b3dadb)]
           pt-[76px]
           pb-[60px]
+          mb-[60px]
         "
       >
         <div
