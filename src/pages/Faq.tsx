@@ -36,6 +36,7 @@ export default function FAQ() {
           pt-[50px]
           pb-[50px]
           text-center
+          bg-[linear-gradient(70deg,#f0ffff_40%,#b3dadb)]
         "
       >
 
