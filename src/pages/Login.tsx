@@ -51,6 +51,7 @@ export default function Login() {
   const cadastrarUsuario = (dados: CadastroForm) => {
     sessionStorage.setItem("usuarioLogado", "true");
     sessionStorage.setItem("nomeUsuario", dados.nome);
+    sessionStorage.setItem("emailUsuario", dados.email);
 
     const usernameFormatado = dados.username.startsWith("@")
       ? dados.username
