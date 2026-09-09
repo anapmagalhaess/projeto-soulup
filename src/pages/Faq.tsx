@@ -1,7 +1,9 @@
 import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
 import Tag from "../components/Tag/Tag";
+
 import FaqItem from "../components/Faq-Item/Faq-Item";
 
 export default function FAQ() {
@@ -37,10 +39,13 @@ export default function FAQ() {
           pb-[50px]
           text-center
           bg-[linear-gradient(70deg,#f0ffff_40%,#b3dadb)]
+          max-[768px]:pt-[44px]
+          max-[768px]:pb-[44px]
+          max-[480px]:pt-[38px]
+          max-[480px]:pb-[38px]
         "
       >
-
-        <div className="relative z-[2] mx-auto w-full max-w-[680px] px-10">
+        <div className="relative z-[2] mx-auto w-full max-w-[680px] px-10 max-[768px]:px-6 max-[480px]:px-5">
           <div className="mb-5 flex justify-center">
             <Tag texto="tá com dúvida?" />
           </div>
@@ -55,6 +60,7 @@ export default function FAQ() {
               leading-[1.18]
               tracking-[-0.01em]
               text-[var(--cor-azul-escuro)]
+              max-[480px]:text-[clamp(28px,9vw,38px)]
             "
           >
             perguntas frequentes
@@ -69,17 +75,18 @@ export default function FAQ() {
               font-medium
               leading-[1.65]
               text-[var(--cor-turquesa)]
+              max-[480px]:text-[14.5px]
             "
           >
-            tudo que você precisa saber sobre nossa solução gamificada
-            — direto ao ponto.
+            tudo que você precisa saber sobre nossa solução gamificada — direto ao
+            ponto.
           </p>
         </div>
       </section>
 
       {/* ==================== FAQ ==================== */}
-      <section className="relative w-full pt-16 pb-24">
-        <div className="mx-auto w-full max-w-[1180px] px-10">
+      <section className="relative w-full pt-16 pb-24 max-[768px]:pt-12 max-[768px]:pb-16 max-[480px]:pt-10 max-[480px]:pb-14">
+        <div className="mx-auto w-full max-w-[1180px] px-10 max-[768px]:px-6 max-[480px]:px-5">
           <div
             id="faqList"
             className="
@@ -88,6 +95,7 @@ export default function FAQ() {
               max-w-[780px]
               flex-col
               gap-[14px]
+              max-[480px]:gap-3
             "
           >
             <FaqItem
@@ -165,7 +173,6 @@ export default function FAQ() {
                 </p>
               }
             />
-
           </div>
 
           {/* call to action */}
@@ -184,9 +191,18 @@ export default function FAQ() {
               px-8
               py-[30px]
               text-[var(--cor-branco)]
+              max-[768px]:flex-col
+              max-[768px]:items-stretch
+              max-[768px]:px-6
+              max-[768px]:py-6
+              max-[768px]:text-center
+              max-[480px]:mt-10
+              max-[480px]:rounded-[18px]
+              max-[480px]:px-5
+              max-[480px]:py-5
             "
           >
-            <div>
+            <div className="min-w-0">
               <h3
                 className="
                   m-0
@@ -194,12 +210,13 @@ export default function FAQ() {
                   [font-family:var(--fonte-titulo)]
                   text-[17px]
                   font-semibold
+                  max-[480px]:text-[16px]
                 "
               >
                 ainda ficou com dúvida?
               </h3>
 
-              <p className="m-0 text-[13.5px] font-medium text-[rgba(255,255,255,0.85)]">
+              <p className="m-0 text-[13.5px] font-medium leading-[1.55] text-[rgba(255,255,255,0.85)] max-[480px]:text-[13px]">
                 fala com a gente — a equipe soul up responde rapidinho.
               </p>
             </div>
@@ -207,8 +224,10 @@ export default function FAQ() {
             <Link
               to="/pagina-contato"
               className="
-                inline-block
+                inline-flex
                 cursor-pointer
+                items-center
+                justify-center
                 rounded-[14px]
                 border-0
                 bg-[var(--cor-branco)]
@@ -225,6 +244,7 @@ export default function FAQ() {
                 ease-out
                 hover:-translate-y-[2px]
                 hover:shadow-[0_7px_0_rgba(255,255,255,0.35)]
+                max-[768px]:w-full
               "
             >
               falar com a gente
