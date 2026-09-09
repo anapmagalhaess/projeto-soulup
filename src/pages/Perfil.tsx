@@ -14,6 +14,16 @@ export default function Perfil() {
     () => sessionStorage.getItem("emailUsuario") ?? "email@exemplo.com",
   );
 
+  const dataAtual = new Date();
+
+  const mesAnoAtual = new Intl.DateTimeFormat("pt-BR", {
+    month: "short",
+    year: "numeric",
+  })
+    .format(dataAtual)
+    .replace(".", "")
+    .replace(" de ", " ");
+
   const wrapClass = "mx-auto w-full max-w-[1180px] px-10 max-[600px]:px-5";
 
   const statCardClass = `
@@ -184,7 +194,7 @@ export default function Perfil() {
                   text-[var(--cor-turquesa)]
                 "
               >
-                {userUsuario} · na soul up desde ago 2026
+                {userUsuario} · na soul up desde {mesAnoAtual}
               </p>
 
               <p
