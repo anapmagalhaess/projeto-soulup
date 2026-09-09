@@ -2,7 +2,8 @@ import Tag from "../components/Tag/Tag";
 import ContatoCard from "../components/ContatoCard/ContatoCard";
 
 export default function Contato() {
-  const wrapClass = "mx-auto w-full max-w-[1180px] px-10";
+  const wrapClass =
+    "mx-auto w-full max-w-[1180px] px-10 max-[768px]:px-6 max-[480px]:px-5";
 
   const socialLinkClass = `
     flex h-11 w-11 items-center justify-center
@@ -15,13 +16,16 @@ export default function Contato() {
     hover:-translate-y-[2px]
     hover:bg-[var(--cor-azul)]
     hover:text-[var(--cor-branco)]
+    max-[480px]:h-10
+    max-[480px]:w-10
+    max-[480px]:text-[15px]
   `;
 
   const contatos = [
     {
       icone: "fa-solid fa-envelope",
       label: "e-mail",
-      valor: "nextgen.solucoestech@gmail.com",
+      valor: "nextgensolucoes@gmail.com",
       href: "mailto:nextgen.solucoestech@gmail.com",
     },
     {
@@ -62,6 +66,10 @@ export default function Contato() {
           bg-[linear-gradient(70deg,#f0ffff_40%,#b3dadb)]
           pt-[76px] pb-[72px]
           text-center
+          max-[768px]:pt-[58px]
+          max-[768px]:pb-[56px]
+          max-[480px]:pt-[44px]
+          max-[480px]:pb-[44px]
         "
       >
         <div
@@ -71,6 +79,8 @@ export default function Contato() {
             h-[260px] w-[260px]
             rounded-full
             bg-[rgba(65,198,196,0.28)]
+            max-[480px]:h-[190px]
+            max-[480px]:w-[190px]
           "
         />
 
@@ -81,10 +91,12 @@ export default function Contato() {
             h-[180px] w-[180px]
             rounded-full
             bg-[rgba(153,209,213,0.4)]
+            max-[480px]:h-[130px]
+            max-[480px]:w-[130px]
           "
         />
 
-        <div className="relative z-[2] mx-auto w-full max-w-[680px] px-10">
+        <div className="relative z-[2] mx-auto w-full max-w-[680px] px-10 max-[768px]:px-6 max-[480px]:px-5">
           <div className="mb-5 flex justify-center">
             <Tag texto="fala com a gente" />
           </div>
@@ -97,6 +109,7 @@ export default function Contato() {
               font-semibold leading-[1.18]
               tracking-[-0.01em]
               text-[var(--cor-azul-escuro)]
+              max-[480px]:text-[clamp(28px,9vw,38px)]
             "
           >
             contato
@@ -108,6 +121,7 @@ export default function Contato() {
               text-[16px] font-medium
               leading-[1.65]
               text-[var(--cor-turquesa)]
+              max-[480px]:text-[14.5px]
             "
           >
             tem alguma dúvida, sugestão ou proposta de parceria? escolhe o canal
@@ -117,7 +131,7 @@ export default function Contato() {
       </section>
 
       {/* ==================== CANAIS DE CONTATO ==================== */}
-      <section className="relative w-full pt-16 pb-10">
+      <section className="relative w-full pt-16 pb-10 max-[768px]:pt-12 max-[480px]:pt-10 max-[480px]:pb-8">
         <div className={wrapClass}>
           <div
             className="
@@ -125,6 +139,7 @@ export default function Contato() {
               grid-cols-4 gap-5
               max-[900px]:grid-cols-2
               max-[560px]:grid-cols-1
+              max-[480px]:gap-4
             "
           >
             {contatos.map((contato) => (
@@ -141,7 +156,7 @@ export default function Contato() {
       </section>
 
       {/* ==================== BANNER DE DÚVIDA ==================== */}
-      <section className="relative w-full pt-6 pb-[88px]">
+      <section className="relative w-full pt-6 pb-[88px] max-[768px]:pb-[68px] max-[480px]:pt-4 max-[480px]:pb-[56px]">
         <div className={wrapClass}>
           <div
             className="
@@ -152,7 +167,12 @@ export default function Contato() {
               rounded-[28px]
               bg-[linear-gradient(135deg,var(--cor-ciano)_0%,var(--cor-azul)_100%)]
               p-11
+              max-[700px]:flex-col
+              max-[700px]:items-stretch
               max-[700px]:p-7
+              max-[700px]:text-center
+              max-[480px]:rounded-[22px]
+              max-[480px]:p-5
             "
           >
             <div
@@ -162,6 +182,8 @@ export default function Contato() {
                 h-[200px] w-[200px]
                 rounded-full
                 bg-[rgba(255,255,255,0.16)]
+                max-[480px]:h-[150px]
+                max-[480px]:w-[150px]
               "
             />
 
@@ -172,10 +194,12 @@ export default function Contato() {
                 h-[140px] w-[140px]
                 rounded-full
                 bg-[rgba(255,255,255,0.16)]
+                max-[480px]:h-[110px]
+                max-[480px]:w-[110px]
               "
             />
 
-            <div className="relative z-[2] max-w-[520px]">
+            <div className="relative z-[2] max-w-[520px] max-[700px]:mx-auto">
               <h2
                 className="
                   m-0 mb-2
@@ -183,6 +207,7 @@ export default function Contato() {
                   text-[clamp(22px,2.4vw,28px)]
                   font-semibold
                   text-[var(--cor-branco)]
+                  max-[480px]:text-[21px]
                 "
               >
                 tá com alguma dúvida?
@@ -192,7 +217,9 @@ export default function Contato() {
                 className="
                   m-0
                   text-[14.5px] font-medium
+                  leading-[1.55]
                   text-[rgba(255,255,255,0.86)]
+                  max-[480px]:text-[13.5px]
                 "
               >
                 abre uma issue e nossa equipe te responde o quanto antes!
@@ -206,7 +233,7 @@ export default function Contato() {
               className="
                 relative z-[2]
                 inline-flex cursor-pointer
-                items-center gap-2
+                items-center justify-center gap-2
                 rounded-[16px]
                 border-0
                 bg-[var(--cor-branco)]
@@ -220,6 +247,9 @@ export default function Contato() {
                 duration-[120ms] ease-out
                 hover:-translate-y-[2px]
                 hover:shadow-[0_8px_0_rgba(255,255,255,0.35)]
+                max-[700px]:w-full
+                max-[480px]:px-5
+                max-[480px]:py-[13px]
               "
             >
               <i className="fa-solid fa-headset" />
@@ -230,19 +260,20 @@ export default function Contato() {
       </section>
 
       {/* ==================== REDES SOCIAIS ==================== */}
-      <section className="relative w-full pb-24 text-center">
+      <section className="relative w-full pb-24 text-center max-[768px]:pb-16 max-[480px]:pb-14">
         <div className={wrapClass}>
           <p
             className="
               m-0 mb-4
               text-[13.5px] font-semibold
               text-[var(--cor-turquesa)]
+              max-[480px]:text-[13px]
             "
           >
             ou nos encontre nas redes sociais
           </p>
 
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <a
               href="#"
               target="_blank"
