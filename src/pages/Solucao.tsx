@@ -112,16 +112,16 @@ export default function Solucao() {
     setter(Number(valor));
   };
 
-  const wrapClass = "mx-auto w-full max-w-[1180px] px-[30px]";
+  const wrapClass = "mx-auto w-full max-w-[1180px] px-[30px] max-[768px]:px-6 max-[480px]:px-5";
 
   const sectionHeadClass =
-    "mx-auto mb-10 max-w-[700px] text-center";
+    "mx-auto mb-10 max-w-[700px] text-center max-[480px]:mb-8";
 
   const sectionTitleClass =
-    "m-10 mb-3 [font-family:var(--fonte-titulo)] text-[clamp(28px,3.2vw,40px)] font-bold leading-[1.2] text-[var(--cor-azul-escuro)]";
+    "m-0 mb-3 [font-family:var(--fonte-titulo)] text-[clamp(28px,3.2vw,40px)] font-bold leading-[1.2] text-[var(--cor-azul-escuro)] max-[480px]:text-[clamp(25px,8vw,34px)]";
 
   const sectionTextClass =
-    "m-0 text-[16px] leading-[1.6] text-[#4a6b6d]";
+    "m-0 text-[16px] leading-[1.6] text-[#4a6b6d] max-[480px]:text-[14.5px]";
 
   const presetButtonClass = `
     cursor-pointer rounded-full border-[1.5px]
@@ -129,6 +129,7 @@ export default function Solucao() {
     bg-[#F0FBFB]
     px-4 py-2
     [font-family:var(--fonte-titulo)]
+    max-[480px]:px-3 max-[480px]:py-[7px]
     text-[13px] font-semibold
     text-[var(--cor-azul-escuro)]
     transition-all duration-200 ease-out
@@ -143,12 +144,14 @@ export default function Solucao() {
     border border-[#EFEFEF]
     bg-[#FAFAFA]
     px-5 py-4
+    max-[480px]:px-4 max-[480px]:py-4
   `;
 
   const calcLabelClass = `
     flex items-center gap-2
     [font-family:var(--fonte-titulo)]
     text-[15px] font-semibold
+    max-[480px]:text-[13.5px]
     text-[var(--cor-azul-escuro)]
     [&_i]:text-[var(--cor-turquesa)]
   `;
@@ -195,6 +198,9 @@ export default function Solucao() {
       className="
         m-0 flex min-h-screen w-full max-w-none flex-1 flex-col gap-[60px]
         overflow-x-hidden bg-[var(--cor-creme)] pb-[60px]
+        max-[768px]:gap-[48px]
+        max-[480px]:gap-[40px]
+        max-[480px]:pb-[48px]
         text-[var(--cor-azul-escuro)]
         [font-family:var(--fonte-texto)]
         antialiased
@@ -208,6 +214,11 @@ export default function Solucao() {
           bg-[linear-gradient(70deg,#f0ffff_40%,#b3dadb)]
           pt-20 pb-[70px]
           mb-10
+          max-[768px]:pt-[60px]
+          max-[768px]:pb-[56px]
+          max-[480px]:pt-[46px]
+          max-[480px]:pb-[44px]
+          max-[480px]:mb-6
         "
       >
         <div
@@ -235,6 +246,8 @@ export default function Solucao() {
             relative z-[2]
             mx-auto w-full max-w-[850px]
             px-[30px] text-center
+            max-[768px]:px-6
+            max-[480px]:px-5
           "
         >
           <div className="mb-4 flex justify-center">
@@ -247,6 +260,7 @@ export default function Solucao() {
               [font-family:var(--fonte-titulo)]
               text-[clamp(34px,4.5vw,52px)]
               font-semibold leading-[1.18]
+              max-[480px]:text-[clamp(29px,9vw,38px)]
               text-[var(--cor-azul-escuro)]
             "
           >
@@ -295,6 +309,7 @@ export default function Solucao() {
               max-w-[720px]
               text-[18px] leading-[1.65]
               text-[#2c5c5c]
+              max-[480px]:text-[15px]
             "
           >
             Descubra como a nossa infraestrutura une Inteligência Artificial,
@@ -323,6 +338,8 @@ export default function Solucao() {
                 duration-200 ease-out
                 hover:-translate-y-[2px]
                 hover:bg-[var(--cor-coral-escuro)]
+                max-[480px]:w-full
+                max-[480px]:justify-center
               "
             >
               <i className="fa-solid fa-calculator" />
@@ -349,6 +366,8 @@ export default function Solucao() {
                 duration-200 ease-out
                 hover:-translate-y-[2px]
                 hover:border-[var(--cor-azul)]
+                max-[480px]:w-full
+                max-[480px]:justify-center
               "
             >
               <i className="fa-solid fa-trophy" />
@@ -359,7 +378,7 @@ export default function Solucao() {
       </section>
 
       {/* ==================== MÉTRICAS COLETIVAS ==================== */}
-      <section className="relative z-[5] mt-[-30px] w-full">
+      <section className="relative z-[5] mt-[-30px] w-full max-[480px]:mt-[-18px]">
         <div className={wrapClass}>
           <div className="mb-[30px] text-center">
             <span
@@ -410,6 +429,8 @@ export default function Solucao() {
                 bg-[var(--cor-branco)]
                 px-5 py-6
                 shadow-[0_8px_24px_rgba(32,111,116,0.08)]
+                max-[480px]:px-4
+                max-[480px]:py-5
                 transition-[transform,box-shadow]
                 duration-300
                 hover:-translate-y-1
@@ -447,6 +468,8 @@ export default function Solucao() {
                 bg-[var(--cor-branco)]
                 px-5 py-6
                 shadow-[0_8px_24px_rgba(32,111,116,0.08)]
+                max-[480px]:px-4
+                max-[480px]:py-5
                 transition-[transform,box-shadow]
                 duration-300
                 hover:-translate-y-1
@@ -484,6 +507,8 @@ export default function Solucao() {
                 bg-[var(--cor-branco)]
                 px-5 py-6
                 shadow-[0_8px_24px_rgba(32,111,116,0.08)]
+                max-[480px]:px-4
+                max-[480px]:py-5
                 transition-[transform,box-shadow]
                 duration-300
                 hover:-translate-y-1
@@ -521,6 +546,8 @@ export default function Solucao() {
                 bg-[var(--cor-branco)]
                 px-5 py-6
                 shadow-[0_8px_24px_rgba(32,111,116,0.08)]
+                max-[480px]:px-4
+                max-[480px]:py-5
                 transition-[transform,box-shadow]
                 duration-300
                 hover:-translate-y-1
@@ -603,6 +630,8 @@ export default function Solucao() {
                   border-b-4 border-b-[var(--cor-ciano-2)]
                   bg-[var(--cor-branco)]
                   px-6 py-8 text-center
+                  max-[480px]:px-5
+                  max-[480px]:py-6
                   shadow-[0_6px_20px_rgba(0,0,0,0.04)]
                   transition-all duration-300
                   hover:-translate-y-[6px]
@@ -652,6 +681,9 @@ export default function Solucao() {
               p-10
               shadow-[0_12px_40px_rgba(32,111,116,0.1)]
               max-[700px]:p-6
+              max-[480px]:rounded-[22px]
+              max-[480px]:border-l-4
+              max-[480px]:p-5
             "
           >
             <div
@@ -659,6 +691,8 @@ export default function Solucao() {
                 mb-[35px] flex flex-wrap
                 items-end justify-between
                 gap-5
+                max-[700px]:items-stretch
+                max-[480px]:mb-7
                 border-b border-[#EAEAEA]
                 pb-[25px]
               "
@@ -689,7 +723,7 @@ export default function Solucao() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-[10px]">
+              <div className="flex flex-wrap items-center gap-[10px] max-[700px]:w-full max-[480px]:gap-2">
                 <span className="[font-family:var(--fonte-titulo)] text-[13.5px] font-semibold text-[var(--cor-azul-escuro)]">
                   Simular por Tier:
                 </span>
@@ -738,7 +772,7 @@ export default function Solucao() {
             <div className="grid grid-cols-[1.25fr_1fr] items-start gap-10 max-[900px]:grid-cols-1">
               <div className="flex flex-col gap-6">
                 <div className={calcGroupClass}>
-                  <div className="mb-3 flex items-center justify-between gap-4">
+                  <div className="mb-3 flex items-center justify-between gap-4 max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2">
                     <label htmlFor="input-distance" className={calcLabelClass}>
                       <i className="fa-solid fa-person-biking" />
                       Mobilidade Sustentável (Bike, Caminhada, Patinete)
@@ -770,7 +804,7 @@ export default function Solucao() {
                 </div>
 
                 <div className={calcGroupClass}>
-                  <div className="mb-3 flex items-center justify-between gap-4">
+                  <div className="mb-3 flex items-center justify-between gap-4 max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2">
                     <label htmlFor="input-pet" className={calcLabelClass}>
                       <i className="fa-solid fa-recycle" />
                       Reciclagem PET e Embalagens Plásticas
@@ -802,7 +836,7 @@ export default function Solucao() {
                 </div>
 
                 <div className={calcGroupClass}>
-                  <div className="mb-3 flex items-center justify-between gap-4">
+                  <div className="mb-3 flex items-center justify-between gap-4 max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2">
                     <label htmlFor="input-alum" className={calcLabelClass}>
                       <i className="fa-solid fa-bottle-water" />
                       Reciclagem de Alumínio e Vidro
@@ -834,7 +868,7 @@ export default function Solucao() {
                 </div>
 
                 <div className={calcGroupClass}>
-                  <div className="mb-3 flex items-center justify-between gap-4">
+                  <div className="mb-3 flex items-center justify-between gap-4 max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2">
                     <label htmlFor="input-energy" className={calcLabelClass}>
                       <i className="fa-solid fa-bolt" />
                       Economia de Energia / Painel Solar
@@ -866,7 +900,7 @@ export default function Solucao() {
                 </div>
 
                 <div className={calcGroupClass}>
-                  <div className="mb-3 flex items-center justify-between gap-4">
+                  <div className="mb-3 flex items-center justify-between gap-4 max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2">
                     <label htmlFor="input-food" className={calcLabelClass}>
                       <i className="fa-solid fa-leaf" />
                       Refeições Plant-Based / Orgânicos
@@ -907,6 +941,8 @@ export default function Solucao() {
                   bg-[linear-gradient(145deg,#F0FBFB_0%,#E2F5F4_100%)]
                   px-6 py-[30px]
                   max-[900px]:static
+                  max-[480px]:px-5
+                  max-[480px]:py-6
                 "
               >
                 <div
@@ -930,6 +966,9 @@ export default function Solucao() {
                       text-[44px] font-bold
                       text-[var(--cor-azul-escuro)]
                       [&_i]:text-[38px]
+                      max-[480px]:text-[34px]
+                      max-[480px]:[&_i]:text-[30px]
+                      max-[480px]:[&_small]:text-[16px]
                       [&_i]:text-[var(--cor-coral)]
                       [&_small]:text-[20px]
                       [&_small]:text-[var(--cor-turquesa)]
@@ -945,7 +984,7 @@ export default function Solucao() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-3 gap-[10px]">
+                <div className="grid grid-cols-3 gap-[10px] max-[520px]:grid-cols-1">
                   <div className={miniMetricClass}>
                     <span className="mb-[6px] text-[20px] text-[var(--cor-azul)]">
                       <i className="fa-solid fa-smog" />
@@ -1017,7 +1056,7 @@ export default function Solucao() {
 
           <div
             id="rewards-container"
-            className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5"
+            className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 max-[480px]:grid-cols-1"
           >
             {recompensas.map((recompensa) => {
               const desbloqueada = pontos >= recompensa.custo;
@@ -1036,6 +1075,7 @@ export default function Solucao() {
                     bg-[var(--cor-branco)]
                     p-6
                     shadow-[0_6px_18px_rgba(0,0,0,0.04)]
+                    max-[480px]:p-5
                     transition-[transform,box-shadow]
                     duration-300
                     hover:-translate-y-1
@@ -1136,11 +1176,17 @@ export default function Solucao() {
               p-[35px]
               shadow-[0_10px_35px_rgba(0,0,0,0.05)]
               max-[700px]:p-5
+              max-[480px]:rounded-[22px]
+              max-[480px]:p-4
             "
           >
             <div
               className="
                 mb-6 flex items-center gap-3
+                max-[600px]:items-start
+                max-[480px]:px-4
+                max-[480px]:py-3
+                max-[480px]:text-[13px]
                 rounded-[14px]
                 border border-[var(--cor-azul-bebe)]
                 bg-[#EAF8F8]
@@ -1165,7 +1211,7 @@ export default function Solucao() {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-left">
+              <table className="w-full min-w-[760px] border-collapse text-left">
                 <thead>
                   <tr
                     className="
@@ -1285,6 +1331,10 @@ export default function Solucao() {
               bg-[linear-gradient(135deg,var(--cor-azul)_0%,var(--cor-azul-escuro)_100%)]
               px-10 py-[60px]
               text-center
+              max-[700px]:px-6
+              max-[480px]:rounded-[22px]
+              max-[480px]:px-5
+              max-[480px]:py-10
               text-[var(--cor-branco)]
               shadow-[0_14px_40px_rgba(19,150,159,0.25)]
               max-[700px]:px-6
@@ -1312,6 +1362,7 @@ export default function Solucao() {
                 max-w-[600px]
                 text-[17px] leading-[1.6]
                 text-[rgba(255,255,255,0.9)]
+                max-[480px]:text-[15px]
               "
             >
               Crie sua conta gratuitamente e comece a registrar suas atitudes
@@ -1334,6 +1385,8 @@ export default function Solucao() {
                   duration-200
                   hover:-translate-y-[2px]
                   hover:bg-[var(--cor-coral-escuro)]
+                  max-[480px]:w-full
+                  max-[480px]:text-center
                 "
               >
                 Cadastrar-se
@@ -1354,6 +1407,8 @@ export default function Solucao() {
                   duration-200
                   hover:border-[var(--cor-branco)]
                   hover:bg-[rgba(255,255,255,0.1)]
+                  max-[480px]:w-full
+                  max-[480px]:text-center
                 "
               >
                 Conhecer nossa solução
