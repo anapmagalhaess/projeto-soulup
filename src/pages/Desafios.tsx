@@ -236,13 +236,15 @@ export default function Desafios() {
     }, 100);
   };
 
-  const wrapClass = "mx-auto w-full max-w-[1180px] px-[30px]";
+  const wrapClass = "mx-auto w-full max-w-[1180px] px-[30px] max-[768px]:px-6 max-[480px]:px-5";
 
   const filterBase = `
     inline-flex items-center gap-2 rounded-full border-[1.5px]
     border-x bg-[var(--cor-branco)]
     px-[22px] py-[11px]
     [font-family:var(--fonte-titulo)] text-[13.5px] font-semibold
+    max-[600px]:px-4 max-[600px]:py-[10px]
+    max-[480px]:text-[12.5px]
     text-[var(--cor-azul-escuro)]
     cursor-pointer
     transition-[background,color,transform,border-color] duration-150 ease-out
@@ -268,6 +270,8 @@ export default function Desafios() {
           border-b border-[var(--cor-creme-destaque)]
           bg-[linear-gradient(70deg,#f0ffff_40%,#b3dadb)]
           pt-[72px] pb-16 text-center
+          max-[768px]:pt-[56px] max-[768px]:pb-[52px]
+          max-[480px]:pt-[44px] max-[480px]:pb-[42px]
         "
       >
         <div
@@ -288,7 +292,7 @@ export default function Desafios() {
           "
         />
 
-        <div className="relative z-[2] mx-auto w-full max-w-[750px] px-[30px]">
+        <div className="relative z-[2] mx-auto w-full max-w-[750px] px-[30px] max-[768px]:px-6 max-[480px]:px-5">
           <div className="mb-5 flex justify-center">
             <Tag texto="bora se desafiar?" />
           </div>
@@ -298,6 +302,7 @@ export default function Desafios() {
               m-0 mb-[18px]
               [font-family:var(--fonte-titulo)]
               text-[clamp(30px,4vw,46px)] font-semibold
+              max-[480px]:text-[clamp(28px,9vw,38px)]
               leading-[1.2] tracking-[-0.01em]
               text-[var(--cor-azul-escuro)]
             "
@@ -328,6 +333,7 @@ export default function Desafios() {
             className="
               mx-auto m-0 max-w-[62ch]
               text-[16.5px] font-medium leading-[1.65]
+              max-[480px]:text-[14.5px]
               text-[var(--cor-turquesa)]
               [&_strong]:text-[var(--cor-azul-escuro)]
             "
@@ -341,9 +347,9 @@ export default function Desafios() {
       </section>
 
       {/* ==================== FILTROS ==================== */}
-      <section className="relative w-full pt-[30px] pb-[10px]">
+      <section className="relative w-full pt-[30px] pb-[10px] max-[480px]:pt-6">
         <div className={wrapClass}>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 max-[480px]:gap-2">
             <button
               type="button"
               data-category="all"
@@ -400,9 +406,9 @@ export default function Desafios() {
       </section>
 
       {/* ==================== CARDS DE DESAFIO ==================== */}
-      <section className="relative w-full pt-5 pb-[60px]">
+      <section className="relative w-full pt-5 pb-[60px] max-[480px]:pb-[48px]">
         <div className={wrapClass}>
-          <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-2 max-[620px]:grid-cols-1">
+          <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-2 max-[620px]:grid-cols-1 max-[480px]:gap-5">
             {desafios
               .filter((desafio) => mostrarCard(desafio.categoria))
               .map((desafio) => (
@@ -423,9 +429,9 @@ export default function Desafios() {
       </section>
 
       {/* ==================== SIMULADOR IA ==================== */}
-      <section id="simulator" className="relative w-full pt-5 pb-20">
+      <section id="simulator" className="relative w-full pt-5 pb-20 max-[768px]:pb-16 max-[480px]:pb-14">
         <div className={wrapClass}>
-          <div className="mx-auto mb-10 max-w-[680px] text-center">
+          <div className="mx-auto mb-10 max-w-[680px] text-center max-[480px]:mb-8">
             <div className="mb-5 flex justify-center">
               <Tag texto="inteligência artificial auditora" />
             </div>
@@ -434,20 +440,21 @@ export default function Desafios() {
               className="
                 m-0 mb-3 [font-family:var(--fonte-titulo)]
                 text-[clamp(26px,3vw,36px)] font-semibold
+                max-[480px]:text-[clamp(24px,8vw,32px)]
                 text-[var(--cor-azul-escuro)]
               "
             >
               Simulador de Validação por IA
             </h2>
 
-            <p className="m-0 text-[15px] font-medium leading-[1.6] text-[var(--cor-turquesa)]">
+            <p className="m-0 text-[15px] font-medium leading-[1.6] text-[var(--cor-turquesa)] max-[480px]:text-[14px]">
               Depois de realizar seu desafio no mundo físico, você registra uma
               foto e envia no app. Experimente o simulador e veja como a IA da
               Soul Up valida sua imagem automaticamente, em tempo real.
             </p>
           </div>
 
-          <div className="mx-auto grid max-w-[1050px] grid-cols-2 gap-[30px] max-[850px]:grid-cols-1">
+          <div className="mx-auto grid max-w-[1050px] grid-cols-2 gap-[30px] max-[850px]:grid-cols-1 max-[480px]:gap-5">
             <form
               id="simulator-form"
               onSubmit={enviarParaAnalise}
@@ -456,6 +463,10 @@ export default function Desafios() {
                 rounded-[24px] border border-[var(--cor-creme-destaque)]
                 bg-[var(--cor-branco)] px-7 py-8
                 shadow-[0_8px_24px_rgba(0,0,0,0.04)]
+                max-[480px]:rounded-[20px]
+                max-[480px]:px-5
+                max-[480px]:py-6
+                max-[480px]:gap-[18px]
               "
             >
               <div className="flex flex-col gap-2">
@@ -490,6 +501,7 @@ export default function Desafios() {
                     rounded-[12px] border-[1.5px] border-[var(--cor-azul-bebe)]
                     bg-[var(--cor-creme)] px-4 py-3
                     [font-family:var(--fonte-texto)] text-[14px]
+                    max-[480px]:text-[13px]
                     text-[var(--cor-azul-escuro)] outline-none
                     transition-[border-color] duration-150
                     focus:border-[var(--cor-azul)] disabled:cursor-not-allowed disabled:opacity-60
@@ -537,7 +549,10 @@ export default function Desafios() {
                       flex flex-col items-center justify-center gap-[6px]
                       rounded-[16px] border-2 border-dashed border-[var(--cor-azul-bebe)]
                       bg-[#F5FDFD] px-4 py-7 text-center
-                      text-[13.5px] font-semibold text-[var(--cor-turquesa)]
+                      text-[13.5px] font-semibold
+                      max-[480px]:px-3
+                      max-[480px]:py-6
+                      max-[480px]:text-[12.5px] text-[var(--cor-turquesa)]
                       transition-[border-color,background] duration-150
                       [&_i]:mb-1 [&_i]:text-[24px] [&_i]:text-[var(--cor-azul)]
                       [&_span]:text-[11.5px] [&_span]:font-medium
@@ -566,6 +581,9 @@ export default function Desafios() {
                   hover:shadow-[0_7px_0_var(--cor-coral-escuro)]
                   disabled:cursor-not-allowed disabled:opacity-60
                   disabled:transform-none disabled:shadow-none
+                  max-[480px]:w-full
+                  max-[480px]:px-4
+                  max-[480px]:text-[14px]
                 "
               >
                 <i className={statusAnalise === "loading" ? "fa-solid fa-spinner fa-spin" : "fa-solid fa-circle-check"} />
@@ -577,11 +595,14 @@ export default function Desafios() {
               className="
                 flex min-h-[340px] flex-col rounded-[24px]
                 bg-[#0F2A2C] p-6 text-[#CFEFEA]
+                max-[480px]:min-h-[300px]
+                max-[480px]:rounded-[20px]
+                max-[480px]:p-5
                 [font-family:'JetBrains_Mono',monospace]
                 shadow-[0_10px_30px_rgba(15,42,44,0.3)]
               "
             >
-              <div className="mb-[18px] border-b border-[rgba(255,255,255,0.12)] pb-3 text-[11px] font-medium tracking-[0.04em] text-[var(--cor-ciano)]">
+              <div className="mb-[18px] border-b border-[rgba(255,255,255,0.12)] pb-3 text-[11px] font-medium tracking-[0.04em] text-[var(--cor-ciano)] max-[480px]:text-[10px]">
                 SOULUP VISION AI v1.0.4 — TERMINAL AUDITOR
               </div>
 
@@ -653,6 +674,7 @@ export default function Desafios() {
             bg-[rgba(15,42,44,0.42)]
             px-5
             backdrop-blur-[3px]
+            max-[480px]:px-4
           "
           role="dialog"
           aria-modal="true"
@@ -674,6 +696,9 @@ export default function Desafios() {
               max-[680px]:items-stretch
               max-[680px]:gap-5
               max-[680px]:text-center
+              max-[480px]:rounded-[20px]
+              max-[480px]:px-5
+              max-[480px]:py-6
             "
           >
             <div
@@ -698,6 +723,8 @@ export default function Desafios() {
                 className="
                   flex h-[68px] w-[68px]
                   shrink-0 items-center justify-center
+                  max-[480px]:h-[58px]
+                  max-[480px]:w-[58px]
                   rounded-[20px]
                   bg-[var(--cor-azul-bebe)]
                   text-[32px]
@@ -727,6 +754,7 @@ export default function Desafios() {
                     m-0
                     [font-family:var(--fonte-titulo)]
                     text-[23px] font-semibold
+                    max-[480px]:text-[20px]
                     leading-[1.2]
                     text-[var(--cor-azul-escuro)]
                   "
@@ -776,6 +804,7 @@ export default function Desafios() {
                 active:translate-y-[2px]
                 active:shadow-[0_2px_0_var(--cor-coral-escuro)]
                 max-[680px]:w-full
+                max-[480px]:px-5
               "
             >
               <i className="fa-solid fa-check" />
