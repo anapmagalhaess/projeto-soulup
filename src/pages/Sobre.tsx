@@ -10,6 +10,10 @@ export default function Sobre() {
     bg-[#F5FDFD]
     px-[18px] pt-[30px] pb-[24px]
     text-center
+    max-[768px]:min-h-0
+    max-[480px]:px-5
+    max-[480px]:pt-8
+    max-[480px]:pb-6
   `;
 
   const flowNumberClass = `
@@ -52,6 +56,9 @@ export default function Sobre() {
     border border-[#E2E8F0]
     bg-[#F8FAFC]
     px-[26px] pt-[34px] pb-[28px]
+    max-[480px]:px-5
+    max-[480px]:pt-7
+    max-[480px]:pb-6
     text-center
     transition-[transform,box-shadow,border-color,background]
     duration-[220ms] ease-out
@@ -67,6 +74,8 @@ export default function Sobre() {
     border border-[var(--cor-creme-destaque)]
     bg-[var(--cor-branco)]
     px-[28px] py-[30px]
+    max-[480px]:px-5
+    max-[480px]:py-6
     shadow-[0_10px_28px_-14px_rgba(32,111,116,0.16)]
     transition-[transform,box-shadow,border-color]
     duration-[220ms] ease-out
@@ -79,10 +88,8 @@ export default function Sobre() {
     <main
       className="
         relative
-        left-1/2
-        w-screen
+        w-full
         max-w-none
-        -translate-x-1/2
         box-border
         m-0
         min-h-screen
@@ -102,12 +109,16 @@ export default function Sobre() {
           bg-[linear-gradient(180deg,#F1FCFC_0%,#DFF4F5_100%)]
           pt-[76px] pb-[84px]
           text-center
+          max-[768px]:pt-[58px]
+          max-[768px]:pb-[64px]
+          max-[480px]:pt-[46px]
+          max-[480px]:pb-[52px]
         "
       >
-        <div className="absolute left-[-80px] top-[-100px] h-[320px] w-[320px] rounded-full bg-[rgba(65,198,196,0.28)] blur-[2px]" />
-        <div className="absolute bottom-[-80px] right-[5%] h-[220px] w-[220px] rounded-full bg-[rgba(153,209,213,0.4)] blur-[1px]" />
+        <div className="absolute left-[-80px] top-[-100px] h-[320px] w-[320px] rounded-full bg-[rgba(65,198,196,0.28)] blur-[2px] max-[480px]:h-[220px] max-[480px]:w-[220px]" />
+        <div className="absolute bottom-[-80px] right-[5%] h-[220px] w-[220px] rounded-full bg-[rgba(153,209,213,0.4)] blur-[1px] max-[480px]:h-[150px] max-[480px]:w-[150px]" />
 
-        <div className="relative z-[2] mx-auto max-w-[720px] px-10">
+        <div className="relative z-[2] mx-auto max-w-[720px] px-10 max-[768px]:px-6 max-[480px]:px-5">
           <Tag texto="sobre o projeto" />
 
           <h1
@@ -116,6 +127,7 @@ export default function Sobre() {
               [font-family:var(--fonte-titulo)]
               text-[clamp(32px,4.2vw,48px)]
               font-semibold leading-[1.18] tracking-[-0.01em]
+              max-[480px]:text-[clamp(29px,9vw,38px)]
               text-[var(--cor-azul-escuro)]
             "
           >
@@ -130,7 +142,7 @@ export default function Sobre() {
             .
           </h1>
 
-          <p className="mx-auto m-0 max-w-[54ch] text-[16.5px] font-medium leading-[1.7] text-[var(--cor-turquesa)]">
+          <p className="mx-auto m-0 max-w-[54ch] text-[16.5px] font-medium leading-[1.7] text-[var(--cor-turquesa)] max-[480px]:text-[15px]">
             criamos um ciclo simples, transparente e verificado por IA — pra
             ninguém ficar na dúvida se o esforço sustentável do dia a dia
             realmente virou alguma coisa.
@@ -139,9 +151,9 @@ export default function Sobre() {
       </section>
 
       {/* ==================== FLUXO ==================== */}
-      <section className="relative w-full pt-[90px] pb-[96px]">
-        <div className="mx-auto w-full max-w-[1180px] px-10">
-          <div className="mx-auto mb-[60px] max-w-[580px] text-center">
+      <section className="relative w-full pt-[90px] pb-[96px] max-[768px]:pt-[68px] max-[768px]:pb-[72px] max-[480px]:pt-[56px] max-[480px]:pb-[60px]">
+        <div className="mx-auto w-full max-w-[1180px] px-10 max-[768px]:px-6 max-[480px]:px-5">
+          <div className="mx-auto mb-[60px] max-w-[580px] text-center max-[480px]:mb-10">
             <Tag texto="o ciclo da nossa solução" />
 
             <h2 className="m-0 mb-3 [font-family:var(--fonte-titulo)] text-[clamp(28px,3vw,38px)] font-semibold tracking-[-0.01em] text-[var(--cor-azul-escuro)]">
@@ -154,7 +166,7 @@ export default function Sobre() {
             </p>
           </div>
 
-          <div className="flex flex-row items-stretch gap-[6px] max-[768px]:flex-col max-[768px]:gap-4">
+          <div className="flex flex-row items-stretch gap-[6px] max-[900px]:flex-col max-[900px]:gap-4">
             <div className={flowStepClass}>
               <span className={flowNumberClass}>1</span>
               <div className={flowIconClass}><i className="fa-solid fa-shield" /></div>
@@ -162,7 +174,7 @@ export default function Sobre() {
               <p className={flowTextClass}>você registra uma atitude sustentável real do seu dia a dia.</p>
             </div>
 
-            <div className="flex w-[30px] flex-none items-center justify-center self-center rotate-0 text-[var(--cor-azul)] max-[768px]:rotate-90">
+            <div className="flex w-[30px] flex-none items-center justify-center self-center rotate-0 text-[var(--cor-azul)] max-[900px]:h-[22px] max-[900px]:w-full max-[900px]:rotate-90">
               <i className="fa-solid fa-arrow-right-long" />
             </div>
 
@@ -173,7 +185,7 @@ export default function Sobre() {
               <p className={flowTextClass}>nossa inteligência artificial confere se a ação registrada é consistente e verdadeira.</p>
             </div>
 
-            <div className="flex w-[30px] flex-none items-center justify-center self-center rotate-0 text-[var(--cor-azul)] max-[768px]:rotate-90">
+            <div className="flex w-[30px] flex-none items-center justify-center self-center rotate-0 text-[var(--cor-azul)] max-[900px]:h-[22px] max-[900px]:w-full max-[900px]:rotate-90">
               <i className="fa-solid fa-arrow-right-long" />
             </div>
 
@@ -184,7 +196,7 @@ export default function Sobre() {
               <p className={flowTextClass}>os pontos entram na sua carteira com valor proporcional ao esforço medido da ação.</p>
             </div>
 
-            <div className="flex w-[30px] flex-none items-center justify-center self-center rotate-0 text-[var(--cor-azul)] max-[768px]:rotate-90">
+            <div className="flex w-[30px] flex-none items-center justify-center self-center rotate-0 text-[var(--cor-azul)] max-[900px]:h-[22px] max-[900px]:w-full max-[900px]:rotate-90">
               <i className="fa-solid fa-arrow-right-long" />
             </div>
 
@@ -195,7 +207,7 @@ export default function Sobre() {
               <p className={flowTextClass}>sua pontuação te posiciona entre os usuários mais engajados do planeta.</p>
             </div>
 
-            <div className="flex w-[30px] flex-none items-center justify-center self-center rotate-0 text-[var(--cor-azul)] max-[768px]:rotate-90">
+            <div className="flex w-[30px] flex-none items-center justify-center self-center rotate-0 text-[var(--cor-azul)] max-[900px]:h-[22px] max-[900px]:w-full max-[900px]:rotate-90">
               <i className="fa-solid fa-arrow-right-long" />
             </div>
 
@@ -210,9 +222,9 @@ export default function Sobre() {
       </section>
 
       {/* ==================== VITRINE ==================== */}
-      <section className="relative w-full pb-[60px]">
-        <div className="mx-auto w-full max-w-[1180px] px-10">
-          <div className="rounded-[32px] border border-[var(--cor-creme-destaque)] bg-[var(--cor-branco)] px-[44px] pt-[48px] pb-[44px] text-center shadow-[0_24px_50px_-30px_rgba(32,111,116,0.18)] max-[768px]:px-5 max-[768px]:py-8">
+      <section className="relative w-full pb-[60px] max-[480px]:pb-[48px]">
+        <div className="mx-auto w-full max-w-[1180px] px-10 max-[768px]:px-6 max-[480px]:px-5">
+          <div className="rounded-[32px] border border-[var(--cor-creme-destaque)] bg-[var(--cor-branco)] px-[44px] pt-[48px] pb-[44px] text-center shadow-[0_24px_50px_-30px_rgba(32,111,116,0.18)] max-[768px]:px-6 max-[768px]:py-8 max-[480px]:rounded-[24px] max-[480px]:px-5 max-[480px]:py-7">
             <Tag texto="ganhe pontos soul" />
 
             <h2 className="m-0 mb-3 [font-family:var(--fonte-titulo)] text-[clamp(24px,2.6vw,32px)] font-semibold text-[var(--cor-azul-escuro)]">
@@ -224,7 +236,7 @@ export default function Sobre() {
               com <strong>pontos soul</strong>. veja exemplos do que pontua na nossa plataforma:
             </p>
 
-            <div className="grid grid-cols-4 gap-[22px] max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+            <div className="grid grid-cols-4 gap-[22px] max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
               <div className={showcaseItemClass}>
                 <div className="mb-[22px] flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#DCFCE7] text-[24px] text-[#15803D] transition-transform duration-200 group-hover:scale-[1.08]">
                   <i className="fa-solid fa-bicycle" />
@@ -266,13 +278,13 @@ export default function Sobre() {
       </section>
 
       {/* ==================== IA ==================== */}
-      <section className="relative w-full pb-[88px]">
-        <div className="mx-auto w-full max-w-[1180px] px-10">
+      <section className="relative w-full pb-[88px] max-[768px]:pb-[68px] max-[480px]:pb-[56px]">
+        <div className="mx-auto w-full max-w-[1180px] px-10 max-[768px]:px-6 max-[480px]:px-5">
           <div className="mx-auto mb-[34px] max-w-[580px] text-center">
             <Tag texto="validação por ia" />
           </div>
 
-          <div className="relative grid grid-cols-[1.1fr_0.9fr] items-center gap-12 overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#0F525F_0%,#206F74_60%,#154D55_100%)] p-9 shadow-[0_24px_60px_-20px_rgba(15,82,95,0.4)] before:pointer-events-none before:absolute before:right-[-100px] before:top-[-100px] before:h-[300px] before:w-[300px] before:rounded-full before:bg-[rgba(65,198,196,0.15)] before:blur-[40px] before:content-[''] p-[52px] max-[1024px]:grid-cols-1 max-[1024px]:gap-8 max-[1024px]:p-9">
+          <div className="relative grid grid-cols-[1.1fr_0.9fr] items-center gap-12 overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#0F525F_0%,#206F74_60%,#154D55_100%)] p-[52px] shadow-[0_24px_60px_-20px_rgba(15,82,95,0.4)] before:pointer-events-none before:absolute before:right-[-100px] before:top-[-100px] before:h-[300px] before:w-[300px] before:rounded-full before:bg-[rgba(65,198,196,0.15)] before:blur-[40px] before:content-[''] max-[1024px]:grid-cols-1 max-[1024px]:gap-8 max-[1024px]:p-9 max-[480px]:rounded-[24px] max-[480px]:p-6">
             <div className="relative z-[1]">
               <span className="mb-[18px] inline-flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.25)] bg-[rgba(255,255,255,0.15)] px-[14px] py-[6px] [font-family:var(--fonte-titulo)] text-[12px] font-bold text-[var(--cor-azul-bebe)]">
                 🤖 IA Transparente & Verificada
@@ -291,7 +303,7 @@ export default function Sobre() {
               </p>
             </div>
 
-            <div className="relative z-[1] grid grid-cols-2 gap-[20px] max-[768px]:grid-cols-1">
+            <div className="relative z-[1] grid grid-cols-2 gap-[20px] max-[640px]:grid-cols-1">
               {[
                 ["fa-eye", "análise e validação", "verificação inteligente de fotos e dados enviados."],
                 ["fa-earth-americas", "cálculo de impacto", "medição aproximada do CO₂ evitado por ação."],
@@ -314,9 +326,9 @@ export default function Sobre() {
       </section>
 
       {/* ==================== MINI LOJA ==================== */}
-      <section className="relative w-full pb-[96px]">
-        <div className="mx-auto w-full max-w-[1180px] px-10">
-          <div className="mx-auto mb-[60px] max-w-[580px] text-center">
+      <section className="relative w-full pb-[96px] max-[768px]:pb-[72px] max-[480px]:pb-[60px]">
+        <div className="mx-auto w-full max-w-[1180px] px-10 max-[768px]:px-6 max-[480px]:px-5">
+          <div className="mx-auto mb-[60px] max-w-[580px] text-center max-[480px]:mb-10">
             <Tag texto="mini loja de recompensas" />
 
             <h2 className="m-0 mb-3 [font-family:var(--fonte-titulo)] text-[clamp(28px,3vw,38px)] font-semibold tracking-[-0.01em] text-[var(--cor-azul-escuro)]">
@@ -328,7 +340,7 @@ export default function Sobre() {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-[30px] max-[1024px]:grid-cols-2 max-[768px]:grid-cols-1">
+          <div className="mt-12 grid grid-cols-3 gap-[30px] max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1 max-[480px]:mt-9">
             {[
               {
                 tag: "energia limpa", tagClass: "bg-[#FEF9C3] text-[#854D0E]", pts: "500 pts",
@@ -374,7 +386,7 @@ export default function Sobre() {
               }
             ].map((item) => (
               <div key={`${item.title}-${item.pts}`} className={storeCardClass}>
-                <div className="mb-[24px] flex items-center justify-between gap-3">
+                <div className="mb-[24px] flex items-center justify-between gap-3 max-[480px]:flex-wrap">
                   <span
                     className={`rounded-full px-[14px] py-[7px] [font-family:var(--fonte-titulo)] text-[11.5px] font-bold uppercase tracking-[0.04em] ${item.tagClass}`}
                   >
@@ -400,9 +412,9 @@ export default function Sobre() {
                   {item.text}
                 </p>
 
-                <div className="flex items-center justify-between gap-[10px] border-t border-[#F1F5F9] pt-[18px]">
+                <div className="flex items-center justify-between gap-[10px] border-t border-[#F1F5F9] pt-[18px] max-[480px]:flex-col max-[480px]:items-stretch">
                   <span className="text-[11.5px] font-semibold text-[#64748B]">{item.partner}</span>
-                  <span className="rounded-full bg-[#E3F6F5] px-[14px] py-[6px] [font-family:var(--fonte-titulo)] text-[12.5px] font-bold text-[var(--cor-azul)] transition-all duration-200 group-hover:bg-[var(--cor-azul)] group-hover:text-[var(--cor-branco)]">
+                  <span className="rounded-full bg-[#E3F6F5] px-[14px] py-[6px] [font-family:var(--fonte-titulo)] text-[12.5px] font-bold text-[var(--cor-azul)] transition-all duration-200 group-hover:bg-[var(--cor-azul)] group-hover:text-[var(--cor-branco)] max-[480px]:text-center">
                     resgatar prévia
                   </span>
                 </div>
@@ -410,7 +422,7 @@ export default function Sobre() {
             ))}
           </div>
 
-          <div className="mt-[88px] flex flex-col items-center justify-between gap-6 rounded-[28px] border border-[rgba(255,139,122,0.3)] bg-[linear-gradient(135deg,#FFF0ED_0%,#FFE5E0_100%)] px-5 py-7 text-center shadow-[0_12px_30px_-15px_rgba(255,139,122,0.25)] flex-row px-[44px] py-9 text-left max-[768px]:flex-col max-[768px]:px-5 max-[768px]:py-7 max-[768px]:text-center">
+          <div className="mt-[88px] flex flex-row items-center justify-between gap-6 rounded-[28px] border border-[rgba(255,139,122,0.3)] bg-[linear-gradient(135deg,#FFF0ED_0%,#FFE5E0_100%)] px-[44px] py-9 text-left shadow-[0_12px_30px_-15px_rgba(255,139,122,0.25)] max-[768px]:mt-[64px] max-[768px]:flex-col max-[768px]:px-6 max-[768px]:py-7 max-[768px]:text-center max-[480px]:mt-[52px] max-[480px]:rounded-[22px] max-[480px]:px-5">
             <div>
               <h3 className="m-0 mb-[6px] [font-family:var(--fonte-titulo)] text-[20px] font-bold text-[var(--cor-azul-escuro)]">
                 quer começar a acumular pontos e resgatar essas recompensas?
@@ -436,6 +448,8 @@ export default function Sobre() {
                 duration-200
                 hover:-translate-y-[2px]
                 hover:bg-[var(--cor-coral-escuro)]
+                max-[480px]:w-full
+                max-[480px]:justify-center
               "
             >
               começar agora <i className="fa-solid fa-arrow-right" />
