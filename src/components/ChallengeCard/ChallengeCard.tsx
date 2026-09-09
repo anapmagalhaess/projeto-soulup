@@ -6,7 +6,7 @@ type ChallengeCardProps = {
   titulo: string;
   descricao: string;
   pontos: number;
-  onIniciar: () => void;
+  onIniciar: (id: string) => void;
 };
 
 export default function ChallengeCard({
@@ -121,7 +121,7 @@ export default function ChallengeCard({
 
         <button
           type="button"
-          onClick={onIniciar}
+          onClick={() => onIniciar(id)}
           className="
             cursor-pointer
             rounded-full

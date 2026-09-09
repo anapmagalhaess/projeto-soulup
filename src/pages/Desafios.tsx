@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import Tag from "../components/Tag/Tag";
 import ChallengeCard from "../components/ChallengeCard/ChallengeCard";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function Desafios() {
   const [categoriaAtiva, setCategoriaAtiva] = useState("all");
@@ -10,6 +11,8 @@ export default function Desafios() {
   const [progresso, setProgresso] = useState(0);
   const [modalAberto, setModalAberto] = useState(false);
   const [arquivoKey, setArquivoKey] = useState(0);
+  const navigate = useNavigate();
+  const { id } = useParams();
 
   const pontosPorDesafio: Record<string, number> = {
     "pet-recycling": 5,
@@ -152,6 +155,23 @@ export default function Desafios() {
   ];
 
   useEffect(() => {
+    if (!id) return;
+
+    const desafioEncontrado = desafios.find((desafio) => desafio.id === id);
+
+    if (!desafioEncontrado) return;
+
+    setDesafioSelecionado(desafioEncontrado.id);
+    setCategoriaAtiva(desafioEncontrado.categoria);
+
+    window.setTimeout(() => {
+      document
+        .getElementById("simulator")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  }, [id]);
+
+  useEffect(() => {
     if (statusAnalise !== "loading") return;
 
     setProgresso(0);
@@ -186,15 +206,21 @@ export default function Desafios() {
     setProgresso(0);
     setModalAberto(false);
     setArquivoKey((atual) => atual + 1);
+    navigate("/pagina-desafio");
   };
 
   const mostrarCard = (categoria: string) =>
     categoriaAtiva === "all" || categoriaAtiva === categoria;
 
-  const irParaSimulador = () => {
-    document
-      .getElementById("simulator")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const irParaSimulador = (idDesafio: string) => {
+    navigate(`/pagina-desafio/${idDesafio}`);
+    setDesafioSelecionado(idDesafio);
+
+    window.setTimeout(() => {
+      document
+        .getElementById("simulator")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
   };
 
   const wrapClass = "mx-auto w-full max-w-[1180px] px-[30px]";
@@ -431,7 +457,20 @@ export default function Desafios() {
                   id="challenge-select"
                   required
                   value={desafioSelecionado}
-                  onChange={(event) => setDesafioSelecionado(event.target.value)}
+                  onChange={(event) => {
+                      const novoId = event.target.value;
+                      setDesafioSelecionado(novoId);
+
+                      const desafio = desafios.find(
+                        (item) => item.id === novoId,
+                      );
+
+                      if (desafio) {
+                        setCategoriaAtiva(desafio.categoria);
+                      }
+
+                      navigate(`/pagina-desafio/${novoId}`);
+                    }}
                   disabled={statusAnalise === "loading"}
                   className="
                     rounded-[12px] border-[1.5px] border-[var(--cor-azul-bebe)]
