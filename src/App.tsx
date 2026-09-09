@@ -3,15 +3,15 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 
 // Importando as páginas
-import Home from "./paginas/Home";
-import Sobre from "./paginas/Sobre";
-import Faq from "./paginas/Faq";
-import Desafios from "./paginas/Desafios";
-import Solucao from "./paginas/Solucao";
-import Contato from "./paginas/Contato";
-import QuemSomos from "./paginas/QuemSomos";
-import Login from "./paginas/Login";
-import Perfil from "./paginas/Perfil";
+import Home from "./pages/Home";
+import Sobre from "./pages/Sobre";
+import Faq from "./pages/Faq";
+import Desafios from "./pages/Desafios";
+import Solucao from "./pages/Solucao";
+import Contato from "./pages/Contato";
+import QuemSomos from "./pages/QuemSomos";
+import Login from "./pages/Login";
+import Perfil from "./pages/Perfil";
 
 export default function App() {
   //Imports
