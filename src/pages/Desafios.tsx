@@ -3,35 +3,7 @@ import Tag from "../components/Tag/Tag";
 import ChallengeCard from "../components/ChallengeCard/ChallengeCard";
 import { useNavigate, useParams } from "react-router-dom";
 
-export default function Desafios() {
-  const [categoriaAtiva, setCategoriaAtiva] = useState("all");
-  const [desafioSelecionado, setDesafioSelecionado] = useState("");
-  const [nomeArquivo, setNomeArquivo] = useState("");
-  const [statusAnalise, setStatusAnalise] = useState<"idle" | "loading" | "success">("idle");
-  const [progresso, setProgresso] = useState(0);
-  const [modalAberto, setModalAberto] = useState(false);
-  const [arquivoKey, setArquivoKey] = useState(0);
-  const navigate = useNavigate();
-  const { id } = useParams();
-
-  const pontosPorDesafio: Record<string, number> = {
-    "pet-recycling": 5,
-    "eco-walk": 20,
-    "natural-light": 5,
-    "e-waste": 20,
-    "energy-save": 25,
-    "bike-ride": 10,
-    "compostagem": 15,
-    "carona-solidaria": 15,
-    "chuveiro-rapido": 8,
-    "doacao-roupas": 15,
-    "doacao-alimentos": 20,
-    "doacao-sangue": 40,
-  };
-
-  const pontosGanhos = pontosPorDesafio[desafioSelecionado] ?? 0;
-
-  const desafios = [
+const desafios = [
     {
       id: "pet-recycling",
       categoria: "reciclagem",
@@ -152,29 +124,64 @@ export default function Desafios() {
         "Realize uma doação de sangue em um banco de sangue credenciado e envie o comprovante da doação.",
       pontos: 40,
     },
-  ];
+];
+
+export default function Desafios() {
+  const [categoriaAtiva, setCategoriaAtiva] = useState("all");
+  const [desafioSelecionado, setDesafioSelecionado] = useState("");
+  const [nomeArquivo, setNomeArquivo] = useState("");
+  const [statusAnalise, setStatusAnalise] = useState<"idle" | "loading" | "success">("idle");
+  const [progresso, setProgresso] = useState(0);
+  const [modalAberto, setModalAberto] = useState(false);
+  const [arquivoKey, setArquivoKey] = useState(0);
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  const pontosPorDesafio: Record<string, number> = {
+    "pet-recycling": 5,
+    "eco-walk": 20,
+    "natural-light": 5,
+    "e-waste": 20,
+    "energy-save": 25,
+    "bike-ride": 10,
+    "compostagem": 15,
+    "carona-solidaria": 15,
+    "chuveiro-rapido": 8,
+    "doacao-roupas": 15,
+    "doacao-alimentos": 20,
+    "doacao-sangue": 40,
+  };
+
+  const pontosGanhos = pontosPorDesafio[desafioSelecionado] ?? 0;
+
+
 
   useEffect(() => {
     if (!id) return;
 
-    const desafioEncontrado = desafios.find((desafio) => desafio.id === id);
+    const desafioEncontrado = desafios.find(
+      (desafio) => desafio.id === id,
+    );
 
     if (!desafioEncontrado) return;
 
-    setDesafioSelecionado(desafioEncontrado.id);
-    setCategoriaAtiva(desafioEncontrado.categoria);
+    const timer = window.setTimeout(() => {
+      setDesafioSelecionado(desafioEncontrado.id);
+      setCategoriaAtiva(desafioEncontrado.categoria);
 
-    window.setTimeout(() => {
       document
         .getElementById("simulator")
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
     }, 100);
+
+    return () => window.clearTimeout(timer);
   }, [id]);
 
   useEffect(() => {
     if (statusAnalise !== "loading") return;
-
-    setProgresso(0);
 
     const intervalo = window.setInterval(() => {
       setProgresso((atual) => Math.min(atual + 5, 95));
@@ -195,7 +202,10 @@ export default function Desafios() {
 
   const enviarParaAnalise = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     if (!desafioSelecionado || !nomeArquivo) return;
+
+    setProgresso(0);
     setStatusAnalise("loading");
   };
 
@@ -219,7 +229,10 @@ export default function Desafios() {
     window.setTimeout(() => {
       document
         .getElementById("simulator")
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
     }, 100);
   };
 
@@ -459,6 +472,7 @@ export default function Desafios() {
                   value={desafioSelecionado}
                   onChange={(event) => {
                       const novoId = event.target.value;
+
                       setDesafioSelecionado(novoId);
 
                       const desafio = desafios.find(
