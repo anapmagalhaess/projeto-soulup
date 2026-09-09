@@ -30,7 +30,7 @@
 
 ## 🌎 Sobre o Projeto
 
-A **Soul Up** é uma plataforma gamificada criada para incentivar atitudes sustentáveis no dia a dia e transformar ações positivas em recompensas reais.
+A nossa solução para **Soul Up** é uma plataforma gamificada criada para incentivar atitudes sustentáveis no dia a dia e transformar ações positivas em recompensas reais.
 
 A proposta conecta **sustentabilidade, tecnologia, inteligência artificial e gamificação**. O usuário pode conhecer desafios ecológicos, registrar ações, acompanhar sua pontuação, visualizar seu impacto ambiental e explorar recompensas associadas à sua participação.
 
@@ -40,8 +40,7 @@ A solução também apresenta uma simulação de validação por IA, calculadora
 
 ---
 
-## ✨ Pilares da Soul Up
-
+## ✨ Pilares
 | 🌱 Sustentabilidade | 🤖 Tecnologia | 👥 Comunidade | 🎁 Recompensas |
 | :--- | :--- | :--- | :--- |
 | Incentivamos hábitos que contribuam para a redução de impactos ambientais e valorizamos pequenas ações do cotidiano. | Utilizamos conceitos de inteligência artificial, validação de imagens e análise de impacto para representar como ações podem ser verificadas na plataforma. | A experiência inclui ranking, comunidades, conquistas e indicadores para estimular participação e engajamento coletivo. | As ações sustentáveis geram pontos que podem ser relacionados a benefícios, produtos e vantagens de parceiros. |
@@ -119,6 +118,8 @@ A **Home** apresenta a Soul Up e sua proposta principal logo no primeiro contato
 
 A página também apresenta indicadores de participação, um resumo visual do processo em três etapas — registrar uma ação, acumular pontos e trocar por recompensas — e uma meta coletiva da comunidade com barra de progresso.
 
+<img src="./src/img/home-1.webp" />
+<img src="./src/img/home-2.webp" />
 ---
 
 ### 🌱 Sobre
@@ -128,6 +129,11 @@ A página **Sobre** explica com mais profundidade como funciona o ciclo da solu�
 O usuário acompanha o fluxo completo de uma atitude sustentável: realização da ação, validação por inteligência artificial, recebimento de pontos, posicionamento no ranking e posterior resgate de recompensas.
 
 Também são apresentados exemplos de ações que geram pontos, detalhes sobre o papel da IA no processo de validação e uma prévia da loja de recompensas disponível dentro do ecossistema.
+
+<img src="./src/img/sobre-1.webp" />
+<img src="./src/img/sobre-2.webp" />
+<img src="./src/img/sobre-3.webp" />
+<img src="./src/img/sobre-4.webp" />
 
 ---
 
@@ -143,6 +149,8 @@ As respostas explicam temas como:
 - funcionamento e reset do ranking.
 
 Caso a dúvida do usuário não esteja contemplada, a página oferece um redirecionamento direto para a área de contato.
+
+<img src="./src/img/faq-1.webp" />
 
 ---
 
@@ -163,6 +171,10 @@ A página conta ainda com:
 - barra de progresso da validação;
 - modal de sucesso com a quantidade de pontos conquistada.
 
+<img src="./src/img/desafios-1.webp" />
+<img src="./src/img/desafios-2.webp" />
+<img src="./src/img/desafios-3.webp" />
+
 ---
 
 ### 💡 Solução
@@ -180,6 +192,13 @@ Com base nos valores selecionados, a página calcula:
 
 Também é possível aplicar simulações por **Tier Verde, Prata ou Ouro**, visualizar quais recompensas seriam desbloqueadas com a pontuação estimada e consultar o ranking mensal de usuários.
 
+<img src="./src/img/solucao-1.webp" />
+<img src="./src/img/solucao-2.webp" />
+<img src="./src/img/solucao-3.webp" />
+<img src="./src/img/solucao-4.webp" />
+<img src="./src/img/solucao-5.webp" />
+<img src="./src/img/solucao-6.webp" />
+
 ---
 
 ### 📞 Contato
@@ -194,6 +213,8 @@ Ela apresenta cards com:
 - endereço.
 
 Também disponibiliza um banner para abertura de **Issue no GitHub**, além de atalhos visuais para redes sociais.
+
+<img src="./src/img/contato-1.webp" />
 
 ---
 
@@ -211,6 +232,8 @@ Cada integrante possui um card com:
 - LinkedIn.
 
 A seção foi desenvolvida utilizando um componente reutilizável para manter padronização visual entre todos os membros da equipe.
+
+<img src="./src/img/quemsomos-1.webp" />
 
 ---
 
@@ -232,6 +255,8 @@ O formulário utiliza **React Hook Form** e possui validações para:
 A idade mínima permitida é validada antes da conclusão do cadastro.
 
 Após o envio correto dos dados, as principais informações do usuário são armazenadas em `sessionStorage`, a navegação é atualizada e um modal de confirmação informa que o cadastro foi realizado com sucesso.
+
+<img src="./src/img/login-1.webp" />
 
 ---
 
@@ -258,6 +283,8 @@ Ela apresenta:
 
 O perfil também apresenta informações sobre os níveis **Verde, Prata e Ouro** e o progresso necessário para avançar entre os tiers.
 
+<img src="./src/img/perfil-1.webp" />
+<img src="./src/img/perfil-2.webp" />
 ---
 
 ## 🖼️ Imagens, Ícones e Demonstração do Projeto
@@ -266,7 +293,7 @@ O README utiliza elementos visuais para facilitar a identificação das tecnolog
 
 <div align="center">
 
-### 🎥 Demonstração da Soul Up
+### 🎥 Demonstração
 
 <a href="https://youtu.be/LppVSuMFK-w" target="_blank">
   <img
@@ -360,19 +387,6 @@ h + Enter → exibe a lista de atalhos
 o + Enter → abre o projeto no navegador
 ```
 
-### 6. Verifique a qualidade do código
-
-```bash
-npm run lint
-```
-
-### 7. Gere a versão de produção
-
-```bash
-npm run build
-```
-
-A pasta `dist` será criada com os arquivos otimizados para produção.
 
 ### Como usar a plataforma
 
@@ -409,7 +423,7 @@ A pasta `dist` será criada com os arquivos otimizados para produção.
 
 Para dúvidas, sugestões ou suporte técnico:
 
-- ✉️ **E-mail:** `nextgen.solucoestech@gmail.com`
+- ✉️ **E-mail:** `nextgensolucoes@gmail.com`
 - ❓ **GitHub Issues:** [abrir uma issue](https://github.com/anapmagalhaess/projeto-soulup/issues)
 
 ---
