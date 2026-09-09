@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from "react";
 import Tag from "../components/Tag/Tag";
-import ChallengeCard from "../components/Challenge-Card/Challenge-Card";
+import ChallengeCard from "../components/ChallengeCard/ChallengeCard";
 
 export default function Desafios() {
   const [categoriaAtiva, setCategoriaAtiva] = useState("all");

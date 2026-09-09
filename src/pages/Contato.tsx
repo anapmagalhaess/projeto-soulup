@@ -1,5 +1,5 @@
 import Tag from "../components/Tag/Tag";
-import ContatoCard from "../components/Contato-Card/Contato-Card";
+import ContatoCard from "../components/ContatoCard/ContatoCard";
 
 export default function Contato() {
   const wrapClass = "mx-auto w-full max-w-[1180px] px-10";
