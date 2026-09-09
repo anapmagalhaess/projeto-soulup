@@ -2,7 +2,8 @@ import Tag from "../components/Tag/Tag";
 import TeamCard from "../components/TeamCard/TeamCard";
 
 export default function QuemSomos() {
-  const wrapClass = "mx-auto w-full max-w-[1180px] px-10";
+  const wrapClass =
+    "mx-auto w-full max-w-[1180px] px-10 max-[768px]:px-6 max-[480px]:px-5";
 
   const integrantes = [
     {
@@ -57,6 +58,10 @@ export default function QuemSomos() {
           bg-[linear-gradient(70deg,#f0ffff_40%,#b3dadb)]
           pt-[76px] pb-[72px]
           text-center
+          max-[768px]:pt-[58px]
+          max-[768px]:pb-[56px]
+          max-[480px]:pt-[44px]
+          max-[480px]:pb-[44px]
         "
       >
         <div
@@ -66,6 +71,8 @@ export default function QuemSomos() {
             h-[260px] w-[260px]
             rounded-full
             bg-[rgba(65,198,196,0.28)]
+            max-[480px]:h-[190px]
+            max-[480px]:w-[190px]
           "
         />
 
@@ -76,10 +83,12 @@ export default function QuemSomos() {
             h-[180px] w-[180px]
             rounded-full
             bg-[rgba(153,209,213,0.4)]
+            max-[480px]:h-[130px]
+            max-[480px]:w-[130px]
           "
         />
 
-        <div className="relative z-[2] mx-auto w-full max-w-[680px] px-10">
+        <div className="relative z-[2] mx-auto w-full max-w-[680px] px-10 max-[768px]:px-6 max-[480px]:px-5">
           <div className="mb-5 flex justify-center">
             <Tag texto="desenvolvedores" />
           </div>
@@ -92,6 +101,7 @@ export default function QuemSomos() {
               font-semibold leading-[1.18]
               tracking-[-0.01em]
               text-[var(--cor-azul-escuro)]
+              max-[480px]:text-[clamp(28px,9vw,38px)]
             "
           >
             quem somos
@@ -103,6 +113,7 @@ export default function QuemSomos() {
               text-[16px] font-medium
               leading-[1.65]
               text-[var(--cor-turquesa)]
+              max-[480px]:text-[14.5px]
             "
           >
             o time por trás da solução gamificada para a soul up — construindo
@@ -113,13 +124,15 @@ export default function QuemSomos() {
       </section>
 
       {/* ==================== TIME ==================== */}
-      <section className="relative w-full pt-16 pb-24">
+      <section className="relative w-full pt-16 pb-24 max-[768px]:pt-12 max-[768px]:pb-16 max-[480px]:pt-10 max-[480px]:pb-14">
         <div className={wrapClass}>
           <div
             className="
               mx-auto grid max-w-[860px]
               grid-cols-2 gap-8
+              max-[768px]:gap-6
               max-[700px]:grid-cols-1
+              max-[480px]:gap-5
             "
           >
             {integrantes.map((integrante) => (
