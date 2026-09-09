@@ -73,6 +73,7 @@ export default function Login() {
 
   const fieldClass = `
     flex flex-col gap-[6px]
+    max-[480px]:gap-[5px]
   `;
 
   const labelClass = `
@@ -88,6 +89,10 @@ export default function Login() {
     bg-[var(--cor-branco)]
     px-4 py-[10px]
     text-[14.5px]
+    max-[480px]:rounded-[14px]
+    max-[480px]:px-[14px]
+    max-[480px]:py-[11px]
+    max-[480px]:text-[14px]
     outline-none
     transition-[border-color,box-shadow,transform]
     duration-150 ease-out
@@ -111,8 +116,9 @@ export default function Login() {
           [font-family:'Plus_Jakarta_Sans',sans-serif]
           antialiased
           max-[950px]:h-auto
-          max-[950px]:min-h-[calc(100dvh-75px)]
+          max-[950px]:min-h-[calc(100dvh-70px)]
           max-[950px]:overflow-visible
+          max-[480px]:min-h-0
         "
       >
         <div
@@ -131,10 +137,15 @@ export default function Login() {
               bg-[var(--cor-creme)]
               px-[48px] py-[26px]
               max-[950px]:overflow-visible
+              max-[950px]:px-10
+              max-[950px]:py-12
               max-[700px]:px-6
+              max-[700px]:py-10
+              max-[480px]:px-5
+              max-[480px]:py-8
             "
           >
-            <div className="my-auto w-full">
+            <div className="my-auto w-full max-[950px]:mx-auto max-[950px]:max-w-[680px]">
               <div className="mb-4">
                 <span
                   className="
@@ -144,6 +155,7 @@ export default function Login() {
                     px-3 py-[5px]
                     [font-family:var(--fonte-titulo)]
                     text-[12.5px] font-semibold
+                  max-[480px]:text-[11.5px]
                     tracking-[0.02em]
                     text-[var(--cor-coral-escuro)]
                   "
@@ -156,6 +168,7 @@ export default function Login() {
                     m-0 mb-3
                     [font-family:var(--fonte-titulo)]
                     text-[30px] font-semibold
+                    max-[480px]:text-[27px]
                     leading-[1.14]
                     tracking-[-0.01em]
                     text-[var(--cor-azul-escuro)]
@@ -170,6 +183,7 @@ export default function Login() {
                   className="
                     m-0 max-w-[42ch]
                     text-[13.5px] leading-[1.5]
+                    max-[480px]:text-[13px]
                     text-[#5C7A70]
                   "
                 >
@@ -181,7 +195,7 @@ export default function Login() {
               <form
                 onSubmit={handleSubmit(cadastrarUsuario)}
                 noValidate
-                className="mt-4 flex flex-col gap-[10px]"
+                className="mt-4 flex flex-col gap-[10px] max-[480px]:gap-3"
               >
                 <div className={fieldClass}>
                   <label htmlFor="pais" className={labelClass}>
@@ -304,7 +318,7 @@ export default function Login() {
                   )}
                 </div>
 
-                <div className="grid grid-cols-2 gap-[10px] max-[620px]:grid-cols-1">
+                <div className="grid grid-cols-2 gap-[10px] max-[680px]:grid-cols-1 max-[480px]:gap-3">
                   <div className={fieldClass}>
                     <label htmlFor="nascimento" className={labelClass}>
                       Data de nascimento
@@ -419,6 +433,7 @@ export default function Login() {
                     mt-1 flex items-start gap-[10px]
                     text-[13px] leading-[1.55]
                     text-[#5C7A70]
+                    max-[480px]:text-[12.5px]
                   "
                 >
                   <input
@@ -485,6 +500,7 @@ export default function Login() {
                     bg-[var(--cor-coral)]
                     px-5 py-[12px]
                     [font-family:var(--fonte-titulo)]
+                    max-[480px]:py-[13px]
                     text-[15.5px] font-semibold
                     tracking-[0.01em]
                     text-[var(--cor-branco)]
@@ -515,12 +531,18 @@ export default function Login() {
               text-left
               text-[var(--cor-creme)]
               [background:radial-gradient(120%_130%_at_18%_0%,var(--cor-ciano)_0%,transparent_55%),linear-gradient(160deg,var(--cor-azul)_0%,var(--cor-ciano-2)_55%,var(--cor-azul-escuro)_100%)]
-              max-[950px]:min-h-[520px]
+              max-[950px]:min-h-[440px]
+              max-[950px]:px-10
+              max-[950px]:py-12
+              max-[700px]:min-h-[400px]
               max-[700px]:px-6
-              max-[700px]:py-12
+              max-[700px]:py-10
+              max-[480px]:min-h-[360px]
+              max-[480px]:px-5
+              max-[480px]:py-8
             "
           >
-            <div className="relative z-[2] w-full max-w-[650px]">
+            <div className="relative z-[2] w-full max-w-[650px] max-[950px]:mx-auto max-[950px]:text-center">
               <span
                 className="
                   mb-[22px] inline-flex items-center gap-2
@@ -543,6 +565,7 @@ export default function Login() {
                   [font-family:var(--fonte-titulo)]
                   text-[clamp(32px,4vw,50px)]
                   font-semibold leading-[1.12]
+                  max-[480px]:text-[clamp(28px,9vw,38px)]
                   tracking-[-0.01em]
                   text-[var(--cor-creme)]
                 "
@@ -594,6 +617,8 @@ export default function Login() {
                 className="
                   m-0 max-w-[46ch]
                   text-[14.5px] font-medium
+                  max-[950px]:mx-auto
+                  max-[480px]:text-[13.5px]
                   leading-[1.65]
                   text-[rgba(255,255,255,0.68)]
                 "
@@ -603,7 +628,7 @@ export default function Login() {
               </p>
             </div>
 
-            <div className="relative z-[2] flex flex-wrap justify-start gap-[14px] max-[560px]:flex-col">
+            <div className="relative z-[2] flex flex-wrap justify-start gap-[14px] max-[950px]:justify-center max-[560px]:grid max-[560px]:w-full max-[560px]:grid-cols-2 max-[480px]:grid-cols-1">
               <div
                 className="
                   flex rotate-[-1.5deg] flex-col gap-[2px]
@@ -611,6 +636,8 @@ export default function Login() {
                   border border-[rgba(255,255,255,0.16)]
                   bg-[rgba(255,255,255,0.08)]
                   px-4 py-[10px]
+                  max-[560px]:rotate-0
+                  max-[560px]:text-center
                 "
               >
                 <span
@@ -635,6 +662,8 @@ export default function Login() {
                   border border-[rgba(255,255,255,0.16)]
                   bg-[rgba(255,255,255,0.08)]
                   px-4 py-[10px]
+                  max-[560px]:rotate-0
+                  max-[560px]:text-center
                 "
               >
                 <span
@@ -665,6 +694,7 @@ export default function Login() {
             bg-[rgba(0,0,0,0.38)]
             px-5
             backdrop-blur-[3px]
+            max-[480px]:px-4
           "
           role="dialog"
           aria-modal="true"
@@ -678,6 +708,9 @@ export default function Login() {
               bg-[var(--cor-creme)]
               px-9 py-10
               text-center
+              max-[480px]:rounded-[20px]
+              max-[480px]:px-6
+              max-[480px]:py-8
               shadow-[0_18px_50px_rgba(15,42,44,0.2)]
             "
           >
@@ -700,6 +733,7 @@ export default function Login() {
                 m-0 mb-3
                 [font-family:var(--fonte-titulo)]
                 text-[24px] font-bold
+                max-[480px]:text-[21px]
                 text-[var(--cor-azul-escuro)]
               "
             >
@@ -710,6 +744,7 @@ export default function Login() {
               className="
                 mx-auto m-0 max-w-[34ch]
                 text-[14.5px] leading-[1.6]
+                max-[480px]:text-[13.5px]
                 text-[var(--cor-turquesa)]
               "
             >
