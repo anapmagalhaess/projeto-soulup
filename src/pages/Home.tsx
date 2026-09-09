@@ -6,13 +6,9 @@ export default function Home() {
     <main
       className="
         relative
-        left-1/2
-        right-1/2
-        -ml-[50vw]
-        -mr-[50vw]
         m-0
         p-0
-        w-screen
+        w-full
         max-w-none
         min-h-screen
         overflow-x-hidden
@@ -36,6 +32,12 @@ export default function Home() {
           pt-[76px]
           pb-[60px]
           mb-[60px]
+          max-[900px]:pt-[56px]
+          max-[900px]:pb-[48px]
+          max-[900px]:mb-[48px]
+          max-[600px]:pt-[42px]
+          max-[600px]:pb-[40px]
+          max-[600px]:mb-[40px]
         "
       >
         <div
@@ -48,10 +50,14 @@ export default function Home() {
             items-center
             gap-10
             px-10
+            max-[900px]:grid-cols-1
+            max-[900px]:gap-8
+            max-[900px]:px-6
+            max-[600px]:px-5
           "
         >
           {/* Conteúdo do Hero */}
-          <div>
+          <div className="max-[900px]:text-center">
             <p className="m-0">
               <Tag texto="bem-vindo(a) à soulup" />
             </p>
@@ -63,6 +69,9 @@ export default function Home() {
                 max-w-[15ch]
                 [font-family:var(--fonte-titulo)]
                 text-[clamp(34px,4vw,50px)]
+                max-[900px]:mx-auto
+                max-[600px]:max-w-[13ch]
+                max-[600px]:text-[clamp(30px,9vw,40px)]
                 font-semibold
                 leading-[1.16]
                 tracking-[-0.01em]
@@ -120,6 +129,8 @@ export default function Home() {
                 mb-8
                 max-w-[46ch]
                 text-[16.5px]
+                max-[900px]:mx-auto
+                max-[600px]:text-[15px]
                 font-medium
                 leading-[1.65]
                 text-[var(--cor-turquesa)]
@@ -131,7 +142,7 @@ export default function Home() {
             </p>
 
             {/* links */}
-            <div className="mb-[52px] flex flex-wrap items-center gap-[20px]">
+            <div className="mb-[52px] flex flex-wrap items-center gap-[20px] max-[900px]:justify-center max-[600px]:mb-10 max-[600px]:flex-col max-[600px]:gap-3">
               <Link
                 to="/pagina-login"
                 className="
@@ -156,6 +167,7 @@ export default function Home() {
                   hover:-translate-y-[2px]
                   hover:shadow-[0_8px_0_var(--cor-coral-escuro)]
                   active:translate-y-[2px]
+                  max-[600px]:w-full
                   active:shadow-[0_3px_0_var(--cor-coral-escuro)]
                 "
               >
@@ -184,6 +196,7 @@ export default function Home() {
                   transition-[background,transform]
                   duration-150
                   hover:-translate-y-[2px]
+                  max-[600px]:w-full
                   hover:bg-white/60
                 "
               >
@@ -192,9 +205,9 @@ export default function Home() {
             </div>
 
             {/* Status da plataforma */}
-            <div className="flex flex-wrap gap-[14px]">
-              <div className="rotate-[-1.5deg] rounded-[18px] border border-[rgba(32,111,116,0.12)] bg-[rgba(255,255,255,0.70)] px-[18px] py-[12px]">
-                <p className="m-0 whitespace-nowrap">
+            <div className="flex flex-wrap gap-[14px] max-[900px]:justify-center max-[600px]:grid max-[600px]:grid-cols-1 max-[600px]:gap-3">
+              <div className="rotate-[-1.5deg] rounded-[18px] border border-[rgba(32,111,116,0.12)] bg-[rgba(255,255,255,0.70)] px-[18px] py-[12px] max-[600px]:rotate-0 max-[600px]:text-center">
+                <p className="m-0 whitespace-nowrap max-[600px]:whitespace-normal">
                   <span className="[font-family:var(--fonte-titulo)] text-[20px] font-semibold text-[var(--cor-azul-escuro)]">
                     <strong>12k+</strong>
                   </span>
@@ -204,8 +217,8 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="rotate-[1.5deg] rounded-[18px] border border-[rgba(32,111,116,0.12)] bg-[rgba(255,255,255,0.70)] px-[18px] py-[12px]">
-                <p className="m-0 whitespace-nowrap">
+              <div className="rotate-[1.5deg] rounded-[18px] border border-[rgba(32,111,116,0.12)] bg-[rgba(255,255,255,0.70)] px-[18px] py-[12px] max-[600px]:rotate-0 max-[600px]:text-center">
+                <p className="m-0 whitespace-nowrap max-[600px]:whitespace-normal">
                   <span className="[font-family:var(--fonte-titulo)] text-[20px] font-semibold text-[var(--cor-azul-escuro)]">
                     <strong>3,8k</strong>
                   </span>
@@ -215,8 +228,8 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="rounded-[18px] border border-[rgba(32,111,116,0.12)] bg-[rgba(255,255,255,0.70)] px-[18px] py-[12px]">
-                <p className="m-0 whitespace-nowrap">
+              <div className="rounded-[18px] border border-[rgba(32,111,116,0.12)] bg-[rgba(255,255,255,0.70)] px-[18px] py-[12px] max-[600px]:text-center">
+                <p className="m-0 whitespace-nowrap max-[600px]:whitespace-normal">
                   <span className="[font-family:var(--fonte-titulo)] text-[20px] text-[var(--cor-azul-escuro)]">
                     <strong>40+</strong>
                   </span>
@@ -229,7 +242,7 @@ export default function Home() {
           </div>
 
           {/* Visual do Hero */}
-          <div className="relative h-[380px]">
+          <div className="relative h-[380px] max-[900px]:mx-auto max-[900px]:w-full max-[900px]:max-w-[520px] max-[600px]:h-[300px]">
             <div className="absolute left-0 top-[4%] h-[220px] w-[220px] rounded-full bg-[rgba(65,198,196,0.30)]" />
             <div className="absolute bottom-[6%] right-[4%] h-[150px] w-[150px] rounded-full bg-[rgba(153,209,213,0.45)]" />
 
@@ -241,6 +254,7 @@ export default function Home() {
                 top-1/2
                 w-[260px]
                 -translate-x-1/2
+                max-[600px]:w-[230px]
                 -translate-y-1/2
                 rotate-[-3deg]
                 rounded-[28px]
@@ -307,10 +321,11 @@ export default function Home() {
           w-full
           bg-[var(--cor-creme)]
           pb-[70px]
+          max-[600px]:pb-[52px]
         "
       >
-        <div className="mx-auto w-full max-w-[1180px] px-10">
-          <div className="mx-auto mb-[52px] max-w-[560px] text-center">
+        <div className="mx-auto w-full max-w-[1180px] px-10 max-[900px]:px-6 max-[600px]:px-5">
+          <div className="mx-auto mb-[52px] max-w-[560px] text-center max-[600px]:mb-10">
             <p className="m-0">
               <Tag texto="simples assim" />
             </p>
@@ -335,9 +350,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 items-start gap-6">
+          <div className="grid grid-cols-3 items-start gap-6 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 max-[600px]:gap-5">
             {/* Card 1 */}
-            <article className="relative min-w-0 rounded-[24px] border border-[var(--cor-creme)] bg-[#F5FDFD] px-[28px] pt-[24px] pb-[20px]">
+            <article className="relative min-w-0 rounded-[24px] border border-[var(--cor-creme)] bg-[#F5FDFD] px-[28px] pt-[24px] pb-[20px] max-[600px]:px-5 max-[600px]:pt-6 max-[600px]:pb-5">
               <span className="absolute left-[28px] top-[-14px] z-10 flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[var(--cor-azul)] [font-family:var(--fonte-titulo)] text-[14px] font-semibold text-[var(--cor-branco)]">
                 1
               </span>
@@ -357,7 +372,7 @@ export default function Home() {
             </article>
 
             {/* Card 2 */}
-            <article className="relative min-w-0 rounded-[24px] border border-[var(--cor-creme)] bg-[#F5FDFD] px-[28px] pt-[24px] pb-[20px]">
+            <article className="relative min-w-0 rounded-[24px] border border-[var(--cor-creme)] bg-[#F5FDFD] px-[28px] pt-[24px] pb-[20px] max-[600px]:px-5 max-[600px]:pt-6 max-[600px]:pb-5">
               <span className="absolute left-[28px] top-[-14px] z-10 flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[var(--cor-azul)] [font-family:var(--fonte-titulo)] text-[14px] font-semibold text-[var(--cor-branco)]">
                 2
               </span>
@@ -377,7 +392,7 @@ export default function Home() {
             </article>
 
             {/* Card 3 */}
-            <article className="relative min-w-0 rounded-[24px] border border-[var(--cor-creme)] bg-[#F5FDFD] px-[28px] pt-[24px] pb-[20px]">
+            <article className="relative min-w-0 rounded-[24px] border border-[var(--cor-creme)] bg-[#F5FDFD] px-[28px] pt-[24px] pb-[20px] max-[600px]:px-5 max-[600px]:pt-6 max-[600px]:pb-5">
               <span className="absolute left-[28px] top-[-14px] z-10 flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[var(--cor-azul)] [font-family:var(--fonte-titulo)] text-[14px] font-semibold text-[var(--cor-branco)]">
                 3
               </span>
@@ -411,6 +426,10 @@ export default function Home() {
           bg-[var(--cor-azul-bebe)]
           pt-[100px]
           pb-[120px]
+          max-[900px]:pt-[72px]
+          max-[900px]:pb-[88px]
+          max-[600px]:pt-[56px]
+          max-[600px]:pb-[64px]
         "
       >
         {/* Bolhas decorativas da meta da comunidade */}
@@ -444,13 +463,15 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-[1] mx-auto w-full max-w-[1180px] px-10">
+        <div className="relative z-[1] mx-auto w-full max-w-[1180px] px-10 max-[900px]:px-6 max-[600px]:px-5">
           <div
             className="
               mx-auto
               flex
-              h-[420px]
-              w-[860px]
+              min-h-[420px]
+              w-full
+              max-w-[860px]
+              max-[600px]:min-h-0
               flex-col
               items-center
               justify-center
@@ -460,6 +481,8 @@ export default function Home() {
               bg-[#F5FDFD]
               p-12
               text-center
+              max-[900px]:p-10
+              max-[600px]:p-6
               shadow-[0_20px_40px_-10px_rgba(32,111,116,0.08)]
             "
           >
@@ -488,17 +511,17 @@ export default function Home() {
             </div>
 
             <div className="mt-[30px] flex w-full flex-col items-center">
-              <div className="relative mb-3 h-[14px] w-[520px] overflow-hidden rounded-[10px] bg-[#E3F6F5]">
+              <div className="relative mb-3 h-[14px] w-full max-w-[520px] overflow-hidden rounded-[10px] bg-[#E3F6F5]">
                 <div className="h-full w-1/2 rounded-[10px] bg-[linear-gradient(90deg,var(--cor-ciano),var(--cor-azul))] transition-[width] duration-1000 ease-in-out" />
               </div>
 
-              <div className="flex w-[520px] justify-between text-[14px] font-semibold text-[var(--cor-azul-escuro)]">
+              <div className="flex w-full max-w-[520px] justify-between gap-4 text-[14px] font-semibold text-[var(--cor-azul-escuro)] max-[480px]:text-[12px]">
                 <span>25.000 alcançados</span>
                 <span>50.000</span>
               </div>
             </div>
 
-            <p className="m-0 mt-10 text-[12.5px] font-semibold tracking-[0.02em] text-[var(--cor-coral-escuro)]">
+            <p className="m-0 mt-10 text-[12.5px] font-semibold tracking-[0.02em] text-[var(--cor-coral-escuro)] max-[600px]:mt-8">
               <strong>meta cumprida = cupom de 10% a todos</strong>
             </p>
           </div>
