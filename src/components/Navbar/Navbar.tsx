@@ -1,25 +1,63 @@
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const definirClasse = ({ isActive }: { isActive: boolean }) => {
+  const [usuarioLogado, setUsuarioLogado] = useState(
+    () => sessionStorage.getItem("usuarioLogado") === "true",
+  );
+
+  useEffect(() => {
+    const atualizarAutenticacao = () => {
+      const isLogado =
+        sessionStorage.getItem("usuarioLogado") === "true";
+
+      setUsuarioLogado(isLogado);
+    };
+
+    // Atualiza a Navbar quando o Login dispara o evento
+    window.addEventListener(
+      "auth-change",
+      atualizarAutenticacao,
+    );
+
+    // Também verifica mudanças do storage
+    window.addEventListener(
+      "storage",
+      atualizarAutenticacao,
+    );
+
+    return () => {
+      window.removeEventListener(
+        "auth-change",
+        atualizarAutenticacao,
+      );
+
+      window.removeEventListener(
+        "storage",
+        atualizarAutenticacao,
+      );
+    };
+  }, []);
+
+  const definirClasse = ({
+    isActive,
+  }: {
+    isActive: boolean;
+  }) => {
     const classeBase = `
       group/link
       relative
       flex
       shrink-0
       items-center
-
       px-[5px]
       py-[10px]
-
       whitespace-nowrap
-
       [font-family:'Fredoka',sans-serif]
       text-[16px]
       font-medium
       text-[var(--cor-azul)]
       no-underline
-
       after:absolute
       after:left-[5px]
       after:right-[5px]
@@ -29,7 +67,6 @@ export default function Navbar() {
       after:bg-[var(--cor-azul)]
       after:transition-transform
       after:duration-[400ms]
-
       hover:after:scale-x-100
     `;
 
@@ -55,18 +92,13 @@ export default function Navbar() {
         w-screen
         max-w-none
         -translate-x-1/2
-
         box-border
         m-0
         flex
         min-h-[75px]
-
         items-center
-
         overflow-x-hidden
-
         bg-[var(--cor-creme)]
-
         px-[clamp(20px,2.5vw,50px)]
         py-0
       "
@@ -84,7 +116,6 @@ export default function Navbar() {
             inline-flex
             items-center
             gap-[9px]
-
             [font-family:'Fredoka',sans-serif]
             text-[35px]
             font-semibold
@@ -101,14 +132,10 @@ export default function Navbar() {
               w-[42px]
               shrink-0
               rotate-[-6deg]
-
               items-center
               justify-center
-
               rounded-[58%_42%_63%_37%/45%_58%_42%_55%]
-
               bg-[var(--cor-ciano-2)]
-
               [font-family:'Fredoka',sans-serif]
               text-[13px]
               font-semibold
@@ -144,14 +171,10 @@ export default function Navbar() {
             cursor-pointer
             items-center
             justify-center
-
             rounded-[15px]
-
             border
             border-[var(--cor-azul-bebe)]
-
             bg-[linear-gradient(to_right,var(--cor-azul),var(--cor-ciano))]
-
             text-[15px]
             text-[var(--cor-branco)]
           "
@@ -163,14 +186,12 @@ export default function Navbar() {
         <div
           className="
             group/menu
-
             ml-auto
             flex
             min-w-0
             max-w-full
             items-center
             justify-end
-
             gap-x-[clamp(16px,2vw,40px)]
           "
         >
@@ -178,33 +199,64 @@ export default function Navbar() {
             Página Inicial
           </NavLink>
 
-          <NavLink to="/pagina-sobre" className={definirClasse}>
+          <NavLink
+            to="/pagina-sobre"
+            className={definirClasse}
+          >
             Sobre
           </NavLink>
 
-          <NavLink to="/pagina-faq" className={definirClasse}>
+          <NavLink
+            to="/pagina-faq"
+            className={definirClasse}
+          >
             FAQ
           </NavLink>
 
-          <NavLink to="/pagina-desafio" className={definirClasse}>
+          <NavLink
+            to="/pagina-desafio"
+            className={definirClasse}
+          >
             Desafios
           </NavLink>
 
-          <NavLink to="/pagina-solucao" className={definirClasse}>
+          <NavLink
+            to="/pagina-solucao"
+            className={definirClasse}
+          >
             Soluções
           </NavLink>
 
-          <NavLink to="/pagina-contato" className={definirClasse}>
+          <NavLink
+            to="/pagina-contato"
+            className={definirClasse}
+          >
             Contato
           </NavLink>
 
-          <NavLink to="/pagina-quem-somos" className={definirClasse}>
+          <NavLink
+            to="/pagina-quem-somos"
+            className={definirClasse}
+          >
             Quem somos?
           </NavLink>
 
-          <NavLink to="/pagina-login" className={definirClasse}>
-            Entrar
-          </NavLink>
+          {/* LOGIN / PERFIL */}
+          {usuarioLogado ? (
+            <NavLink
+              to="/pagina-perfil"
+              className={definirClasse}
+            >
+              Perfil
+            </NavLink>
+          ) : (
+            <NavLink
+              to="/pagina-login"
+              className={definirClasse}
+            >
+              Entrar
+            </NavLink>
+          )}
         </div>
       </nav>
     </header>
