@@ -133,7 +133,7 @@ export default function Login() {
           <section
             className="
               relative flex min-h-0 flex-col
-              overflow-hidden
+              overflow-y-auto
               bg-[var(--cor-creme)]
               px-[48px] py-[26px]
               max-[950px]:overflow-visible
