@@ -16,10 +16,10 @@ export default function AppRoutes() {
             <Route path="/" element={<Home />} />
             <Route path="/pagina-sobre" element={<Sobre />} />
             <Route path="/pagina-faq" element={<Faq />} />
-            <Route path="/pagina-desafios" element={<Desafios />} />
+            <Route path="/pagina-desafio" element={<Desafios />} />
             <Route path="/pagina-solucao" element={<Solucao />} />
             <Route path="/pagina-contato" element={<Contato />} />
-            <Route path="/pagina-quemsomos" element={<QuemSomos />} />
+            <Route path="/pagina-quem-somos" element={<QuemSomos />} />
             <Route path="/pagina-login" element={<Login />} />
             <Route path="/pagina-perfil" element={<Perfil />} />
         </Routes>
