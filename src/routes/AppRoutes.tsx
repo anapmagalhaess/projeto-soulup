@@ -9,6 +9,7 @@ import Contato from "../pages/Contato/Contato";
 import QuemSomos from "../pages/QuemSomos/QuemSomos";
 import Login from "../pages/Login/Login";
 import Perfil from "../pages/Perfil/Perfil";
+import NotFound from '../pages/NotFound/NotFound';
 
 export default function AppRoutes() {
     return (
@@ -23,6 +24,7 @@ export default function AppRoutes() {
             <Route path="/pagina-quemsomos" element={<QuemSomos />} />
             <Route path="/pagina-login" element={<Login />} />
             <Route path="/pagina-perfil" element={<Perfil />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     )
 }
