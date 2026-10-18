@@ -17,6 +17,7 @@ export default function AppRoutes() {
             <Route path="/pagina-sobre" element={<Sobre />} />
             <Route path="/pagina-faq" element={<Faq />} />
             <Route path="/pagina-desafio" element={<Desafios />} />
+            <Route path="/pagina-desafio/:id" element={<Desafios />} />
             <Route path="/pagina-solucao" element={<Solucao />} />
             <Route path="/pagina-contato" element={<Contato />} />
             <Route path="/pagina-quemsomos" element={<QuemSomos />} />
