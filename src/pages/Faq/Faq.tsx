@@ -2,9 +2,9 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import Tag from "../components/Tag/Tag";
+import Tag from "../../components/Tag/Tag";
 
-import FaqItem from "../components/Faq-Item/Faq-Item";
+import FaqItem from "../../components/Faq-Item/Faq-Item";
 
 export default function FAQ() {
   const [faqAberta, setFaqAberta] = useState<number | null>(0);
