@@ -1,5 +1,5 @@
-import Tag from "../components/Tag/Tag";
-import TeamCard from "../components/TeamCard/TeamCard";
+import Tag from "../../components/Tag/Tag";
+import TeamCard from "../../components/TeamCard/TeamCard";
 
 export default function QuemSomos() {
   const wrapClass =

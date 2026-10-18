@@ -1,5 +1,5 @@
-import Tag from "../components/Tag/Tag";
-import ContatoCard from "../components/ContatoCard/ContatoCard";
+import Tag from "../../components/Tag/Tag";
+import ContatoCard from "../../components/ContatoCard/ContatoCard";
 
 export default function Contato() {
   const wrapClass =

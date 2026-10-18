@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from "react";
-import Tag from "../components/Tag/Tag";
-import ChallengeCard from "../components/ChallengeCard/ChallengeCard";
+import Tag from "../../components/Tag/Tag";
+import ChallengeCard from "../../components/ChallengeCard/ChallengeCard";
 import { useNavigate, useParams } from "react-router-dom";
 
 const desafios = [

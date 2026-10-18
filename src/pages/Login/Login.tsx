@@ -13,6 +13,28 @@ type CadastroForm = {
   termos: boolean;
 };
 
+const apenasDigitos = (valor: string) => valor.replace(/\D/g, "");
+
+function cpfValido(valor: string) {
+  const cpf = apenasDigitos(valor);
+
+  if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+
+  const calcularDigito = (tamanho: number) => {
+    let soma = 0;
+    for (let i = 0; i < tamanho; i++) {
+      soma += Number(cpf[i]) * (tamanho + 1 - i);
+    }
+    const resto = (soma * 10) % 11;
+    return resto === 10 ? 0 : resto;
+  };
+
+  return (
+    calcularDigito(9) === Number(cpf[9]) &&
+    calcularDigito(10) === Number(cpf[10])
+  );
+}
+
 export default function Login() {
   const navigate = useNavigate();
   const [modalAberto, setModalAberto] = useState(false);
@@ -22,6 +44,8 @@ export default function Login() {
   const {
     register,
     handleSubmit,
+    getValues,
+    trigger,
     formState: { errors },
     reset,
   } = useForm<CadastroForm>({
@@ -49,15 +73,12 @@ export default function Login() {
   }, [modalAberto, navigate]);
 
   const cadastrarUsuario = (dados: CadastroForm) => {
+    const usernameLimpo = dados.username.trim().replace(/^@/, "");
+
     sessionStorage.setItem("usuarioLogado", "true");
-    sessionStorage.setItem("nomeUsuario", dados.nome);
-    sessionStorage.setItem("emailUsuario", dados.email);
-
-    const usernameFormatado = dados.username.startsWith("@")
-      ? dados.username
-      : `@${dados.username}`;
-
-    sessionStorage.setItem("userUsuario", usernameFormatado);
+    sessionStorage.setItem("nomeUsuario", dados.nome.trim());
+    sessionStorage.setItem("emailUsuario", dados.email.trim());
+    sessionStorage.setItem("userUsuario", `@${usernameLimpo}`);
 
     // Atualiza componentes que permanecem montados, como a Navbar/Layout.
     window.dispatchEvent(new Event("auth-change"));
@@ -208,6 +229,11 @@ export default function Login() {
                     className={`${inputClass} pr-10`}
                     {...register("pais", {
                       required: "Selecione um país.",
+                      // Ao trocar o país, revalida os campos que dependem dele.
+                      onChange: () => {
+                        if (getValues("documento")) trigger("documento");
+                        if (getValues("celular")) trigger("celular");
+                      },
                     })}
                   >
                     <option value="">Selecione</option>
@@ -234,15 +260,22 @@ export default function Login() {
                     className={inputClass}
                     {...register("documento", {
                       required: "Informe seu documento.",
-                      minLength: {
-                        value: 8,
-                        message:
-                          "O documento deve possuir pelo menos 8 caracteres.",
-                      },
-                      maxLength: {
-                        value: 15,
-                        message:
-                          "O documento deve possuir no máximo 15 caracteres.",
+                      validate: (valor) => {
+                        const documento = valor.trim();
+
+                        if (getValues("pais") === "Brasil") {
+                          return (
+                            cpfValido(documento) ||
+                            "Digite um CPF válido (11 dígitos)."
+                          );
+                        }
+
+                        if (documento.length < 8)
+                          return "O documento deve possuir pelo menos 8 caracteres.";
+                        if (documento.length > 15)
+                          return "O documento deve possuir no máximo 15 caracteres.";
+
+                        return true;
                       },
                     })}
                   />
@@ -267,15 +300,15 @@ export default function Login() {
                     className={inputClass}
                     {...register("nome", {
                       required: "Informe seu nome completo.",
-                      minLength: {
-                        value: 2,
-                        message:
-                          "O nome deve possuir pelo menos 2 caracteres.",
-                      },
-                      maxLength: {
-                        value: 120,
-                        message:
-                          "O nome deve possuir no máximo 120 caracteres.",
+                      validate: (valor) => {
+                        const nome = valor.trim();
+
+                        if (nome.length < 2)
+                          return "O nome deve possuir pelo menos 2 caracteres.";
+                        if (nome.length > 120)
+                          return "O nome deve possuir no máximo 120 caracteres.";
+
+                        return true;
                       },
                     })}
                   />
@@ -298,15 +331,19 @@ export default function Login() {
                     className={inputClass}
                     {...register("username", {
                       required: "Informe um nome de usuário.",
-                      minLength: {
-                        value: 3,
-                        message:
-                          "O nome de usuário deve possuir pelo menos 3 caracteres.",
-                      },
-                      maxLength: {
-                        value: 30,
-                        message:
-                          "O nome de usuário deve possuir no máximo 30 caracteres.",
+                      validate: (valor) => {
+                        // Conta os caracteres sem o @ inicial.
+                        const semArroba = valor.trim().replace(/^@/, "");
+
+                        if (semArroba.length < 3)
+                          return "O nome de usuário deve possuir pelo menos 3 caracteres (sem contar o @).";
+                        if (semArroba.length > 30)
+                          return "O nome de usuário deve possuir no máximo 30 caracteres.";
+
+                        return (
+                          /^[\w.]+$/.test(semArroba) ||
+                          "Use apenas letras, números, _ ou ."
+                        );
                       },
                     })}
                   />
@@ -332,8 +369,15 @@ export default function Login() {
                       {...register("nascimento", {
                         required: "Informe sua data de nascimento.",
                         validate: (valor) => {
-                          const hoje = new Date();
                           const nascimento = new Date(`${valor}T00:00:00`);
+
+                          if (Number.isNaN(nascimento.getTime()))
+                            return "Data inválida.";
+
+                          const hoje = new Date();
+
+                          if (nascimento > hoje)
+                            return "A data não pode estar no futuro.";
 
                           let idade =
                             hoje.getFullYear() - nascimento.getFullYear();
@@ -348,6 +392,8 @@ export default function Login() {
                           ) {
                             idade--;
                           }
+
+                          if (idade > 120) return "Data inválida.";
 
                           return (
                             idade >= 14 ||
@@ -377,15 +423,23 @@ export default function Login() {
                       className={inputClass}
                       {...register("celular", {
                         required: "Informe seu celular.",
-                        minLength: {
-                          value: 11,
-                          message:
-                            "O celular deve possuir pelo menos 11 caracteres.",
-                        },
-                        maxLength: {
-                          value: 15,
-                          message:
-                            "O celular deve possuir no máximo 15 caracteres.",
+                        validate: (valor) => {
+                          if (!/^[\d\s()+-]+$/.test(valor))
+                            return "Use apenas números, espaços, ( ), + ou -.";
+
+                          const digitos = apenasDigitos(valor);
+
+                          if (getValues("pais") === "Brasil") {
+                            return (
+                              /^\d{2}9?\d{8}$/.test(digitos) ||
+                              "Digite um celular válido, ex.: (11) 91234-5678."
+                            );
+                          }
+
+                          return (
+                            (digitos.length >= 7 && digitos.length <= 15) ||
+                            "Digite um número de celular válido."
+                          );
                         },
                       })}
                     />

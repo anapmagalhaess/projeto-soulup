@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Tag from "../components/Tag/Tag";
+import Tag from "../../components/Tag/Tag";
 
 export default function Home() {
   return (
